@@ -1,0 +1,156 @@
+<!--
+Zion High School Application for Android
+Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="노력중점"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_action_expand"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fe_eb_sub_1"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fe_eb_sub_2"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fe_eb_sub_3"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fe_eb_sub_4"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="특색사업"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_action_expand"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feat_busin_desc_1"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feat_busin_desc_2"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feat_busin_desc_3"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/feat_busin_desc_4"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

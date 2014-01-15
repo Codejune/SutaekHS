@@ -1,0 +1,124 @@
+<!--
+Zion High School Application for Android
+Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/truth"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:background="@drawable/cardbg"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/motto"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/symbol"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:background="@drawable/cardbg"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/symbol"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/rose"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:background="@drawable/cardbg"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/flower"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/pinus"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:background="@drawable/cardbg"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tree"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cardbg"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"/>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

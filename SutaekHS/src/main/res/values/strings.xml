@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Zion High School Application for Android
+Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<resources>
+
+    <string name="app_name">Sutaek High School</string>
+    <string name="home">Home</string>
+    <string name="notices">Notices</string>
+    <string name="meal">Lunch/Dinner</string>
+    <string name="schoolinfo">School Informations</string>
+    <string name="schedule">Schedule</string>
+    <string name="schoolintro">About the School</string>
+    <string name="info">About the App</string>
+
+    <string name="appsettings_apinfo_title">Application Information</string>
+    <string name="appsettings_appinfo_src">Get full Sourcecode from GitHub</string>
+    <string name="appsettings_docs_title">Legal Notices Documents</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednsday">Wednsday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="network_connection_warning">No network connection, Check your network connection first</string>
+
+    <stirng name="adress">145, Gumbae-ro, Sutaekdong, Guri-si, Gyeonggi-do, Korea[Click to see more on Google Maps]</stirng>
+
+    <string name="transportations">버스를 이용하여 오는경우: \n
+        51, 52, 91, 92번 버스를 타고 수택고등학교 정문 옆 횡단보도에서 하차 \n</string>
+    <string name="location">Location of the School</string>
+    <string name="contact">Contact</string>
+    <string name="school_office">School Office :  031-551-0674</string>
+    <string name="administration_department">Administration Department : 031-551-0673</string>
+    <string name="fax">FAX : 031-551-7442</string>
+    <string name="feat_busin">Featuring Business</string>
+    <string name="feat_busin_desc_1"> 1. 예능교육과정 특성화교 운영
+        \n-소질과 재능 발굴, 실기능력배양
+        \n-공교육 정상화 경제적 부담 경감
+        \n-심도있는 실기교육-체계적 교육과정
+        \n-학생중심의 효율적 진로지도</string>
+    <string name="feat_busin_desc_2"> 2. 실천위주 자아발견 교실 운영
+        \n-독서록, 명상록, 명상의 시간운영
+        \n-학생부 훈화자료 활용의 활성화
+        \n-학생 포트폴리오 및 관리 철저
+        \n-인성과 관련 계발활동 부서관리
+        \n-학부모 자원봉사활동의 활성화</string>
+    <string name="feat_busin_desc_3"> 3. 더불어 살아가는 어깨동무 학교문화 창출
+        \n-학부모 명예교사 운영
+        \n-학부모 수업공개의 날 운영
+        \n-각종위원회 학부모, 교사협의회 구성
+        \n-등교지도, 교외생활지도 및 정기고사 감독
+        \n-학부모 지도봉사단 운영</string>
+    <string name="feat_busin_desc_4"> 4. 과목중점형 교과교실제 운영을 통한 글로벌 수택인 육성
+        \n-교육과정과 교육시설의 획기적 변화에 대한 공감대 형성
+        \n-교사의 수업 전문성을 실현할 수 있는 교과교실 환경 조성</string>
+
+    <string name="homepage">Visit the Homepage(zion.hs.kr)</string>
+    <string name="school_symbol">Symbol of The School</string>
+    <string name="goal_edu">Goal of The Our Education</string>
+    <string name="fe_eb">Focus efforts and Emphasis Business</string>
+
+    <string name="motto">교훈 - 신의</string>
+    <string name="symbol">교표</string>
+    <string name="flower">교화 - 장미 :
+    \n - 사랑(愛)
+    \n - 아름다움(美)
+    \n - 향기(香)</string>
+    <string name="tree">교목 - 느티나무 :
+    \n - 깊게 뿌리를 내림 - 내실
+    \n - 단단한 열매 - 결실
+    \n - 줄기가 곧게 자람 - 지조
+    \n - 다양한 쓰임새 - 봉사</string>
+    <string name="our_goal">본교 교육목표</string>
+    <string name="our_goal_desc">건전한 가치관을 가진 능력있는 사람</string>
+    <string name="our_goal_sub_1">세계인 육성 :
+    \n 전통문화에 대한 자긍심을 바탕으로 세계 시민의 자질과 진취적 기상을 가진 사람</string>
+    <string name="our_goal_sub_2">실력인 육성 :
+    \n 열심히 배우고 끊임없이 탐구하는 자세로 매사에 최선을 다하는 사람</string>
+    <string name="our_goal_sub_3">자주인 육성 :
+    \n 자율과 책임으로 자아를 실현하고 건전한 가치관을 가진 사람</string>
+    <string name="our_goal_sub_4">건강인 육성 :
+    \n 튼튼한 몸과 건전한 정신을 가지고 공동체 문화를 주도하는 사람</string>
+
+    <string name="our_imagin">가르치는 기쁨, 배우는 즐거움</string>
+    <string name="our_imagin_sub_1">교사상 : 미래와 전통을 창조하는 학교, 희망의교 학교
+    \n학생상 : 스스로 공부하는 능력있는 학생, 꿈을 키우는 학생
+   \n교사상 : 품위 있고 존경 받는 교사, 능력있는 교</string>
+
+    <string name="our_philosophy">본교 교육이념</string>
+    <string name="our_philosophy_sub">미래에 도전하는 창의적인 민주시민 육성</string>
+
+    <string name="our_activity">본교 교육활동</string>
+    <string name="our_activity_sub">
+    1.예절바른 학생, 실력 있는 학생 기르기
+    \n2.개인특기, 창의력 계발 교육 충실
+    \n3.열린 교육을 지향하는 민주적 학교 운영
+    \n4.능력별 학습으로 균등한 학습기회 제공
+    \n5.회화 중심의 외국어 교육 강화(Lab 실 운영)
+    \n6.미래사회를 대비하는 컴퓨터 교육 강화(컴퓨터실 1,2 운영)
+    </string>
+
+    <string name="fe_eb_sub_1">
+        1. 혁신교육 및 창의지성 학교터전 만들기
+        \n-참여와 소통 협력을 통한 새로운 학교 문화 창출
+        \n-학생동아리 활성화를 통한 자발성 고양
+        \n-수준별 교육과정의 내실 있는 운영
+        \n-심화학습 및 기초 미달학생 특별지도
+    </string>
+    <string name="fe_eb_sub_2">
+        2. 외국어 회화능력 강화
+        \n-원어민교사와 함께하는 영어수업 운영
+        \n-학생들의 손으로 만드는 영자신문 발행
+        \n-영어캠프의 내실 있는 운영
+        \n-영어단어, 영어속담 경시대회
+    </string>
+    <string name="fe_eb_sub_3">
+        3. 진로선택 지도의 강화
+        \n-특기적성 재능을 살린 상담활동
+        \n-학력신장, 외부강사 초청강연
+        \n-미래 희망직업에 대한 외부강사 학생 연수
+        \n-개인 포트폴리오 제작으로 대입준비
+    </string>
+    <string name="fe_eb_sub_4">
+        4. 다양한 인증제 및 자격증 취득
+        \n-한자성어, 영어속담 외우기 졸업인증제 실시
+        \n (한자성어 90개, 영어속담 60개 암기)
+        \n-한자성어, 영어속담, 영어단어 경시대회
+        \n-한자검정, 한국사능력검정, 일본어능력시험, 영어 인증제 및 토익시험등
+        \n-컴퓨터 관련 자격증 취득(기능사 시험)
+    </string>
+    <string name="title_activity_doc__readme">README</string>
+    <string name="title_activity_doc__notices">NOTICES</string>
+    <string name="title_activity_doc__copying">COPYING</string>
+    <string name="title_activity_doc__contributors">CONTRIBUTORS</string>
+
+    <string name="action_settings">sex</string>
+</resources>
