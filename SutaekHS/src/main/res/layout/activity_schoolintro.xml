@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#333"
+    android:background="#e5e5e5"
     >
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:background="#ffff8800"
+            android:background="#ffed674d"
             android:textColor="#ffffffff"
             android:paddingTop="4dp"
             android:paddingBottom="4dp" />

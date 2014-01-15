@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:id="@+id/day"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:background="@drawable/cardbg"
+        android:background="@drawable/card_no_border"
         android:padding="5dp"
         android:layout_margin="10dp"/>
 
@@ -37,7 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Schedule String"
         android:id="@+id/schedule"
-        android:background="@drawable/cardbg"
+        android:background="@drawable/card_no_border"
         android:padding="5dp"
         android:layout_alignTop="@+id/day"
         android:layout_toRightOf="@+id/day"

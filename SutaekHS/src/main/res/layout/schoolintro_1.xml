@@ -37,7 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_goal"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
-            android:textColor="#ffffff"/>
+            android:textColor="#000000"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,7 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_goal_desc"
             android:id="@+id/textView2"
             android:layout_gravity="center_horizontal"
-            android:textColor="#ffffff"/>
+            android:textColor="#000000"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -61,7 +61,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_goal_sub_1"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            android:background="@drawable/card_no_border"
             android:padding="10dp"
             android:textColor="@android:color/black"/>
 
@@ -71,7 +71,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_goal_sub_2"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            android:background="@drawable/card_no_border"
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/black"/>
@@ -82,7 +82,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_goal_sub_3"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            android:background="@drawable/card_no_border"
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/black"/>
@@ -93,10 +93,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_goal_sub_4"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            android:background="@drawable/card_no_border"
             android:padding="10dp"
             android:layout_marginTop="10dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="#000000"/>
 
 
         <TextView
@@ -107,7 +107,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_imagin"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
-            android:textColor="#ffffff"/>
+            android:textColor="#000000"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -122,9 +122,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_imagin_sub_1"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            android:background="@drawable/card_no_border"
             android:padding="10dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="#000000"/>
 
         <TextView
             android:layout_marginTop="20dp"
@@ -134,7 +134,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_philosophy"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
-            android:textColor="#ffffff"/>
+            android:textColor="#000000"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -149,9 +149,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_philosophy_sub"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            android:background="@drawable/card_no_border"
             android:padding="10dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="#000000"/>
 
         <TextView
             android:layout_marginTop="20dp"
@@ -161,7 +161,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_activity"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
-            android:textColor="#ffffff"/>
+            android:textColor="#000000"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -176,9 +176,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/our_activity_sub"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            android:background="@drawable/card_no_border"
             android:padding="10dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="#000000"/>
 
     </LinearLayout>
 

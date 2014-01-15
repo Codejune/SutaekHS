@@ -37,7 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:scaleType="fitXY"
-            android:background="@drawable/cardbg"/>
+            android:background="@drawable/card_no_border"/>
 
         <TextView
             android:layout_width="fill_parent"
@@ -45,7 +45,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/motto"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            android:background="@drawable/card_no_border"
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/black"/>
@@ -59,7 +59,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:scaleType="fitXY"
-            android:background="@drawable/cardbg"/>
+            android:background="@drawable/card_no_border"/>
 
         <TextView
             android:layout_width="fill_parent"
@@ -67,7 +67,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/symbol"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            android:background="@drawable/card_no_border"
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/black"/>
@@ -81,7 +81,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:scaleType="fitXY"
-            android:background="@drawable/cardbg"/>
+            android:background="@drawable/card_no_border"/>
 
         <TextView
             android:layout_width="fill_parent"
@@ -89,7 +89,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/flower"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            android:background="@drawable/card_no_border"
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/black"/>
@@ -103,7 +103,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:scaleType="fitXY"
-            android:background="@drawable/cardbg"/>
+            android:background="@drawable/card_no_border"/>
 
         <TextView
             android:layout_width="fill_parent"
@@ -111,7 +111,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:text="@string/tree"
             android:id="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/cardbg"
+            android:background="@drawable/card_no_border"
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:textColor="@android:color/black"/>

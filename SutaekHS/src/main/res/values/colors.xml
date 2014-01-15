@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="pressed">#CCffbb33</color>
-    <color name="public_color">#ffff4444</color>
+    <color name="pressed">#CCED674D</color>
+    <color name="public_color">#ffED674D</color>
 </resources>

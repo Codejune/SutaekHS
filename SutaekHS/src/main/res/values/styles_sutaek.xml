@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
 <resources>
 
     <style name="Theme.Sutaek" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="actionBarItemBackground">@drawable/selectable_background_sutaek</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Sutaek</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Sutaek</item>
         <item name="actionBarTabStyle">@style/ActionBarTabStyle.Sutaek</item>
         <item name="actionDropDownStyle">@style/DropDownNav.Sutaek</item>
@@ -16,15 +35,20 @@
 
     </style>
 
-    <style name="Theme.Sutaek.NoActionBar" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-        <!-- No ActionBar -->
-        <item name="android:windowNoTitle">true</item>
-
+    <style name="ActionBar.Solid.Sutaek" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@drawable/ab_solid_sutaek</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_sutaek</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_sutaek</item>
+        <item name="progressBarStyle">@style/ProgressBar.Sutaek</item>
     </style>
 
-    <style name="ActionBar.Solid.Sutaek" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <item name="background">@drawable/ab_background</item>
-        <item name="backgroundSplit">@drawable/ab_background</item>
+    <style name="ActionBar.Transparent.Sutaek" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="background">@drawable/ab_transparent_sutaek</item>
+        <item name="progressBarStyle">@style/ProgressBar.Sutaek</item>
+    </style>
+	
+    <style name="PopupMenu.Sutaek" parent="@style/Widget.AppCompat.PopupMenu">	
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_sutaek</item>	
     </style>
 	
     <style name="DropDownListView.Sutaek" parent="@style/Widget.AppCompat.ListView.DropDown">
@@ -36,7 +60,13 @@
     </style>
 	
     <style name="DropDownNav.Sutaek" parent="@style/Widget.AppCompat.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_sutaek</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_sutaek</item>
         <item name="android:dropDownSelector">@drawable/selectable_background_sutaek</item>
+    </style>
+    
+    <style name="ProgressBar.Sutaek" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_sutaek</item>
     </style>
     
     <style name="ActionButton.CloseMode.Sutaek" parent="@style/Widget.AppCompat.ActionButton.CloseMode">
@@ -45,6 +75,7 @@
     
     <!-- this style is only referenced in a Light.DarkActionBar based theme -->
     <style name="Theme.Sutaek.Widget" parent="@style/Theme.AppCompat">
+        <item name="popupMenuStyle">@style/PopupMenu.Sutaek</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Sutaek</item>
     </style>
 
