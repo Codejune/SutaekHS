@@ -111,6 +111,7 @@ public class Meal extends ActionBarActivity {
                 lunchstring = MealLibrary.getMeal("goe.go.kr","J100000656","4","04","2"); //Get Lunch Menu Date
                 dinnerstring = MealLibrary.getMeal("goe.go.kr","J100000656","4","04","3"); //Get Dinner Menu Date
 
+
                 mHandler.post(new Runnable()
                 {
                     public void run()

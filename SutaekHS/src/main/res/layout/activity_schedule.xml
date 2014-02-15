@@ -11,13 +11,14 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/textView"
         android:textColor="#000000"
+        android:textSize="15dp"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/schedule"
+        android:text="@string/schedule_info"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:background="@drawable/card_no_border"

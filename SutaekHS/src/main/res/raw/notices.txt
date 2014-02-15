@@ -1,4 +1,4 @@
-Zion High School Application for Android : Third Party Notices
+Sutaek High School Application for Android : Third Party Notices
 
 ====================
 This software is licensed under the GNU Gernel Public License Version 2(GNU GPL v2)

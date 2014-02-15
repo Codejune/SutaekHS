@@ -16,7 +16,7 @@
             android:id="@+id/doc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:textSize="15dp"
             android:textColor="#000000"
             />
 

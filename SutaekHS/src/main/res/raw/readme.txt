@@ -1,5 +1,5 @@
-Zion High School Application for Android
-Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
+Sutaek High School Application for Android
+Copyright (C) 2013 ByoungJune Kim<kbj9704@gmail.com>
 ====================
 
 This program is free software: you can redistribute it and/or modify

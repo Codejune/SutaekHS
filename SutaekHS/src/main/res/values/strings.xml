@@ -1,31 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-Zion High School Application for Android
-Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
--->
 <resources>
 
     <string name="app_name">Sutaek High School</string>
     <string name="home">Home</string>
     <string name="notices">Notices</string>
-    <string name="meal">Lunch/Dinner</string>
+    <string name="title_activity_notices_parents">Notices for Parents</string>
+    <string name="meal">Meal Chart</string>
     <string name="schoolinfo">School Informations</string>
     <string name="schedule">Schedule</string>
     <string name="schoolintro">About the School</string>
     <string name="info">About the App</string>
+    <string name="notices_info">Showing 15 Recent Notices from the School</string>
+    <string name="noti_parents_info">Showing 15 Recent Notices for Parents from the School</string>
+    <string name="schedule_info">School Schedules in This Month</string>
 
     <string name="appsettings_apinfo_title">Application Information</string>
     <string name="appsettings_appinfo_src">Get full Sourcecode from GitHub</string>
@@ -41,14 +28,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <stirng name="adress">145, Gumbae-ro, Sutaekdong, Guri-si, Gyeonggi-do, Korea[Click to see more on Google Maps]</stirng>
 
-    <string name="transportations">버스를 이용하여 오는경우: \n
-        51, 52, 91, 92번 버스를 타고 수택고등학교 정문 옆 횡단보도에서 하차 \n</string>
-    <string name="location">Location of the School</string>
-    <string name="contact">Contact</string>
-    <string name="school_office">School Office :  031-551-0674</string>
-    <string name="administration_department">Administration Department : 031-551-0673</string>
+    <string name="transportations">버스를 이용하여 오는경우: \n51, 52, 91, 92번 버스를 타고 수택고등학교 정문 옆 횡단보도에서 하차\n걸어서 오는 경우: \n검배사거리에서 구리타워 방향</string>
+    <string name="location">오시는 길</string>
+    <string name="contact">학교와 연락하기</string>
+    <string name="school_office">교무실 : 031-551-0674</string>
+    <string name="administration_department">행정실 : 031-551-0673</string>
     <string name="fax">FAX : 031-551-7442</string>
-    <string name="feat_busin">Featuring Business</string>
+    <string name="feat_busin">특색사업</string>
     <string name="feat_busin_desc_1"> 1. 예능교육과정 특성화교 운영
         \n-소질과 재능 발굴, 실기능력배양
         \n-공교육 정상화 경제적 부담 경감
@@ -70,11 +56,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         \n-교육과정과 교육시설의 획기적 변화에 대한 공감대 형성
         \n-교사의 수업 전문성을 실현할 수 있는 교과교실 환경 조성</string>
 
-    <string name="homepage">Visit the Homepage(zion.hs.kr)</string>
-    <string name="school_symbol">Symbol of The School</string>
-    <string name="goal_edu">Goal of The Our Education</string>
-    <string name="fe_eb">Focus efforts and Emphasis Business</string>
-
+    <string name="homepage">홈페이지 방문(sutaek.hs.kr)</string>
+    <string name="school_symbol">학교상징</string>
+    <string name="goal_edu">교육목표</string>
+    <string name="fe_eb">노력중점 및 특색사업</string>
     <string name="motto">교훈 - 신의</string>
     <string name="symbol">교표</string>
     <string name="flower">교화 - 장미 :
@@ -86,16 +71,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     \n - 단단한 열매 - 결실
     \n - 줄기가 곧게 자람 - 지조
     \n - 다양한 쓰임새 - 봉사</string>
+
     <string name="our_goal">본교 교육목표</string>
     <string name="our_goal_desc">건전한 가치관을 가진 능력있는 사람</string>
     <string name="our_goal_sub_1">세계인 육성 :
-    \n 전통문화에 대한 자긍심을 바탕으로 세계 시민의 자질과 진취적 기상을 가진 사람</string>
+    \n-전통문화에 대한 자긍심을 바탕으로 세계 시민의 자질과 진취적 기상을 가진 사람</string>
     <string name="our_goal_sub_2">실력인 육성 :
-    \n 열심히 배우고 끊임없이 탐구하는 자세로 매사에 최선을 다하는 사람</string>
+    \n-열심히 배우고 끊임없이 탐구하는 자세로 매사에 최선을 다하는 사람</string>
     <string name="our_goal_sub_3">자주인 육성 :
-    \n 자율과 책임으로 자아를 실현하고 건전한 가치관을 가진 사람</string>
+    \n-자율과 책임으로 자아를 실현하고 건전한 가치관을 가진 사람</string>
     <string name="our_goal_sub_4">건강인 육성 :
-    \n 튼튼한 몸과 건전한 정신을 가지고 공동체 문화를 주도하는 사람</string>
+    \n-튼튼한 몸과 건전한 정신을 가지고 공동체 문화를 주도하는 사람</string>
 
     <string name="our_imagin">가르치는 기쁨, 배우는 즐거움</string>
     <string name="our_imagin_sub_1">교사상 : 미래와 전통을 창조하는 학교, 희망의교 학교

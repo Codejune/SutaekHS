@@ -1,47 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-Zion High School Application for Android
-Copyright (C) 2013 Youngbin Han<sukso96100@gmail.com>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
--->
 <resources>
 
     <string name="app_name">수택고등학교</string>
     <string name="notices">공지사항</string>
-    <string name="meal">중식/석식</string>
+    <string name="meal">급식정보</string>
     <string name="schoolinfo">학교정보</string>
     <string name="schedule">학사일정</string>
     <string name="schoolintro">학교소개</string>
     <string name="info">앱 정보</string>
-    <string name="notices_parents_info">가정통신문</string>
-    <string name="title_activity_notices__parents">가정통신문</string>
+    <string name="title_activity_notices_parents">가정통신문</string>
     <string name="appsettings_apinfo_title">앱 정보</string>
-    <string name="appsettings_appinfo_src">GitHub에서 소스코드 얻기</string>
+    <string name="appsettings_appinfo_src">개발자 Github로 가기</string>
     <string name="appsettings_docs_title">법적 고지사항 문서</string>
+    <string name="notices_info">학교로부터의 최근 15개 공지사항</string>
+    <string name="noti_parents_info">학교로부터의 최근 15개 가정통신문</string>
+    <string name="schedule_info">이번달 학사일정</string>
 
     <string name="lunch">중식</string>
     <string name="dinner">석식</string>
     <string name="monday">월요일</string>
     <string name="tuesday">화요일</string>
-    <string name="wednsday">수요일</string>중
+    <string name="wednsday">수요일</string>
     <string name="thursday">목요일</string>
     <string name="friday">금요일</string>
     <string name="loading">불러오는 중...</string>
     <string name="network_connection_warning">네트워크에 연결되어 있지 않습니다, 네트워크 연결을 먼저 확인하세요.</string>
-    <string name="address">경기도 구리시 수택동 검배로 145[Google Maps에서 보려면 클릭]</string>
-    <string name="transportations">버스를 이용하여 오는경우: 51, 52, 91, 92번 버스를 타고 수택고등학교 정문 옆 횡단보도에서 하차 \n</string>
+    <string name="address">경기도 구리시 수택동 검배로 145 [Google Maps에서 보려면 클릭]</string>
+    <string name="transportations">버스를 이용하여 오는경우:\n51, 52, 91, 92번 버스를 타고 수택고등학교 정문 옆 횡단보도에서 하차\n걸어서 오는 경우: \n검배사거리에서 구리타워 방향</string>
     <string name="location">오시는 길</string>
     <string name="contact">학교와 연락하기</string>
     <string name="school_office">교무실 : 031-551-0674</string>
@@ -88,13 +73,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="our_goal">본교 교육목표</string>
     <string name="our_goal_desc">건전한 가치관을 가진 능력있는 사람</string>
     <string name="our_goal_sub_1">세계인 육성 :
-    \n 전통문화에 대한 자긍심을 바탕으로 세계 시민의 자질과 진취적 기상을 가진 사람</string>
+    \n-전통문화에 대한 자긍심을 바탕으로 세계 시민의 자질과 진취적 기상을 가진 사람</string>
     <string name="our_goal_sub_2">실력인 육성 :
-    \n 열심히 배우고 끊임없이 탐구하는 자세로 매사에 최선을 다하는 사람</string>
+    \n-열심히 배우고 끊임없이 탐구하는 자세로 매사에 최선을 다하는 사람</string>
     <string name="our_goal_sub_3">자주인 육성 :
-    \n 자율과 책임으로 자아를 실현하고 건전한 가치관을 가진 사람</string>
+    \n-자율과 책임으로 자아를 실현하고 건전한 가치관을 가진 사람</string>
     <string name="our_goal_sub_4">건강인 육성 :
-    \n 튼튼한 몸과 건전한 정신을 가지고 공동체 문화를 주도하는 사람</string>
+    \n-튼튼한 몸과 건전한 정신을 가지고 공동체 문화를 주도하는 사람</string>
 
     <string name="our_imagin">가르치는 기쁨, 배우는 즐거움</string>
     <string name="our_imagin_sub_1">교사상 : 미래와 전통을 창조하는 학교, 희망의교 학교

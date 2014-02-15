@@ -9,18 +9,18 @@
 
     <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
         android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp">
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
 
         <LinearLayout android:layout_width="0dp" android:layout_height="fill_parent"
             android:layout_weight="2"
             android:orientation="vertical"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:paddingTop="20dp">
+            android:paddingTop="10dp">
             <!-- child views -->
             <include
                 layout="@layout/notices_cover"
