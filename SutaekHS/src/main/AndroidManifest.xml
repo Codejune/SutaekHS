@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codejune.sutaekhs"
+    package="com.codejune.sutaekhighschool"
     android:versionCode="2"
     android:versionName="2.0" >
 
@@ -17,9 +17,11 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Sutaek" >
+        android:theme="@style/Theme.Sutaek"
+        android:debuggable="false">
+
         <activity
-            android:name="com.codejune.sutaekhs.MainActivity"
+            android:name="com.codejune.sutaekhighschool.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,92 +30,92 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.codejune.sutaekhs.Appinfo"
+            android:name="com.codejune.sutaekhighschool.Appinfo"
             android:label="@string/info"
-            android:parentActivityName="com.codejune.sutaekhs.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhs.MainActivity" />
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
         </activity>
         <activity
-            android:name="com.codejune.sutaekhs.Notices"
+            android:name="com.codejune.sutaekhighschool.Notices"
             android:label="@string/notices"
-            android:parentActivityName="com.codejune.sutaekhs.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhs.MainActivity" />
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
         </activity>
         <activity
-            android:name="com.codejune.sutaekhs.Meal"
+            android:name="com.codejune.sutaekhighschool.Meal"
             android:label="@string/meal"
-            android:parentActivityName="com.codejune.sutaekhs.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhs.MainActivity" />
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
         </activity>
         <activity
-            android:name="com.codejune.sutaekhs.Schoolinfo"
+            android:name="com.codejune.sutaekhighschool.Schoolinfo"
             android:label="@string/schoolinfo"
-            android:parentActivityName="com.codejune.sutaekhs.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhs.MainActivity" />
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
         </activity>
         <activity
-            android:name="com.codejune.sutaekhs.Schedule"
+            android:name="com.codejune.sutaekhighschool.Schedule"
             android:label="@string/schedule"
-            android:parentActivityName="com.codejune.sutaekhs.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhs.MainActivity" />
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
         </activity>
         <activity
-            android:name="com.codejune.sutaekhs.Schoolintro"
+            android:name="com.codejune.sutaekhighschool.Schoolintro"
             android:label="@string/schoolintro"
-            android:parentActivityName="com.codejune.sutaekhs.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhs.MainActivity" />
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
         </activity>
         <activity
-            android:name="com.codejune.sutaekhs.Notices_Parents"
+            android:name="com.codejune.sutaekhighschool.Notices_Parents"
             android:label="@string/title_activity_notices_parents"
-            android:parentActivityName="com.codejune.sutaekhs.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhs.MainActivity" />
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
         </activity>
         <activity
-            android:name="com.codejune.sutaekhs.Doc_Readme"
+            android:name="com.codejune.sutaekhighschool.Doc_Readme"
             android:label="@string/title_activity_doc__readme"
-            android:parentActivityName="com.codejune.sutaekhs.Appinfo" >
+            android:parentActivityName="com.codejune.sutaekhighschool.Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhs.Appinfo" />
+                android:value="com.codejune.sutaekhighschool.Appinfo" />
         </activity>
         <activity
-            android:name="com.codejune.sutaekhs.Doc_Notices"
+            android:name="com.codejune.sutaekhighschool.Doc_Notices"
             android:label="@string/title_activity_doc__notices"
-            android:parentActivityName="com.codejune.sutaekhs.Appinfo" >
+            android:parentActivityName="com.codejune.sutaekhighschool.Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhs.Appinfo" />
+                android:value="com.codejune.sutaekhighschool.Appinfo" />
         </activity>
         <activity
-            android:name="com.codejune.sutaekhs.Doc_Copying"
+            android:name="com.codejune.sutaekhighschool.Doc_Copying"
             android:label="@string/title_activity_doc__copying"
-            android:parentActivityName="com.codejune.sutaekhs.Appinfo" >
+            android:parentActivityName="com.codejune.sutaekhighschool.Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhs.Appinfo" />
+                android:value="com.codejune.sutaekhighschool.Appinfo" />
         </activity>
         <activity
-            android:name="com.codejune.sutaekhs.Doc_Contributors"
+            android:name="com.codejune.sutaekhighschool.Doc_Contributors"
             android:label="@string/title_activity_doc__contributors"
-            android:parentActivityName="com.codejune.sutaekhs.Appinfo" >
+            android:parentActivityName="com.codejune.sutaekhighschool.Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhs.Appinfo" />
+                android:value="com.codejune.sutaekhighschool.Appinfo" />
         </activity>
     </application>
 
