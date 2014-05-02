@@ -42,18 +42,20 @@
                 android:layout_gravity="center_horizontal"
                 android:id="@+id/schoolintro"
                 android:layout_marginTop="10dp"/>
-            <include
-                layout="@layout/notices_parents_cover"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/notices_parents"
-                android:layout_marginTop="10dp"
-                />
+
             <include
                 layout="@layout/meal_cover"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/meal"
+                android:layout_marginTop="10dp"
+                />
+
+            <include
+                layout="@layout/notices_parents_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notices_parents"
                 android:layout_marginTop="10dp"
                 />
 
@@ -69,8 +71,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/info"
-                android:layout_marginTop="10dp"
-                />
+                android:layout_marginTop="10dp"/>
+
         </LinearLayout>
 
     </LinearLayout>
