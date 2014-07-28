@@ -35,7 +35,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/our_goal"
-            android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
             android:textColor="#000000"/>
 
@@ -44,14 +43,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/our_goal_desc"
-            android:id="@+id/textView2"
             android:layout_gravity="center_horizontal"
             android:textColor="#000000"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/ic_action_expand"/>
 
@@ -59,7 +56,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/our_goal_sub_1"
-            android:id="@+id/textView"
             android:layout_centerHorizontal="true"
             android:background="@drawable/card_no_border"
             android:padding="10dp"
@@ -69,7 +65,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/our_goal_sub_2"
-            android:id="@+id/textView"
             android:layout_centerHorizontal="true"
             android:background="@drawable/card_no_border"
             android:padding="10dp"
@@ -80,7 +75,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/our_goal_sub_3"
-            android:id="@+id/textView"
             android:layout_centerHorizontal="true"
             android:background="@drawable/card_no_border"
             android:padding="10dp"
@@ -91,7 +85,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/our_goal_sub_4"
-            android:id="@+id/textView"
             android:layout_centerHorizontal="true"
             android:background="@drawable/card_no_border"
             android:padding="10dp"
@@ -105,14 +98,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/our_imagin"
-            android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
             android:textColor="#000000"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/ic_action_expand"/>
 
@@ -120,7 +111,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/our_imagin_sub_1"
-            android:id="@+id/textView"
             android:layout_centerHorizontal="true"
             android:background="@drawable/card_no_border"
             android:padding="10dp"
@@ -132,14 +122,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/our_philosophy"
-            android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
             android:textColor="#000000"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/ic_action_expand"/>
 
@@ -147,7 +135,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/our_philosophy_sub"
-            android:id="@+id/textView"
             android:layout_centerHorizontal="true"
             android:background="@drawable/card_no_border"
             android:padding="10dp"
@@ -159,14 +146,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/our_activity"
-            android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
             android:textColor="#000000"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/ic_action_expand"/>
 
@@ -174,7 +159,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/our_activity_sub"
-            android:id="@+id/textView"
             android:layout_centerHorizontal="true"
             android:background="@drawable/card_no_border"
             android:padding="10dp"

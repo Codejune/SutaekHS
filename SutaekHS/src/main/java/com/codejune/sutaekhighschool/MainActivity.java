@@ -29,7 +29,7 @@ public class MainActivity extends ActionBarActivity {
         if( !isNetworkConnected(this) ){
             new AlertDialog.Builder(this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setTitle("네트워크 연결 오류").setMessage("네트워크 연결 상태 확인 후 다시 시도해 주십시요.")
+                    .setTitle("네트워크 연결").setMessage("\n네트워크 연결 상태 확인 후 다시 시도해 주십시요\n")
                     .setPositiveButton("확인", new DialogInterface.OnClickListener()
                     {
                         @Override

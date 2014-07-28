@@ -26,7 +26,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:id="@+id/imageView"
         android:src="@drawable/info"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -37,10 +36,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/info"
-        android:id="@+id/textView"
-        android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:textSize="17dp"
+        android:textSize="15dp"
         android:textColor="#000000"/>
 
 

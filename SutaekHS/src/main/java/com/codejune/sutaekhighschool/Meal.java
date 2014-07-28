@@ -35,11 +35,9 @@ public class Meal extends ActionBarActivity {
     NetworkInfo wifi;
 
 
-    private final Handler handler = new Handler()
-    {
+    private final Handler handler = new Handler() {
         @Override
-        public void handleMessage(Message msg)
-        {
+        public void handleMessage(Message msg) {
 
         }
     };
@@ -50,77 +48,81 @@ public class Meal extends ActionBarActivity {
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_meal);
 
-        cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        // 네트워크 통신 체크
+        cManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 
-        if(mobile.isConnected() || wifi.isConnected())
-        {
+        if (mobile.isConnected() || wifi.isConnected()) {
 
-        }
-        else{
+        } else {
             Toast toast = Toast.makeText(getApplicationContext(),
                     getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
-                    finish();
+            finish();
         }
 
-        lunchmon = (TextView)this.findViewById(R.id.lunchmon);
-        lunchtue = (TextView)this.findViewById(R.id.lunchtue);
-        lunchwed = (TextView)this.findViewById(R.id.lunchwed);
-        lunchthu = (TextView)this.findViewById(R.id.lunchthu);
-        lunchfri = (TextView)this.findViewById(R.id.lunchfri);
-        dinnermon = (TextView)this.findViewById(R.id.dinnermon);
-        dinnertue = (TextView)this.findViewById(R.id.dinnertue);
-        dinnerwed = (TextView)this.findViewById(R.id.dinnerwed);
-        dinnerthu = (TextView)this.findViewById(R.id.dinnerthu);
-        dinnerfri = (TextView)this.findViewById(R.id.dinnerfri);
+        lunchmon = (TextView) this.findViewById(R.id.lunchmon);
+        lunchtue = (TextView) this.findViewById(R.id.lunchtue);
+        lunchwed = (TextView) this.findViewById(R.id.lunchwed);
+        lunchthu = (TextView) this.findViewById(R.id.lunchthu);
+        lunchfri = (TextView) this.findViewById(R.id.lunchfri);
+        dinnermon = (TextView) this.findViewById(R.id.dinnermon);
+        dinnertue = (TextView) this.findViewById(R.id.dinnertue);
+        dinnerwed = (TextView) this.findViewById(R.id.dinnerwed);
+        dinnerthu = (TextView) this.findViewById(R.id.dinnerthu);
+        dinnerfri = (TextView) this.findViewById(R.id.dinnerfri);
         //dinnertext = (TextView)this.findViewById(R.id.dinner);
 
 
-
         final Handler mHandler = new Handler();
-        new Thread()
-        {
+        new Thread() {
 
-            public void run()
-            {
-                mHandler.post(new Runnable(){
+            public void run() {
+                mHandler.post(new Runnable() {
 
-                    public void run()
-                    {
+                    public void run() {
                         String loading = getString(R.string.loading);
-                        progressDialog = ProgressDialog.show(Meal.this,"",loading,true);
+                        progressDialog = ProgressDialog.show(Meal.this, "", loading, true);
                     }
                 });
-                lunchstring = MealLibrary.getMeal("goe.go.kr","J100000656","4","04","2"); //Get Lunch Menu Date
-                dinnerstring = MealLibrary.getMeal("goe.go.kr","J100000656","4","04","3"); //Get Dinner Menu Date
+                lunchstring = MealLibrary.getMeal("goe.go.kr", "J100000656", "4", "04", "2"); //Get Lunch Menu Date
+                dinnerstring = MealLibrary.getMeal("goe.go.kr", "J100000656", "4", "04", "3"); //Get Dinner Menu Date
 
 
-                mHandler.post(new Runnable()
-                {
-                    public void run()
-                    {
+                mHandler.post(new Runnable() {
+                    public void run() {
+                        TextView[] Lunch = {lunchmon, lunchtue, lunchwed, lunchthu, lunchfri};
+                        TextView[] Dinner = {dinnermon, dinnertue, dinnerwed, dinnerthu, dinnerfri};
+                        String[] Day = {getString(R.string.monday), getString(R.string.tuesday), getString(R.string.wednsday), getString(R.string.thursday), getString(R.string.friday)};
+
                         progressDialog.dismiss();
-                        lunchmon.setText(getString(R.string.monday) + ":\n" + lunchstring[1]);
-                        lunchtue.setText(getString(R.string.tuesday) + ":\n" + lunchstring[2]);
-                        lunchwed.setText(getString(R.string.wednsday) + ":\n" + lunchstring[3]);
-                        lunchthu.setText(getString(R.string.thursday) + ":\n" + lunchstring[4]);
-                        lunchfri.setText(getString(R.string.friday) + ":\n" + lunchstring[5]);
+                        for (int i = 1; i <= 5; i++) {
+                            for (int j = 0; j <= 4; j++) {
+                                if (lunchstring[i] == null) {
+                                    Lunch[j].setText(Day[j] + ":" + getString(R.string.mealnone));
+                                }
+                                if (dinnerstring[i] == null) {
+                                    Dinner[j].setText(Day[j] + ":" + getString(R.string.mealnone));
+                                } else {
+                                    lunchmon.setText(getString(R.string.monday) + ":\n" + lunchstring[1]);
+                                    lunchtue.setText(getString(R.string.tuesday) + ":\n" + lunchstring[2]);
+                                    lunchwed.setText(getString(R.string.wednsday) + ":\n" + lunchstring[3]);
+                                    lunchthu.setText(getString(R.string.thursday) + ":\n" + lunchstring[4]);
+                                    lunchfri.setText(getString(R.string.friday) + ":\n" + lunchstring[5]);
 
-                        dinnermon.setText(getString(R.string.monday) + ":\n" + dinnerstring[1]);
-                        dinnertue.setText(getString(R.string.tuesday) + ":\n" + dinnerstring[2]);
-                        dinnerwed.setText(getString(R.string.wednsday) + ":\n" + dinnerstring[3]);
-                        dinnerthu.setText(getString(R.string.thursday) + ":\n" + dinnerstring[4]);
-                        dinnerfri.setText(getString(R.string.friday) + ":\n" + dinnerstring[5]);
-                        handler.sendEmptyMessage(0);
+                                    dinnermon.setText(getString(R.string.monday) + ":\n" + dinnerstring[1]);
+                                    dinnertue.setText(getString(R.string.tuesday) + ":\n" + dinnerstring[2]);
+                                    dinnerwed.setText(getString(R.string.wednsday) + ":\n" + dinnerstring[3]);
+                                    dinnerthu.setText(getString(R.string.thursday) + ":\n" + dinnerstring[4]);
+                                    dinnerfri.setText(getString(R.string.friday) + ":\n" + dinnerstring[5]);
+                                }
+                                handler.sendEmptyMessage(0);
+                            }
+                        }
                     }
                 });
-
             }
         }.start();
     }
-
-
-
-
 }
+

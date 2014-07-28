@@ -13,7 +13,7 @@
     <string name="notices_info">Showing 15 Recent Notices from the School</string>
     <string name="noti_parents_info">Showing 15 Recent Notices for Parents from the School</string>
     <string name="schedule_info">School Schedules in This Month</string>
-
+    <string name="loading">Loading...</string>
     <string name="appsettings_apinfo_title">Application Information</string>
     <string name="appsettings_appinfo_src">Get full Sourcecode from GitHub</string>
     <string name="appsettings_docs_title">Legal Notices Documents</string>
@@ -25,9 +25,7 @@
     <string name="thursday">Thursday</string>
     <string name="friday">Friday</string>
     <string name="network_connection_warning">No network connection, Check your network connection first</string>
-
-    <stirng name="adress">145, Gumbae-ro, Sutaekdong, Guri-si, Gyeonggi-do, Korea[Click to see more on Google Maps]</stirng>
-
+    <string name="adress">145, Gumbae-ro, Sutaekdong, Guri-si, Gyeonggi-do, Korea[Click to see more on Google Maps]</string>
     <string name="transportations">버스를 이용하여 오는경우: \n51, 52, 91, 92번 버스를 타고 수택고등학교 정문 옆 횡단보도에서 하차\n걸어서 오는 경우: \n검배사거리에서 구리타워 방향</string>
     <string name="location">오시는 길</string>
     <string name="contact">학교와 연락하기</string>
@@ -136,4 +134,6 @@
     <string name="title_activity_doc__contributors">CONTRIBUTORS</string>
 
     <string name="action_settings">sex</string>
+    <string name="mealnone">\n급식정보가 존재하지 않습니다.\n(휴일, 재량휴업일, 방학 등등의 이유로 존재하지 않습니다.)</string>
+    <string name="copyright">Copyright@graduation in 2016 KimByoungJune</string>
 </resources>

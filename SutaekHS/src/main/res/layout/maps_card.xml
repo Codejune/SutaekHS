@@ -26,19 +26,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:id="@+id/imageView"
         android:src="@drawable/map"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:id="@+id/imageView"
         android:scaleType="fitXY"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/address"
-        android:id="@+id/textView"
-        android:layout_below="@+id/imageView"
+        android:text="@string/adress"
         android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView"
         android:textColor="#000000"/>
 
 

@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/location"
-            android:id="@+id/textView3"
             android:textColor="#000000"/>
         <include
             android:layout_width="wrap_content"
@@ -35,10 +34,9 @@
         <TextView
             android:layout_marginTop="10dp"
             android:padding="10dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/transportations"
-            android:id="@+id/textView"
             android:background="@drawable/card_no_border"
             android:textColor="#000000"/>
         <TextView
@@ -49,7 +47,6 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/contact"
-            android:id="@+id/textView3"
             android:textColor="#000000"/>
         <TextView
             android:layout_marginTop="10dp"
@@ -57,7 +54,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/school_office"
-            android:id="@+id/school_office"
             android:background="@drawable/card_no_border"
             android:textColor="#000000"/>
 
@@ -67,7 +63,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/administration_department"
-            android:id="@+id/admin_depart"
             android:background="@drawable/card_no_border"
             android:textColor="#000000"/>
         <TextView
@@ -76,7 +71,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/fax"
-            android:id="@+id/fax"
             android:background="@drawable/card_no_border"
             android:textColor="#000000"/>
         <TextView

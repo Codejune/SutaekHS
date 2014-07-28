@@ -4,6 +4,7 @@
     <string name="app_name">수택고등학교</string>
     <string name="notices">공지사항</string>
     <string name="meal">급식정보</string>
+    <string name="home">메인</string>
     <string name="schoolinfo">학교정보</string>
     <string name="schedule">학사일정</string>
     <string name="schoolintro">학교소개</string>
@@ -25,7 +26,7 @@
     <string name="friday">금요일</string>
     <string name="loading">불러오는 중...</string>
     <string name="network_connection_warning">네트워크에 연결되어 있지 않습니다, 네트워크 연결을 먼저 확인하세요.</string>
-    <string name="address">경기도 구리시 수택동 검배로 145 [Google Maps에서 보려면 클릭]</string>
+    <string name="adress">경기도 구리시 수택동 검배로 145 [Google Maps에서 보려면 클릭]</string>
     <string name="transportations">버스를 이용하여 오는경우:\n51, 52, 91, 92번 버스를 타고 수택고등학교 정문 옆 횡단보도에서 하차\n걸어서 오는 경우: \n검배사거리에서 구리타워 방향</string>
     <string name="location">오시는 길</string>
     <string name="contact">학교와 연락하기</string>
@@ -128,4 +129,11 @@
         \n-한자검정, 한국사능력검정, 일본어능력시험, 영어 인증제 및 토익시험등
         \n-컴퓨터 관련 자격증 취득(기능사 시험)
     </string>
+    <string name="mealnone">\n급식정보가 존재하지 않습니다.\n(휴일, 재량휴업일, 방학 등등의 이유로 존재하지 않습니다.)</string>
+    <string name="title_activity_doc__readme">README</string>
+    <string name="title_activity_doc__notices">NOTICES</string>
+    <string name="title_activity_doc__copying">COPYING</string>
+    <string name="title_activity_doc__contributors">CONTRIBUTORS</string>
+    <string name="action_settings">sex</string>
+    <string name="copyright">Copyright@2016학년도 수택고등학교 졸업예정자 김병준</string>
 </resources>

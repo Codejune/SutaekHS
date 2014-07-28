@@ -44,6 +44,7 @@ public class Schedule extends ActionBarActivity {
         setContentView(R.layout.activity_schedule);
         final ListView listview = (ListView) findViewById(R.id.listView);
 
+        // 통신 체크
         cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
         mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
@@ -78,11 +79,16 @@ public class Schedule extends ActionBarActivity {
                     schedulearray = new ArrayList<String>();
                     dayarray = new ArrayList<String>();
                     Document doc = Jsoup.connect("http://www.sutaek.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1").get();
-
                     Elements rawdaydata = doc.select(".listDay"); //Get contents from the class,"listDay"
+
+                    // ListView에 추가
                     for (Element el : rawdaydata) {
                         String daydata = el.text();
-                        dayarray.add(daydata); // add value to ArrayList
+                        if(daydata == "") {
+                            daydata = null;
+                        } else {
+                            dayarray.add(daydata); // add value to ArrayList
+                        }
                     }
                     Log.d("Schedule","Parsed Day Array" + dayarray);
 
