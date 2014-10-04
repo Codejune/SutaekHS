@@ -1,7 +1,9 @@
 package com.codejune.sutaekhighschool;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -50,77 +52,74 @@ public class Notices extends ActionBarActivity {
         setContentView(R.layout.activity_notices);
         final ListView listview = (ListView) findViewById(R.id.listView);
 
-        cManager=(ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-        mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-        wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        if (!isNetworkConnected(this)) {
+            new AlertDialog.Builder(this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle("네트워크 연결").setMessage("\n네트워크 연결 상태 확인 후 다시 시도해 주십시요\n")
+                    .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    }).show();
+        } else {
 
-        if(mobile.isConnected() || wifi.isConnected()){}
-        else{
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    getString(R.string.network_connection_warning), Toast.LENGTH_LONG);
-            finish();
-        }
+            final Handler mHandler = new Handler();
+            new Thread() {
 
-        final Handler mHandler = new Handler();
-        new Thread()
-        {
+                public void run() {
 
-            public void run()
-            {
+                    mHandler.post(new Runnable() {
 
-                mHandler.post(new Runnable(){
+                        public void run() {
+                            String loading = getString(R.string.loading);
+                            progressDialog = ProgressDialog.show(Notices.this, "", loading, true);
+                        }
+                    });
 
-                    public void run()
-                    {
-                        String loading = getString(R.string.loading);
-                        progressDialog = ProgressDialog.show(Notices.this,"",loading,true);
+                    //Task
+
+                    //Notices URL
+                    try {
+                        titlearray = new ArrayList<String>();
+                        titleherfarray = new ArrayList<String>();
+                        Document doc = Jsoup.connect("http://www.sutaek.hs.kr/main.php?menugrp=020101&master=bbs&act=list&master_sid=1").get();
+                        Elements rawdata = doc.select(".listbody a"); //Get contents from tags,"a" which are in the class,"listbody"
+                        String titlestring = rawdata.toString();
+                        Log.i("Notices", "Parsed Strings" + titlestring);
+
+                        for (Element el : rawdata) {
+                            String titlherfedata = el.attr("href");
+                            String titledata = el.attr("title");
+                            titleherfarray.add("http://www.sutaek.hs.kr/" + titlherfedata); // add value to ArrayList
+                            titlearray.add(titledata); // add value to ArrayList
+                        }
+                        Log.i("Notices", "Parsed Link Array Strings" + titleherfarray);
+                        Log.i("Notices", "Parsed Array Strings" + titlearray);
+
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+
                     }
-                });
-
-                //Task
-
-                //Notices URL
-                try {
-                    titlearray = new ArrayList<String>();
-                    titleherfarray = new ArrayList<String>();
-                    Document doc = Jsoup.connect("http://www.sutaek.hs.kr/main.php?menugrp=020101&master=bbs&act=list&master_sid=1").get();
-                    Elements rawdata = doc.select(".listbody a"); //Get contents from tags,"a" which are in the class,"listbody"
-                    String titlestring = rawdata.toString();
-                    Log.i("Notices","Parsed Strings" + titlestring);
-
-                    for (Element el : rawdata) {
-                        String titlherfedata = el.attr("href");
-                        String titledata = el.attr("title");
-                        titleherfarray.add("http://www.sutaek.hs.kr/" + titlherfedata); // add value to ArrayList
-                        titlearray.add(titledata); // add value to ArrayList
-                    }
-                    Log.i("Notices","Parsed Link Array Strings" + titleherfarray);
-                    Log.i("Notices","Parsed Array Strings" + titlearray);
 
 
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    mHandler.post(new Runnable() {
+                        public void run() {
+                            progressDialog.dismiss();
+                            //UI Task
+                            adapter = new ArrayAdapter<String>(Notices.this,
+                                    android.R.layout.simple_list_item_1, titlearray);
+                            listview.setAdapter(adapter);
+                            listview.setOnItemClickListener(GoToWebPage);
+                            handler.sendEmptyMessage(0);
+                        }
+                    });
 
                 }
+            }.start();
 
-
-                mHandler.post(new Runnable()
-                {
-                    public void run()
-                    {
-                        progressDialog.dismiss();
-                        //UI Task
-                        adapter = new ArrayAdapter<String>(Notices.this,
-                                android.R.layout.simple_list_item_1, titlearray);
-                        listview.setAdapter(adapter);
-                        listview.setOnItemClickListener(GoToWebPage);
-                        handler.sendEmptyMessage(0);
-                    }
-                });
-
-            }
-        }.start();
-
+        }
     }
     private AdapterView.OnItemClickListener GoToWebPage = new AdapterView.OnItemClickListener()
     {
@@ -132,6 +131,23 @@ public class Notices extends ActionBarActivity {
             startActivity(gotowebpage);
         }
     };
+
+    //인터넷 연결 상태 체크
+    public boolean isNetworkConnected(Context context){
+        boolean isConnected = false;
+
+        ConnectivityManager manager =
+                (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo mobile = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        NetworkInfo wifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+
+        if (mobile.isConnected() || wifi.isConnected()){
+            isConnected = true;
+        }else{
+            isConnected = false;
+        }
+        return isConnected;
+    }
 
 
 

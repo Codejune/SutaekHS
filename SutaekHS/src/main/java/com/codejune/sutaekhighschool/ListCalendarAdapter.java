@@ -5,9 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
-import com.codejune.sutaekhighschool.R;
-
 import java.util.ArrayList;
 public class ListCalendarAdapter extends BaseAdapter {
 

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" filepath="$PROJECT_DIR$/MaterialDesign/MaterialDesign.iml" />
       <module fileurl="file://$PROJECT_DIR$/SutaekHS.iml" filepath="$PROJECT_DIR$/SutaekHS.iml" />
       <module fileurl="file://$PROJECT_DIR$/SutaekHS/SutaekHS-SutaekHS.iml" filepath="$PROJECT_DIR$/SutaekHS/SutaekHS-SutaekHS.iml" />
     </modules>

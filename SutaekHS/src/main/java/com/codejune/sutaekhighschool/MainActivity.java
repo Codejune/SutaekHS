@@ -1,10 +1,8 @@
 package com.codejune.sutaekhighschool;
+
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
@@ -27,20 +25,6 @@ public class MainActivity extends ActionBarActivity {
         View schedule = findViewById(R.id.schedule);
         View schoolintro = findViewById(R.id.schoolintro);
         View notices_parents = findViewById(R.id.notices_parents);
-
-        if( !isNetworkConnected(this) ){
-             new AlertDialog.Builder(this)
-                    .setIcon(android.R.drawable.ic_dialog_alert)
-                    .setTitle("네트워크 연결").setMessage("\n네트워크 연결 상태 확인 후 다시 시도해 주십시요\n")
-                    .setPositiveButton("확인", new DialogInterface.OnClickListener()
-                    {
-                        @Override
-                        public void onClick( DialogInterface dialog, int which )
-                        {
-                            finish();
-                        }
-                    }).show();
-        }
 
 
         notices.setOnClickListener(new OnClickListener() {
@@ -125,23 +109,5 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
-    //인터넷 연결 상태 체크
-    public boolean isNetworkConnected(Context context){
-        boolean isConnected = false;
-
-        ConnectivityManager manager =
-                (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo mobile = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-        NetworkInfo wifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-
-        if (mobile.isConnected() || wifi.isConnected()){
-            isConnected = true;
-        }else{
-            isConnected = false;
-        }
-        return isConnected;
-    }
-
 
 }

@@ -8,8 +8,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import com.codejune.sutaekhighschool.R;
-
 public class Schoolintro extends ActionBarActivity {
 
     private ViewPager mPager;

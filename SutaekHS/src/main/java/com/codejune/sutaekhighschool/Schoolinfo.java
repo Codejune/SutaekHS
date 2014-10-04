@@ -7,8 +7,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.codejune.sutaekhighschool.R;
-
 public class Schoolinfo extends ActionBarActivity {
 
     @Override
