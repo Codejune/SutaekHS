@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="materialdesign">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/SutaekHS/libs/materialdesign.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.codejune.sutaekhighschool.R;
 
-public class Appinfo extends ActionBarActivity {
+public class Appinfo extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

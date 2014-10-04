@@ -1,1 +1,1 @@
-include ':SutaekHS'
+include ':SutaekHS', ':MaterialDesign'

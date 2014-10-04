@@ -14,7 +14,7 @@ repositories {
 
 android {
     compileSdkVersion 19
-    buildToolsVersion '19.1.0'
+    buildToolsVersion '20.0.0'
 
     defaultConfig {
         minSdkVersion 8
@@ -23,9 +23,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile files('libs/jsoup-1.7.3.jar')
     compile files('libs/jericho-android.3.1.jar')
-    compile files('libs/Android_Meal_Library.jar')
     compile 'com.android.support:appcompat-v7:19.+'
+    compile files('libs/android_meal_library-5.jar.jar')
 }

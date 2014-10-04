@@ -10,9 +10,6 @@ import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.codejune.sutaekhighschool.R;
-
 import toast.library.meal.MealLibrary;
 
 public class Meal extends ActionBarActivity {
@@ -28,6 +25,8 @@ public class Meal extends ActionBarActivity {
     TextView dinnerwed;
     TextView dinnerthu;
     TextView dinnerfri;
+    String[] lmealkcal = new String[7];
+    String[] dmealkcal = new String[7];
     String[] lunchstring = new String[7];
     String[] dinnerstring = new String[7];
     ConnectivityManager cManager;
@@ -85,42 +84,46 @@ public class Meal extends ActionBarActivity {
                         progressDialog = ProgressDialog.show(Meal.this, "", loading, true);
                     }
                 });
-                lunchstring = MealLibrary.getMeal("goe.go.kr", "J100000656", "4", "04", "2"); //Get Lunch Menu Date
-                dinnerstring = MealLibrary.getMeal("goe.go.kr", "J100000656", "4", "04", "3"); //Get Dinner Menu Date
+                lunchstring = MealLibrary.getMealNew("goe.go.kr", "J100000656", "4", "04", "2"); //Get Lunch Menu Date
+                dinnerstring = MealLibrary.getMealNew("goe.go.kr", "J100000656", "4", "04", "3"); //Get Dinner Menu Date
+                lmealkcal = MealLibrary.getKcalNew("goe.go.kr", "J100000656", "4", "04", "2"); //Get Kcal Data
+                dmealkcal = MealLibrary.getKcalNew("goe.go.kr", "J100000656", "4", "04", "3"); //Get Kcal Data
 
 
                 mHandler.post(new Runnable() {
                     public void run() {
-                        TextView[] Lunch = {lunchmon, lunchtue, lunchwed, lunchthu, lunchfri};
-                        TextView[] Dinner = {dinnermon, dinnertue, dinnerwed, dinnerthu, dinnerfri};
-                        String[] Day = {getString(R.string.monday), getString(R.string.tuesday), getString(R.string.wednsday), getString(R.string.thursday), getString(R.string.friday)};
 
-                        progressDialog.dismiss();
+                        // Array로 순서화
+                        TextView[] Lunch = {null , lunchmon, lunchtue, lunchwed, lunchthu, lunchfri};
+                        TextView[] Dinner = {null , dinnermon, dinnertue, dinnerwed, dinnerthu, dinnerfri};
+                        String[] Day = {null, getString(R.string.monday), getString(R.string.tuesday), getString(R.string.wednsday), getString(R.string.thursday), getString(R.string.friday)};
+
                         for (int i = 1; i <= 5; i++) {
-                            for (int j = 0; j <= 4; j++) {
-                                if (lunchstring[i] == null) {
-                                    Lunch[j].setText(Day[j] + ":" + getString(R.string.mealnone));
-                                }
-                                if (dinnerstring[i] == null) {
-                                    Dinner[j].setText(Day[j] + ":" + getString(R.string.mealnone));
-                                } else {
-                                    lunchmon.setText(getString(R.string.monday) + ":\n" + lunchstring[1]);
-                                    lunchtue.setText(getString(R.string.tuesday) + ":\n" + lunchstring[2]);
-                                    lunchwed.setText(getString(R.string.wednsday) + ":\n" + lunchstring[3]);
-                                    lunchthu.setText(getString(R.string.thursday) + ":\n" + lunchstring[4]);
-                                    lunchfri.setText(getString(R.string.friday) + ":\n" + lunchstring[5]);
 
-                                    dinnermon.setText(getString(R.string.monday) + ":\n" + dinnerstring[1]);
-                                    dinnertue.setText(getString(R.string.tuesday) + ":\n" + dinnerstring[2]);
-                                    dinnerwed.setText(getString(R.string.wednsday) + ":\n" + dinnerstring[3]);
-                                    dinnerthu.setText(getString(R.string.thursday) + ":\n" + dinnerstring[4]);
-                                    dinnerfri.setText(getString(R.string.friday) + ":\n" + dinnerstring[5]);
-                                }
-                                handler.sendEmptyMessage(0);
-                            }
+                            Lunch[i].setText(Day[i] + ":\n" + lunchstring[i] + "\n" + lmealkcal[i] + "kcal");
+                            Dinner[i].setText(Day[i] + ":\n" + dinnerstring[i] + "\n" + dmealkcal[i] + "kcal");
+
                         }
+                        for (int i = 1; i <= 5; i++) {
+                            if (lunchstring[i].equals(" ")) {
+                                Lunch[i].setText(Day[i] + ":" + getString(R.string.mealnone));
+                            }
+                            if (dinnerstring[i].equals(" ")) {
+                                Dinner[i].setText(Day[i] + ":" + getString(R.string.mealnone));
+
+                            }
+
+                        }
+                        progressDialog.dismiss();
                     }
-                });
+
+
+
+
+
+
+                    });
+                handler.sendEmptyMessage(0);
             }
         }.start();
     }

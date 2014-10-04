@@ -24,7 +24,8 @@ import java.util.ArrayList;
 
 public class Schedule extends ActionBarActivity {
     ConnectivityManager cManager;
-    NetworkInfo mobile;    NetworkInfo wifi;
+    NetworkInfo mobile;
+    NetworkInfo wifi;
     private ProgressDialog progressDialog;
     private ArrayList<String> dayarray;
     private ArrayList<String> schedulearray;
@@ -79,16 +80,17 @@ public class Schedule extends ActionBarActivity {
                     schedulearray = new ArrayList<String>();
                     dayarray = new ArrayList<String>();
                     Document doc = Jsoup.connect("http://www.sutaek.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1").get();
-                    Elements rawdaydata = doc.select(".listDay"); //Get contents from the class,"listDay"
+                    Elements rawdaydata = doc.select(".listDay"); //Get contents from the class,"listDay
+
+                    // 날짜 공백 밀림 버그 수정
+                    if (dayarray.toString() == "" ) {
+                        dayarray.clear();
+                    }
 
                     // ListView에 추가
                     for (Element el : rawdaydata) {
                         String daydata = el.text();
-                        if(daydata == "") {
-                            daydata = null;
-                        } else {
-                            dayarray.add(daydata); // add value to ArrayList
-                        }
+                        dayarray.add(daydata); // add value to ArrayList
                     }
                     Log.d("Schedule","Parsed Day Array" + dayarray);
 
@@ -101,7 +103,6 @@ public class Schedule extends ActionBarActivity {
 
                 } catch (IOException e) {
                     e.printStackTrace();
-
                 }
 
 

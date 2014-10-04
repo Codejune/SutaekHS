@@ -11,6 +11,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+
+
 public class MainActivity extends ActionBarActivity {
 
     @Override
@@ -27,7 +29,7 @@ public class MainActivity extends ActionBarActivity {
         View notices_parents = findViewById(R.id.notices_parents);
 
         if( !isNetworkConnected(this) ){
-            new AlertDialog.Builder(this)
+             new AlertDialog.Builder(this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .setTitle("네트워크 연결").setMessage("\n네트워크 연결 상태 확인 후 다시 시도해 주십시요\n")
                     .setPositiveButton("확인", new DialogInterface.OnClickListener()
@@ -104,10 +106,9 @@ public class MainActivity extends ActionBarActivity {
         switch (keyCode) {
             //하드웨어 뒤로가기 버튼에 따른 이벤트 설정
             case KeyEvent.KEYCODE_BACK:
-
                 new AlertDialog.Builder(this)
-                        .setTitle("어플리케이션 종료")
-                        .setMessage("어플리케이션을 종료합니다")
+                        .setTitle("종료")
+                        .setMessage("\n어플리케이션을 종료하시겠습니까?\n")
                         .setPositiveButton("예", new DialogInterface.OnClickListener() {
 
                             @Override
