@@ -1,80 +1,237 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<com.gc.materialdesign.views.ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:background="#e5e5e5"
     >
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="148dp" >
 
-    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-        android:orientation="horizontal"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="128dp"
+            android:background="#ffED674D"
+            android:paddingBottom="20dp">
 
-        <LinearLayout android:layout_width="0dp" android:layout_height="fill_parent"
-            android:layout_weight="2"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp">
-            <!-- child views -->
-            <include
-                layout="@layout/notices_cover"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/notices"
-                />
-            <include
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                layout="@layout/schoolinfo_cover"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/schoolinfo"
-                android:layout_marginTop="10dp"/>
-            <include
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                layout="@layout/schoolintro_cover"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/schoolintro"
-                android:layout_marginTop="10dp"/>
-
-            <include
-                layout="@layout/meal_cover"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/meal"
-                android:layout_marginTop="10dp"
-                />
-
-            <include
-                layout="@layout/notices_parents_cover"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/notices_parents"
-                android:layout_marginTop="10dp"
-                />
-
-            <include
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                layout="@layout/schedule_cover"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/schedule"
-                android:layout_marginTop="10dp"/>
-            <include
-                layout="@layout/appinfo_cover"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/info"
-                android:layout_marginTop="10dp"/>
-
+                android:layout_gravity="center|bottom"
+                android:layout_marginLeft="104dp"
+                android:text="@string/app_name"
+                android:textColor="#FFF"
+                android:layout_alignParentBottom="true"
+                android:textSize="25dp" />
         </LinearLayout>
 
+        <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="128dp"
+        android:background="#88CECECE" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="104dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:text="Application" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ffED674D" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/notice"
+        android:layout_height="64dp"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:background="@drawable/selector_list"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/notice"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="32dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:text="@string/notices" />
     </LinearLayout>
 
-</ScrollView>
+    <LinearLayout
+        android:id="@+id/notice_parent"
+        android:layout_height="64dp"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:background="@drawable/selector_list"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/notice_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:textColor="#000"
+            android:text="@string/notices_parents" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/meal"
+        android:layout_height="64dp"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:background="@drawable/selector_list"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/meal"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:textColor="#000"
+            android:text="@string/meal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/schedule"
+        android:layout_height="64dp"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:background="@drawable/selector_list">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/schedule"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:textColor="#000"
+            android:text="@string/schedule" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/schoolinfo"
+        android:layout_height="64dp"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:background="@drawable/selector_list"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/schoolinfo"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:textColor="#000"
+            android:text="@string/schoolinfo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/schoolintro"
+        android:layout_height="64dp"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:background="@drawable/selector_list"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/schoolintro"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:textColor="#000"
+            android:text="@string/schoolintro" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/appinfo"
+        android:layout_height="64dp"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:background="@drawable/selector_list"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/info"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:textColor="#000"
+            android:text="@string/info" />
+    </LinearLayout>
+    </LinearLayout>
+
+</com.gc.materialdesign.views.ScrollView>

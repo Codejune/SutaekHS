@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codejune.sutaekhighschool"
-    android:versionCode="8"
-    android:versionName="2.2.2" >
+    android:versionCode="9"
+    android:versionName="3.0" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -21,7 +21,8 @@
 
         <activity
             android:name="com.codejune.sutaekhighschool.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -78,7 +79,7 @@
         </activity>
         <activity
             android:name="com.codejune.sutaekhighschool.Notices_Parents"
-            android:label="@string/title_activity_notices_parents"
+            android:label="@string/notices_parents"
             android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

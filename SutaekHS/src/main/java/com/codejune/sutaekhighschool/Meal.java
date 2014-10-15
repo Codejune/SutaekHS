@@ -30,10 +30,6 @@ public class Meal extends ActionBarActivity {
     String[] dmealkcal = new String[7];
     String[] lunchstring = new String[7];
     String[] dinnerstring = new String[7];
-    ConnectivityManager cManager;
-    NetworkInfo mobile;
-    NetworkInfo wifi;
-
 
     private final Handler handler = new Handler() {
         @Override

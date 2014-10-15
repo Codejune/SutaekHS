@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<com.gc.materialdesign.views.ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#e5e5e5">
 
-<LinearLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
@@ -13,121 +13,122 @@
         android:layout_marginRight="10dp"
         android:paddingBottom="20dp">
 
-    <TextView
-        android:layout_marginTop="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/appsettings_apinfo_title"
-        android:textColor="#000000"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/appsettings_apinfo_title"
+            android:textColor="#000000"/>
 
-    <TextView
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Version of the App"
-        android:id="@+id/version"
-        android:textColor="#000000"
-        android:textSize="10dp"
-        android:background="@drawable/card_no_border"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Version of the App"
+            android:id="@+id/version"
+            android:textColor="#000000"
+            android:textSize="10dp"
+            android:background="@drawable/card_no_border"/>
 
-    <TextView
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/appsettings_appinfo_src"
-        android:id="@+id/src"
-        android:textColor="#000000"
-        android:textSize="10dp"
-        android:background="@drawable/card_no_border"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/appsettings_appinfo_src"
+            android:id="@+id/src"
+            android:textColor="#000000"
+            android:textSize="10dp"
+            android:background="@drawable/card_no_border"/>
 
-    <TextView
-        android:layout_marginTop="20dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/appsettings_docs_title"
-        android:textColor="#000000"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/appsettings_docs_title"
+            android:textColor="#000000"/>
 
-    <TextView
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="README"
-        android:id="@+id/readme"
-        android:textColor="#000000"
-        android:textSize="10dp"
-        android:background="@drawable/card_no_border"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="README"
+            android:id="@+id/readme"
+            android:textColor="#000000"
+            android:textSize="10dp"
+            android:background="@drawable/card_no_border"/>
 
-    <TextView
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="NOTICES"
-        android:id="@+id/notices"
-        android:textColor="#000000"
-        android:textSize="10dp"
-        android:background="@drawable/card_no_border"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="NOTICES"
+            android:id="@+id/notices"
+            android:textColor="#000000"
+            android:textSize="10dp"
+            android:background="@drawable/card_no_border"/>
 
-    <TextView
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="COPYING"
-        android:id="@+id/copying"
-        android:textColor="#000000"
-        android:textSize="10dp"
-        android:background="@drawable/card_no_border"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="COPYING"
+            android:id="@+id/copying"
+            android:textColor="#000000"
+            android:textSize="10dp"
+            android:background="@drawable/card_no_border"/>
 
-    <TextView
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="CONTRIBUTORS"
-        android:id="@+id/contrubutors"
-        android:textColor="#000000"
-        android:textSize="10dp"
-        android:background="@drawable/card_no_border"/>
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="CONTRIBUTORS"
+            android:id="@+id/contrubutors"
+            android:textColor="#000000"
+            android:textSize="10dp"
+            android:background="@drawable/card_no_border"/>
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="right|bottom"
+            android:layout_marginTop="5dp"
             android:textSize="8dp"
             android:text="@string/copyright"/>
     </LinearLayout>
-</ScrollView>
+</com.gc.materialdesign.views.ScrollView>

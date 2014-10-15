@@ -136,6 +136,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:layout_height="wrap_content"
             android:text="@string/our_philosophy_sub"
             android:layout_centerHorizontal="true"
+            android:gravity="center"
             android:background="@drawable/card_no_border"
             android:padding="10dp"
             android:textColor="#000000"/>

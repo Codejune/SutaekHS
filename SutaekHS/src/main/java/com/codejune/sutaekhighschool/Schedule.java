@@ -20,9 +20,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Schedule extends ActionBarActivity {
-    ConnectivityManager cManager;
-    NetworkInfo mobile;
-    NetworkInfo wifi;
+
     private ProgressDialog progressDialog;
     private ArrayList<String> dayarray;
     private ArrayList<String> schedulearray;
@@ -117,7 +115,7 @@ public class Schedule extends ActionBarActivity {
     //인터넷 연결 상태 체크
     public boolean isNetworkConnected(Context context){
         boolean isConnected = false;
-
+        
         ConnectivityManager manager =
                 (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo mobile = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);

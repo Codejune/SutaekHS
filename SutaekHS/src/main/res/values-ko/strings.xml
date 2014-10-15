@@ -9,7 +9,7 @@
     <string name="schedule">학사일정</string>
     <string name="schoolintro">학교소개</string>
     <string name="info">앱 정보</string>
-    <string name="title_activity_notices_parents">가정통신문</string>
+    <string name="notices_parents">가정통신문</string>
     <string name="appsettings_apinfo_title">앱 정보</string>
     <string name="appsettings_appinfo_src">개발자 Github로 가기</string>
     <string name="appsettings_docs_title">법적 고지사항 문서</string>

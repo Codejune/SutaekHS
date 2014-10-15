@@ -25,9 +25,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Notices_Parents extends ActionBarActivity {
-    ConnectivityManager cManager;
-    NetworkInfo mobile;
-    NetworkInfo wifi;
+
     private ProgressDialog progressDialog;
     private ArrayList<String> titlearray;
     private ArrayList<String> titleherfarray;

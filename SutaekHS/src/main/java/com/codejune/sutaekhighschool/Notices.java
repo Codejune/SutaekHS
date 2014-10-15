@@ -17,22 +17,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import com.codejune.sutaekhighschool.R;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class Notices extends ActionBarActivity {
-    ConnectivityManager cManager;
-    NetworkInfo mobile;
-    NetworkInfo wifi;
+
     private ProgressDialog progressDialog;
     private ArrayList<String> titlearray;
     private ArrayList<String> titleherfarray;

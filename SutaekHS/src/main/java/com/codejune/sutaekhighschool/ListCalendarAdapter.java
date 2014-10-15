@@ -1,4 +1,5 @@
 package com.codejune.sutaekhighschool;
+
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;

@@ -4,7 +4,7 @@
     <string name="app_name">Sutaek High School</string>
     <string name="home">Home</string>
     <string name="notices">Notices</string>
-    <string name="title_activity_notices_parents">Notices for Parents</string>
+    <string name="notices_parents">Notices for Parents</string>
     <string name="meal">Meal Chart</string>
     <string name="schoolinfo">School Informations</string>
     <string name="schedule">Schedule</string>
@@ -84,7 +84,7 @@
     <string name="our_imagin">가르치는 기쁨, 배우는 즐거움</string>
     <string name="our_imagin_sub_1">교사상 : 미래와 전통을 창조하는 학교, 희망의교 학교
     \n학생상 : 스스로 공부하는 능력있는 학생, 꿈을 키우는 학생
-   \n교사상 : 품위 있고 존경 받는 교사, 능력있는 교</string>
+   \n교사상 : 품위 있고 존경 받는 교사, 능력있는 교사</string>
 
     <string name="our_philosophy">본교 교육이념</string>
     <string name="our_philosophy_sub">미래에 도전하는 창의적인 민주시민 육성</string>

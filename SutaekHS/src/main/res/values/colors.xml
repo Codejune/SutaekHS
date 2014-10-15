@@ -2,4 +2,5 @@
 <resources>
     <color name="pressed">#CCED674D</color>
     <color name="public_color">#ffED674D</color>
+    <color name="green">#00FF00</color>
 </resources>

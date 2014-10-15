@@ -2,13 +2,13 @@ package com.codejune.sutaekhighschool;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+
 
 public class Appinfo extends Activity {
 
@@ -18,10 +18,6 @@ public class Appinfo extends Activity {
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_appinfo);
 
-        // Load Preference Value
-        SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE);
-        Boolean Toggle_Boolean = pref.getBoolean("toggledata", false);
-        Boolean Toggle_Noti = pref.getBoolean("notitoggle", false);
         //Get app version name from Manifest
         String app_ver = null;
         try {
@@ -84,8 +80,6 @@ public class Appinfo extends Activity {
             public void onStop(){
         super.onStop();
 
-        SharedPreferences pref = getSharedPreferences("pref", Activity.MODE_PRIVATE); // Save UI State
-        SharedPreferences.Editor editor = pref.edit(); // Load Editor
     }
     protected void onDestroy(){
         super.onDestroy();
