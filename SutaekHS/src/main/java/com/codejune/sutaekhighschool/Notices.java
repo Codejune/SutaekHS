@@ -1,5 +1,6 @@
 package com.codejune.sutaekhighschool;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -11,7 +12,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,7 +24,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Notices extends ActionBarActivity {
+public class Notices extends Activity {
 
     private ProgressDialog progressDialog;
     private ArrayList<String> titlearray;
@@ -43,11 +43,12 @@ public class Notices extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_notices);
+        getActionBar().setDisplayShowHomeEnabled(false);
         final ListView listview = (ListView) findViewById(R.id.listView);
 
         if (!isNetworkConnected(this)) {
             new AlertDialog.Builder(this)
-                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setIcon(R.drawable.ic_error)
                     .setTitle("네트워크 연결").setMessage("\n네트워크 연결 상태 확인 후 다시 시도해 주십시요\n")
                     .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                         @Override

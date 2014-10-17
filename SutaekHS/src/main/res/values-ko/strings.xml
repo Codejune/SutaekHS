@@ -3,13 +3,14 @@
 
     <string name="app_name">수택고등학교</string>
     <string name="notices">공지사항</string>
-    <string name="meal">급식정보</string>
+    <string name="meal">급식 정보</string>
     <string name="home">메인</string>
-    <string name="schoolinfo">학교정보</string>
-    <string name="schedule">학사일정</string>
-    <string name="schoolintro">학교소개</string>
-    <string name="info">앱 정보</string>
-    <string name="notices_parents">가정통신문</string>
+    <string name="allmenu">전체 메뉴 보기</string>
+    <string name="schoolinfo">수택고 정보</string>
+    <string name="schedule">학사 일정</string>
+    <string name="schoolintro">수택고에 대해서</string>
+    <string name="info">이 앱에 대해서</string>
+    <string name="notices_parents">학부모 공지사항</string>
     <string name="appsettings_apinfo_title">앱 정보</string>
     <string name="appsettings_appinfo_src">개발자 Github로 가기</string>
     <string name="appsettings_docs_title">법적 고지사항 문서</string>
@@ -17,13 +18,8 @@
     <string name="noti_parents_info">학교로부터의 최근 15개 가정통신문</string>
     <string name="schedule_info">이번달 학사일정</string>
 
-    <string name="lunch">중식</string>
-    <string name="dinner">석식</string>
-    <string name="monday">월요일</string>
-    <string name="tuesday">화요일</string>
-    <string name="wednsday">수요일</string>
-    <string name="thursday">목요일</string>
-    <string name="friday">금요일</string>
+    <string name="lunch">점심</string>
+    <string name="dinner">저녁</string>
     <string name="loading">불러오는 중...</string>
     <string name="network_connection_warning">네트워크에 연결되어 있지 않습니다, 네트워크 연결을 먼저 확인하세요.</string>
     <string name="adress">경기도 구리시 수택동 검배로 145 [Google Maps에서 보려면 클릭]</string>
@@ -55,7 +51,7 @@
         \n-교육과정과 교육시설의 획기적 변화에 대한 공감대 형성
         \n-교사의 수업 전문성을 실현할 수 있는 교과교실 환경 조성</string>
 
-    <string name="homepage">홈페이지 방문(sutaek.hs.kr)</string>
+    <string name="homepage">학교 웹사이트로 이동</string>
     <string name="school_symbol">학교상징</string>
     <string name="goal_edu">교육목표</string>
     <string name="fe_eb">노력중점 및 특색사업</string>
@@ -129,11 +125,10 @@
         \n-한자검정, 한국사능력검정, 일본어능력시험, 영어 인증제 및 토익시험등
         \n-컴퓨터 관련 자격증 취득(기능사 시험)
     </string>
-    <string name="mealnone">\n급식정보가 존재하지 않습니다.\n(휴일, 재량휴업일, 방학 등등의 이유로 존재하지 않습니다.)</string>
+    <string name="mealnone">급식정보가 존재하지 않습니다.\n(공휴일, 학력고사 등의 이유로 존재하지 않습니다.)</string>
     <string name="title_activity_doc__readme">README</string>
     <string name="title_activity_doc__notices">NOTICES</string>
     <string name="title_activity_doc__copying">COPYING</string>
     <string name="title_activity_doc__contributors">CONTRIBUTORS</string>
-    <string name="action_settings">sex</string>
     <string name="copyright">Copyright@2016학년도 수택고등학교 졸업예정자 김병준</string>
 </resources>

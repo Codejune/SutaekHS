@@ -1,14 +1,14 @@
 package com.codejune.sutaekhighschool;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 
-public class Schoolintro extends ActionBarActivity {
+public class Schoolintro extends Activity {
 
     private ViewPager mPager;
 
@@ -17,6 +17,7 @@ public class Schoolintro extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_schoolintro);
+        getActionBar().setDisplayShowHomeEnabled(false);
 
         mPager = (ViewPager)findViewById(R.id.pager);
         mPager.setAdapter(new PagerAdapterClass(getApplicationContext()));

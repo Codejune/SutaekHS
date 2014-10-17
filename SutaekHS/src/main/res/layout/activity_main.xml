@@ -1,73 +1,52 @@
-<com.gc.materialdesign.views.ScrollView
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="#e5e5e5"
-    >
+    android:background="@color/background">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="148dp" >
+        android:layout_height="0px"
+        android:layout_weight="6">
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="128dp"
-            android:background="#ffED674D"
-            android:paddingBottom="20dp">
+            android:layout_height="fill_parent"
+            android:background="@drawable/truth">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|bottom"
-                android:layout_marginLeft="104dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="72dp"
+                android:gravity="center"
                 android:text="@string/app_name"
                 android:textColor="#FFF"
-                android:layout_alignParentBottom="true"
                 android:textSize="25dp" />
         </LinearLayout>
-
-        <View
-        android:layout_width="fill_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="128dp"
-        android:background="#88CECECE" />
-
     </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="48dp"
-        android:layout_marginLeft="104dp" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:textColor="#000"
-            android:text="Application" />
-
         <View
             android:layout_width="fill_parent"
-            android:layout_height="1dp"
+            android:layout_height="2dp"
             android:layout_alignParentBottom="true"
-            android:background="#ffED674D" />
-    </RelativeLayout>
-
+            android:background="#88CECECE" />
     <LinearLayout
-        android:id="@+id/notice"
-        android:layout_height="64dp"
+        android:id="@+id/homepage"
+        android:layout_height="0px"
         android:layout_width="fill_parent"
+        android:layout_weight="1.5"
         android:clickable="true"
         android:background="@drawable/selector_list"
         >
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:src="@drawable/notice"
             android:layout_centerVertical="true"
@@ -78,21 +57,30 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|left"
             android:layout_marginLeft="32dp"
+            android:textSize="16dp"
             android:layout_centerVertical="true"
             android:textColor="#000"
-            android:text="@string/notices" />
+            android:text="@string/homepage" />
     </LinearLayout>
 
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="114dp"
+            android:background="#cfcfcf" />
+
     <LinearLayout
-        android:id="@+id/notice_parent"
-        android:layout_height="64dp"
+        android:id="@+id/allmenu"
+        android:layout_height="0px"
         android:layout_width="fill_parent"
+        android:layout_weight="1.5"
         android:clickable="true"
         android:background="@drawable/selector_list"
         >
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:src="@drawable/notice_parent"
             android:layout_centerVertical="true"
@@ -104,134 +92,20 @@
             android:layout_gravity="center|left"
             android:layout_centerVertical="true"
             android:layout_marginLeft="32dp"
+            android:textSize="16dp"
             android:textColor="#000"
-            android:text="@string/notices_parents" />
+            android:text="@string/allmenu" />
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/meal"
-        android:layout_height="64dp"
-        android:layout_width="fill_parent"
-        android:clickable="true"
-        android:background="@drawable/selector_list"
-        >
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/meal"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"
-            android:textColor="#000"
-            android:text="@string/meal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/schedule"
-        android:layout_height="64dp"
-        android:layout_width="fill_parent"
-        android:clickable="true"
-        android:background="@drawable/selector_list">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/schedule"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"
-            android:textColor="#000"
-            android:text="@string/schedule" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/schoolinfo"
-        android:layout_height="64dp"
-        android:layout_width="fill_parent"
-        android:clickable="true"
-        android:background="@drawable/selector_list"
-        >
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/schoolinfo"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"
-            android:textColor="#000"
-            android:text="@string/schoolinfo" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/schoolintro"
-        android:layout_height="64dp"
-        android:layout_width="fill_parent"
-        android:clickable="true"
-        android:background="@drawable/selector_list"
-        >
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/schoolintro"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"
-            android:textColor="#000"
-            android:text="@string/schoolintro" />
-    </LinearLayout>
-
-    <LinearLayout
+        </LinearLayout>
+    <com.gc.materialdesign.views.ButtonFloat
         android:id="@+id/appinfo"
-        android:layout_height="64dp"
-        android:layout_width="fill_parent"
-        android:layout_gravity="center"
-        android:clickable="true"
-        android:background="@drawable/selector_list"
-        >
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/info"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"
-            android:textColor="#000"
-            android:text="@string/info" />
-    </LinearLayout>
-    </LinearLayout>
-
-</com.gc.materialdesign.views.ScrollView>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="155dp"
+        android:background="@color/public_color"
+        materialdesign:animate="true"
+        materialdesign:icon="@drawable/ic_action_new" />
+</RelativeLayout>

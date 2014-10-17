@@ -1,81 +1,44 @@
 package com.codejune.sutaekhighschool;
 
-import com.gc.materialdesign.views.ButtonFloatSmall;
 import com.gc.materialdesign.widgets.Dialog;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
 
 
 public class MainActivity extends Activity {
 
-    int backgroundColor = Color.parseColor("#ffED674D");
-    ButtonFloatSmall buttonSelectColor;
 
     @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
 
-        findViewById(R.id.notice).setOnClickListener(new OnClickListener() {
+        findViewById(R.id.homepage).setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this,Notices.class);
-                intent.putExtra("BACKGROUND", backgroundColor);
-                startActivity(intent);
+                Intent src = new Intent(Intent.ACTION_VIEW);
+                src.setData(Uri.parse(
+                        "http://sutaek.hs.kr"
+                ));
+                startActivity(src);
             }
         });
-        findViewById(R.id.notice_parent).setOnClickListener(new OnClickListener() {
+        findViewById(R.id.allmenu).setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this,Notices_Parents.class);
-                intent.putExtra("BACKGROUND", backgroundColor);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.meal).setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this,Meal.class);
-                intent.putExtra("BACKGROUND", backgroundColor);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.schedule).setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this,Schedule.class);
-                intent.putExtra("BACKGROUND", backgroundColor);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.schoolinfo).setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this,Schoolinfo.class);
-                intent.putExtra("BACKGROUND", backgroundColor);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.schoolintro).setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this,Schoolintro.class);
-                intent.putExtra("BACKGROUND", backgroundColor);
+                Intent intent = new Intent(MainActivity.this,SubActivity.class);
                 startActivity(intent);
             }
         });
@@ -84,7 +47,6 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this,Appinfo.class);
-                intent.putExtra("BACKGROUND", backgroundColor);
                 startActivity(intent);
             }
         });
@@ -122,6 +84,24 @@ public class MainActivity extends Activity {
                 break;
         }
         return super.onKeyDown(keyCode, event);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.activity_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

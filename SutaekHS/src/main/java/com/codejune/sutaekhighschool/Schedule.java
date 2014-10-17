@@ -1,5 +1,6 @@
 package com.codejune.sutaekhighschool;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -9,8 +10,9 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -19,7 +21,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Schedule extends ActionBarActivity {
+public class Schedule extends Activity {
 
     private ProgressDialog progressDialog;
     private ArrayList<String> dayarray;
@@ -38,11 +40,12 @@ public class Schedule extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_schedule);
+        getActionBar().setDisplayShowHomeEnabled(false);
         final ListView listview = (ListView) findViewById(R.id.listView);
 
         if (!isNetworkConnected(this)) {
             new AlertDialog.Builder(this)
-                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setIcon(R.drawable.ic_error)
                     .setTitle("네트워크 연결").setMessage("\n네트워크 연결 상태 확인 후 다시 시도해 주십시요\n")
                     .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                         @Override
@@ -115,7 +118,7 @@ public class Schedule extends ActionBarActivity {
     //인터넷 연결 상태 체크
     public boolean isNetworkConnected(Context context){
         boolean isConnected = false;
-        
+
         ConnectivityManager manager =
                 (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo mobile = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
@@ -127,5 +130,23 @@ public class Schedule extends ActionBarActivity {
             isConnected = false;
         }
         return isConnected;
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.activity_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

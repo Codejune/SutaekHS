@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codejune.sutaekhighschool"
-    android:versionCode="9"
-    android:versionName="3.0" >
+    android:versionCode="10"
+    android:versionName="3" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -17,17 +17,25 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Sutaek">
+        android:theme="@style/AppTheme">
 
         <activity
             android:name="com.codejune.sutaekhighschool.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:icon="@drawable/ic_launcher"
+            android:theme="@style/AppTheme.TranslucentActionBar"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.codejune.sutaekhighschool.SubActivity"
+            android:label="@string/allmenu"
+            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
         </activity>
         <activity
             android:name="com.codejune.sutaekhighschool.Appinfo"
@@ -40,7 +48,7 @@
         <activity
             android:name="com.codejune.sutaekhighschool.Notices"
             android:label="@string/notices"
-            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.SubActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.MainActivity" />
@@ -48,7 +56,7 @@
         <activity
             android:name="com.codejune.sutaekhighschool.Meal"
             android:label="@string/meal"
-            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.SubActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.MainActivity" />
@@ -56,7 +64,7 @@
         <activity
             android:name="com.codejune.sutaekhighschool.Schoolinfo"
             android:label="@string/schoolinfo"
-            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.SubActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.MainActivity" />
@@ -64,7 +72,7 @@
         <activity
             android:name="com.codejune.sutaekhighschool.Schedule"
             android:label="@string/schedule"
-            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.SubActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.MainActivity" />
@@ -72,7 +80,7 @@
         <activity
             android:name="com.codejune.sutaekhighschool.Schoolintro"
             android:label="@string/schoolintro"
-            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.SubActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.MainActivity" />
@@ -80,7 +88,7 @@
         <activity
             android:name="com.codejune.sutaekhighschool.Notices_Parents"
             android:label="@string/notices_parents"
-            android:parentActivityName="com.codejune.sutaekhighschool.MainActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.SubActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.MainActivity" />

@@ -1,141 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".Meal"
-    android:background="#e5e5e5">
+    android:background="@color/background"
+    tools:context=".Meal" >
 
-<LinearLayout
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="10dp"
-    android:paddingBottom="50dp"
-    android:orientation="vertical">
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/lunch"
-        android:id="@+id/lunch"
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_margin="10dp"
-        android:textColor="#000000"
-        />
+        android:orientation="vertical"
+        android:paddingBottom="50dp" >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Loading..."
-        android:id="@+id/lunchmon"
-        android:background="@drawable/card_no_border"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"/>
+        <TextView
+            android:id="@+id/lunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/lunch"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Loading..."
-        android:id="@+id/lunchtue"
-        android:background="@drawable/card_no_border"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_no_border"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Loading..."
-        android:id="@+id/lunchwed"
-        android:background="@drawable/card_no_border"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:text="月"
+                android:textColor="#000000"
+                android:textSize="20dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Loading..."
-        android:id="@+id/lunchthu"
-        android:background="@drawable/card_no_border"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"/>
+            <TextView
+                android:id="@+id/lunchmon"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingBottom="25dp"
+                android:layout_marginBottom="13dp"
+                android:text="Loading..."
+                android:textColor="#000000" />
+        </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Loading..."
-        android:id="@+id/lunchfri"
-        android:background="@drawable/card_no_border"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_no_border"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/dinner"
-        android:id="@+id/dinner"
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:text="火"
+                android:textColor="#000000"
+                android:textSize="20dp" />
 
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textColor="#000000"
-        />
+            <TextView
+                android:id="@+id/lunchtue"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingBottom="25dp"
+                android:layout_marginBottom="13dp"
+                android:text="Loading..."
+                android:textColor="#000000" />
+        </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Loading..."
-        android:id="@+id/dinnermon"
-        android:background="@drawable/card_no_border"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_no_border"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Loading..."
-        android:id="@+id/dinnertue"
-        android:background="@drawable/card_no_border"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"/>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:text="水"
+                android:textColor="#000000"
+                android:textSize="20dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Loading..."
-        android:id="@+id/dinnerwed"
-        android:background="@drawable/card_no_border"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"/>
+            <TextView
+                android:id="@+id/lunchwed"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingBottom="25dp"
+                android:layout_marginBottom="13dp"
+                android:text="Loading..."
+                android:textColor="#000000" />
+        </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Loading..."
-        android:id="@+id/dinnerthu"
-        android:background="@drawable/card_no_border"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_no_border"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Loading..."
-        android:id="@+id/dinnerfri"
-        android:background="@drawable/card_no_border"
-        android:padding="10dp"
-        android:layout_marginTop="10dp"
-        android:textColor="#000000"/>
-</LinearLayout>
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center|top"
+                android:text="木"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/lunchthu"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingBottom="25dp"
+                android:layout_marginBottom="13dp"
+                android:text="Loading..."
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_no_border"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="金"
+                android:textColor="#000000"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/lunchfri"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingBottom="25dp"
+                android:layout_marginBottom="13dp"
+                android:text="Loading..."
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/dinner"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_no_border"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:text="月"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/dinnermon"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingBottom="25dp"
+                android:layout_marginBottom="13dp"
+                android:text="Loading..."
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_no_border"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:text="火"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/dinnertue"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingBottom="25dp"
+                android:layout_marginBottom="13dp"
+                android:text="Loading..."
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_no_border"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:text="水"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/dinnerwed"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingBottom="25dp"
+                android:layout_marginBottom="13dp"
+                android:text="Loading..."
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_no_border"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:text="木"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/dinnerthu"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingBottom="25dp"
+                android:layout_marginBottom="13dp"
+                android:text="Loading..."
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_no_border"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|top"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:text="金"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/dinnerfri"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingBottom="25dp"
+                android:layout_marginBottom="13dp"
+                android:text="Loading..."
+                android:textColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+
 </ScrollView>

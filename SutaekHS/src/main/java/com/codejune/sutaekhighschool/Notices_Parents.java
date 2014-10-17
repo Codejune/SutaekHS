@@ -11,12 +11,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.actionbarsherlock.app.SherlockActivity;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -24,7 +28,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Notices_Parents extends ActionBarActivity {
+public class Notices_Parents extends SherlockActivity {
 
     private ProgressDialog progressDialog;
     private ArrayList<String> titlearray;
@@ -43,11 +47,12 @@ public class Notices_Parents extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_notices_parents);
+        getActionBar().setDisplayShowHomeEnabled(false);
         final ListView listview = (ListView) findViewById(R.id.listView);
 
         if (!isNetworkConnected(this)) {
             new AlertDialog.Builder(this)
-                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setIcon(R.drawable.ic_error)
                     .setTitle("네트워크 연결").setMessage("\n네트워크 연결 상태 확인 후 다시 시도해 주십시요\n")
                     .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                         @Override

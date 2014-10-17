@@ -1,19 +1,23 @@
 package com.codejune.sutaekhighschool;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
+
+import com.actionbarsherlock.app.SherlockActivity;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class Doc_Copying extends ActionBarActivity {
+public class Doc_Copying extends SherlockActivity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_docs);
+        overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         TextView helloTxt = (TextView)findViewById(R.id.doc);
+        getActionBar().setDisplayShowHomeEnabled(false);
         helloTxt.setText(readTxt());
     }
     private String readTxt(){

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/notice"
+        android:layout_height="0px"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:background="@drawable/selector_list"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/notice"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="32dp"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:text="@string/notices" />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="114dp"
+        android:background="#cfcfcf" />
+
+    <LinearLayout
+        android:id="@+id/notice_parent"
+        android:layout_height="0px"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:background="@drawable/selector_list"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/notice_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:text="@string/notices_parents" />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="114dp"
+        android:background="#cfcfcf" />
+
+    <LinearLayout
+        android:id="@+id/meal"
+        android:layout_height="0px"
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:background="@drawable/selector_list"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/meal"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:text="@string/meal" />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="114dp"
+        android:background="#cfcfcf" />
+
+    <LinearLayout
+        android:id="@+id/schedule"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:background="@drawable/selector_list">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/schedule"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:text="@string/schedule" />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="114dp"
+        android:background="#cfcfcf" />
+
+    <LinearLayout
+        android:id="@+id/schoolinfo"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:background="@drawable/selector_list"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/schoolinfo"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:text="@string/schoolinfo" />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="114dp"
+        android:background="#cfcfcf" />
+
+    <LinearLayout
+        android:id="@+id/schoolintro"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:background="@drawable/selector_list"
+        android:layout_marginBottom="32dp"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/schoolintro"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"
+            android:layout_marginLeft="32dp"
+            android:textColor="#000"
+            android:text="@string/schoolintro" />
+    </LinearLayout>
+
+    </LinearLayout>
+    <com.gc.materialdesign.views.ButtonFloat
+        android:id="@+id/appinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="24dp"
+        android:background="@color/public_color"
+        materialdesign:animate="true"
+        materialdesign:icon="@drawable/ic_action_new" />
+
+</RelativeLayout>
