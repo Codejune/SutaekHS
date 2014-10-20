@@ -28,14 +28,13 @@ public class Schedule extends Activity {
     private ArrayList<String> schedulearray;
     private ListCalendarAdapter adapter;
 
-    private final Handler handler = new Handler()
-    {
+    private final Handler handler = new Handler() {
         @Override
-        public void handleMessage(Message msg)
-        {
+        public void handleMessage(Message msg) {
 
         }
     };
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
@@ -46,13 +45,16 @@ public class Schedule extends Activity {
         if (!isNetworkConnected(this)) {
             new AlertDialog.Builder(this)
                     .setIcon(R.drawable.ic_error)
-                    .setTitle("네트워크 연결").setMessage("\n네트워크 연결 상태 확인 후 다시 시도해 주십시요\n")
-                    .setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    }).show();
+                    .setTitle("네트워크 연결")
+                    .setMessage("\n네트워크 연결 상태 확인 후 다시 시도해 주십시요\n")
+                    .setPositiveButton("확인",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    finish();
+                                }
+                            }).show();
         } else {
 
             final Handler mHandler = new Handler();
@@ -64,18 +66,21 @@ public class Schedule extends Activity {
 
                         public void run() {
                             String loading = getString(R.string.loading);
-                            progressDialog = ProgressDialog.show(Schedule.this, "", loading, true);
+                            progressDialog = ProgressDialog.show(Schedule.this,
+                                    "", loading, true);
                         }
                     });
 
-                    //Task
-
-                    //Notices URL
+                    // Task
+                    // Notices URL
                     try {
                         schedulearray = new ArrayList<String>();
                         dayarray = new ArrayList<String>();
-                        Document doc = Jsoup.connect("http://www.sutaek.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1").get();
-                        Elements rawdaydata = doc.select(".listDay"); //Get contents from the class,"listDay
+                        Document doc = Jsoup
+                                .connect(
+                                        "http://www.sutaek.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1")
+                                .get();
+                        Elements rawdaydata = doc.select(".listDay");
 
                         // 날짜 공백 밀림 버그 수정
                         if (dayarray.toString() == "") {
@@ -89,23 +94,25 @@ public class Schedule extends Activity {
                         }
                         Log.d("Schedule", "Parsed Day Array" + dayarray);
 
-                        Elements rawscheduledata = doc.select(".listData"); //Get contents from tags,"a" which are in the class,"ellipsis"
+                        Elements rawscheduledata = doc.select(".listData");
                         for (Element el : rawscheduledata) {
                             String scheduledata = el.text();
-                            schedulearray.add(scheduledata); // add value to ArrayList
+                            schedulearray.add(scheduledata); // add value to
+                            // ArrayList
                         }
-                        Log.d("Schedule", "Parsed Schedule Array" + schedulearray);
+                        Log.d("Schedule", "Parsed Schedule Array"
+                                + schedulearray);
 
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
 
-
                     mHandler.post(new Runnable() {
                         public void run() {
                             progressDialog.dismiss();
-                            //UI Task
-                            adapter = new ListCalendarAdapter(Schedule.this, dayarray, schedulearray);
+                            // UI Task
+                            adapter = new ListCalendarAdapter(Schedule.this,
+                                    dayarray, schedulearray);
                             listview.setAdapter(adapter);
 
                             handler.sendEmptyMessage(0);
@@ -115,22 +122,26 @@ public class Schedule extends Activity {
             }.start();
         }
     }
-    //인터넷 연결 상태 체크
-    public boolean isNetworkConnected(Context context){
+
+    // 인터넷 연결 상태 체크
+    public boolean isNetworkConnected(Context context) {
         boolean isConnected = false;
 
-        ConnectivityManager manager =
-                (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo mobile = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-        NetworkInfo wifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        ConnectivityManager manager = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo mobile = manager
+                .getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        NetworkInfo wifi = manager
+                .getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 
-        if (mobile.isConnected() || wifi.isConnected()){
+        if (mobile.isConnected() || wifi.isConnected()) {
             isConnected = true;
-        }else{
+        } else {
             isConnected = false;
         }
         return isConnected;
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

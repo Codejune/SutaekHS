@@ -12,9 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-
 public class MainActivity extends Activity {
-
 
     @SuppressLint("NewApi")
     @Override
@@ -28,9 +26,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View arg0) {
                 Intent src = new Intent(Intent.ACTION_VIEW);
-                src.setData(Uri.parse(
-                        "http://sutaek.hs.kr"
-                ));
+                src.setData(Uri.parse("http://sutaek.hs.kr"));
                 startActivity(src);
             }
         });
@@ -38,7 +34,7 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this,SubActivity.class);
+                Intent intent = new Intent(MainActivity.this, SubActivity.class);
                 startActivity(intent);
             }
         });
@@ -46,7 +42,7 @@ public class MainActivity extends Activity {
 
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this,Appinfo.class);
+                Intent intent = new Intent(MainActivity.this, Appinfo.class);
                 startActivity(intent);
             }
         });
@@ -79,12 +75,12 @@ public class MainActivity extends Activity {
                 });
                 dialog.show();
 
-
             default:
                 break;
         }
         return super.onKeyDown(keyCode, event);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

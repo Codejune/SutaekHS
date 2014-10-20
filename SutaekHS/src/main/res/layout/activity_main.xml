@@ -1,67 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="@color/background" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="0px"
-        android:layout_weight="6">
-
-        <LinearLayout
+        android:orientation="vertical" >
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="@drawable/truth">
+            android:layout_height="0px"
+            android:layout_weight="6" >
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/main" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="72dp"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+            </LinearLayout>
+        </RelativeLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="72dp"
-                android:gravity="center"
-                android:text="@string/app_name"
-                android:textColor="#FFF"
-                android:textSize="25dp" />
-        </LinearLayout>
-    </RelativeLayout>
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
             android:layout_alignParentBottom="true"
             android:background="#88CECECE" />
-    <LinearLayout
-        android:id="@+id/homepage"
-        android:layout_height="0px"
-        android:layout_width="fill_parent"
-        android:layout_weight="1.5"
-        android:clickable="true"
-        android:background="@drawable/selector_list"
-        >
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:src="@drawable/notice"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:layout_marginLeft="32dp"
-            android:textSize="16dp"
-            android:layout_centerVertical="true"
-            android:textColor="#000"
-            android:text="@string/homepage" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/homepage"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="1.5"
+            android:background="@drawable/selector_list"
+            android:clickable="true" >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp"
+                android:src="@drawable/web" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="32dp"
+                android:text="@string/homepage"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
 
         <View
             android:layout_width="fill_parent"
@@ -70,42 +68,43 @@
             android:layout_marginLeft="114dp"
             android:background="#cfcfcf" />
 
-    <LinearLayout
-        android:id="@+id/allmenu"
-        android:layout_height="0px"
-        android:layout_width="fill_parent"
-        android:layout_weight="1.5"
-        android:clickable="true"
-        android:background="@drawable/selector_list"
-        >
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:src="@drawable/notice_parent"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"/>
+        <LinearLayout
+            android:id="@+id/allmenu"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="1.5"
+            android:background="@drawable/selector_list"
+            android:clickable="true" >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="32dp"
+                android:src="@drawable/allmenu" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|left"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"
-            android:textSize="16dp"
-            android:textColor="#000"
-            android:text="@string/allmenu" />
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="32dp"
+                android:text="@string/allmenu"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
         </LinearLayout>
+    </LinearLayout>
+
     <com.gc.materialdesign.views.ButtonFloat
         android:id="@+id/appinfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="24dp"
+        android:layout_alignParentRight="true"
         android:layout_marginBottom="155dp"
+        android:layout_marginRight="24dp"
         android:background="@color/public_color"
         materialdesign:animate="true"
-        materialdesign:icon="@drawable/ic_action_new" />
+        materialdesign:icon="@drawable/info" />
+
 </RelativeLayout>

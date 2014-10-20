@@ -2,78 +2,75 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/background">
+    android:background="@color/background" >
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:paddingBottom="20dp">
-
-
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp" >
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/location"
-            android:textColor="#000000"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black" />
+
         <include
+            android:id="@+id/maps_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            layout="@layout/maps_card"
-            android:id="@+id/maps_card"
             android:layout_marginTop="10dp"
-            android:textColor="#000000"/>
+            layout="@layout/maps_card"
+            android:textColor="@color/black" />
 
         <TextView
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/transportations"
+            android:layout_marginTop="10dp"
             android:background="@drawable/card_no_border"
-            android:textColor="#000000"/>
+            android:padding="10dp"
+            android:text="@string/transportations"
+            android:textColor="@color/black" />
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/contact"
-            android:textColor="#000000"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black" />
         <TextView
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_no_border"
+            android:padding="10dp"
             android:text="@string/school_office"
-            android:background="@drawable/card_no_border"
-            android:textColor="#000000"/>
-
+            android:textColor="@color/black" />
         <TextView
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_no_border"
+            android:padding="10dp"
             android:text="@string/administration_department"
-            android:background="@drawable/card_no_border"
-            android:textColor="#000000"/>
+            android:textColor="@color/black" />
         <TextView
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/fax"
+            android:layout_marginTop="10dp"
             android:background="@drawable/card_no_border"
-            android:textColor="#000000"/>
-
+            android:padding="10dp"
+            android:text="@string/fax"
+            android:textColor="@color/black" />
     </LinearLayout>
 
 </ScrollView>

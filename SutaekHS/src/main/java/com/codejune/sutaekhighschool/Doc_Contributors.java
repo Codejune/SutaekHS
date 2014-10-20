@@ -16,19 +16,20 @@ public class Doc_Contributors extends SherlockActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_docs);
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
-        TextView helloTxt = (TextView)findViewById(R.id.doc);
+        TextView helloTxt = (TextView) findViewById(R.id.doc);
         getActionBar().setDisplayShowHomeEnabled(false);
         helloTxt.setText(readTxt());
     }
-    private String readTxt(){
-        InputStream inputStream = getResources().openRawResource(R.raw.contributors);
+
+    private String readTxt() {
+        InputStream inputStream = getResources().openRawResource(
+                R.raw.contributors);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 
         int i;
         try {
             i = inputStream.read();
-            while (i != -1)
-            {
+            while (i != -1) {
                 byteArrayOutputStream.write(i);
                 i = inputStream.read();
             }

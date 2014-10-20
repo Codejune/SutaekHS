@@ -12,6 +12,13 @@ import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 
+import com.gc.materialdesign.views.Button;
+
+import de.psdev.licensesdialog.LicensesDialog;
+import de.psdev.licensesdialog.licenses.ApacheSoftwareLicense20;
+import de.psdev.licensesdialog.licenses.License;
+import de.psdev.licensesdialog.model.Notice;
+
 public class Appinfo extends Activity {
 
     @Override
@@ -21,19 +28,20 @@ public class Appinfo extends Activity {
         setContentView(R.layout.activity_appinfo);
         getActionBar().setDisplayShowHomeEnabled(false);
 
-        //Get app version name from Manifest
+        // Get app version name from Manifest
         String app_ver = null;
         try {
-            app_ver = this.getPackageManager().getPackageInfo(this.getPackageName(), 0).versionName;
+            app_ver = this.getPackageManager().getPackageInfo(
+                    this.getPackageName(), 0).versionName;
         } catch (NameNotFoundException e) {
             e.printStackTrace();
         }
 
-        //Set app version name text
-        TextView version = (TextView)findViewById(R.id.version);
+        // Set app version name text
+        TextView version = (TextView) findViewById(R.id.version);
         version.setText("Version " + app_ver);
 
-        TextView src = (TextView)findViewById(R.id.src);
+        TextView src = (TextView) findViewById(R.id.src);
         src.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +51,7 @@ public class Appinfo extends Activity {
             }
         });
 
-        TextView readme = (TextView)findViewById(R.id.readme);
+        Button readme = (Button) findViewById(R.id.readme);
         readme.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,42 +60,40 @@ public class Appinfo extends Activity {
             }
         });
 
-        TextView notices = (TextView)findViewById(R.id.notices);
-        notices.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent notices = new Intent(Appinfo.this, Doc_Notices.class);
-                startActivity(notices);
-            }
-        });
-
-        TextView copying = (TextView)findViewById(R.id.copying);
-        copying.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent copying = new Intent(Appinfo.this, Doc_Copying.class);
-                startActivity(copying);
-            }
-        });
-
-        TextView contrubutors = (TextView)findViewById(R.id.contrubutors);
+        Button contrubutors = (Button) findViewById(R.id.contrubutors);
         contrubutors.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent contrubutors = new Intent(Appinfo.this, Doc_Contributors.class);
+                Intent contrubutors = new Intent(Appinfo.this,
+                        Doc_Contributors.class);
                 startActivity(contrubutors);
             }
         });
     }
 
-            public void onStop(){
+    public void onStop() {
         super.onStop();
 
     }
-    protected void onDestroy(){
+
+    protected void onDestroy() {
         super.onDestroy();
 
     }
+
+    public void notice(final View view) {
+        new LicensesDialog.Builder(this).setNotices(R.raw.licenses).build().show();
+    }
+
+    public void copying(final View view) {
+        final String name = "Sutaek High School Application for Android";
+        final String url = "http://kbj9704.blog.me";
+        final String copyright = "Copyright (C) 2013 ByoungJune Kim<kbj9704@gmail.com>";
+        final License license = new ApacheSoftwareLicense20();
+        final Notice notice = new Notice(name, url, copyright, license);
+        new LicensesDialog.Builder(this).setNotices(notice).build().show();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

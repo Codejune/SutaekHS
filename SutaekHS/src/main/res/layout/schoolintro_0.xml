@@ -2,99 +2,94 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/background">
+    android:background="@color/background" >
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:paddingBottom="20dp">
-
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp" >
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/truth"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/card_no_border"
             android:scaleType="fitXY"
-            android:background="@drawable/card_no_border"/>
+            android:src="@drawable/truth" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_no_border"
+            android:padding="10dp"
             android:text="@string/motto"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/card_no_border"
-            android:padding="10dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black" />
 
         <ImageView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/symbol"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_no_border"
             android:scaleType="fitXY"
-            android:background="@drawable/card_no_border"/>
+            android:src="@drawable/symbol" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_no_border"
+            android:padding="10dp"
             android:text="@string/symbol"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/card_no_border"
-            android:padding="10dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black" />
 
         <ImageView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/rose"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_no_border"
             android:scaleType="fitXY"
-            android:background="@drawable/card_no_border"/>
+            android:src="@drawable/rose" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_no_border"
+            android:padding="10dp"
             android:text="@string/flower"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/card_no_border"
-            android:padding="10dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@android:color/black"/>
+            android:textColor="@android:color/black" />
 
         <ImageView
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/pinus"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_no_border"
             android:scaleType="fitXY"
-            android:background="@drawable/card_no_border"/>
+            android:src="@drawable/pinus" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tree"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
             android:background="@drawable/card_no_border"
             android:padding="10dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@android:color/black"/>
-
-
-
-
+            android:text="@string/tree"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 
 </ScrollView>

@@ -5,38 +5,56 @@
         dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jericho-android.3.1-5076ea13595244d4d4cef5a8ce816592cbaa4783.jar"
         jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/jericho-android.3.1.jar"
         jumboMode="false"
-        revision="20.0.0"
-        sha1="b9d53e9eeea55b5b67e78a0c94e1a1ac8b357ffc"/>
-    <item
-        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/android_meal_library-5.jar-8f962c24ba89d0a3c9681a4b935aaa96598dafee.jar"
-        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/android_meal_library-5.jar.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="501fc3630600b339ae2690afc9c658e9e9d8040f"/>
-    <item
-        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/support-v4-19.1.0-1449859978de6b97e4f393063f26d6da04394031.jar"
-        jar="/Users/Codejune/Documents/AndroidSDK/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
-    <item
-        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jsoup-1.7.3-057cf23c3f5fed5e780f23260d423d24cc8084ae.jar"
-        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/jsoup-1.7.3.jar"
-        jumboMode="false"
         revision="19.1.0"
-        sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da"/>
+        sha1="b9d53e9eeea55b5b67e78a0c94e1a1ac8b357ffc"/>
     <item
         dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jericho-android.3.1-5076ea13595244d4d4cef5a8ce816592cbaa4783.jar"
         jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/jericho-android.3.1.jar"
         jumboMode="false"
-        revision="19.1.0"
+        revision="21.0.0"
         sha1="b9d53e9eeea55b5b67e78a0c94e1a1ac8b357ffc"/>
     <item
-        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/support-v4-19.1.0-1449859978de6b97e4f393063f26d6da04394031.jar"
-        jar="/Users/Codejune/Documents/AndroidSDK/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/support-v4-13.0.0-ddfe32a7c39d21f7751e22c793df476e1957be6a.jar"
+        jar="/Users/Codejune/Documents/AndroidSDK/extras/android/m2repository/com/android/support/support-v4/13.0.0/support-v4-13.0.0.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="3fe75433da602500cc71fcc1c46e5550291dd45d"/>
+    <item
+        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jsr305-3.0.0-2a102a8d7060982d2247e357eee3a078ca3e9e67.jar"
+        jar="/Users/Codejune/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948"/>
+    <item
+        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jericho-android.3.1-5076ea13595244d4d4cef5a8ce816592cbaa4783.jar"
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/jericho-android.3.1.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="b9d53e9eeea55b5b67e78a0c94e1a1ac8b357ffc"/>
+    <item
+        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/support-v4-13.0.0-ddfe32a7c39d21f7751e22c793df476e1957be6a.jar"
+        jar="/Users/Codejune/Documents/AndroidSDK/extras/android/m2repository/com/android/support/support-v4/13.0.0/support-v4-13.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="3fe75433da602500cc71fcc1c46e5550291dd45d"/>
+    <item
+        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jsoup-1.7.3-057cf23c3f5fed5e780f23260d423d24cc8084ae.jar"
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/jsoup-1.7.3.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+        sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da"/>
+    <item
+        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/android_meal_library-5.jar-8f962c24ba89d0a3c9681a4b935aaa96598dafee.jar"
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/android_meal_library-5.jar.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="501fc3630600b339ae2690afc9c658e9e9d8040f"/>
+    <item
+        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-593591b95e62c46c1cc278618b86585c8b1f7eeb.jar"
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="af64527b748983a75de9c0756e9768b56b240a49"/>
     <item
         dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/android_meal_library-5.jar-8f962c24ba89d0a3c9681a4b935aaa96598dafee.jar"
         jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/android_meal_library-5.jar.jar"
@@ -44,28 +62,34 @@
         revision="19.1.0"
         sha1="501fc3630600b339ae2690afc9c658e9e9d8040f"/>
     <item
-        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-4d9515fd67c3ea40192eae3555b101ae04ca40ad.jar"
-        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-bc2476ef8b50bcd1af7c989f1ca74be62a0f10b1.jar"
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/de.psdev.licensesdialog/licensesdialog/1.6.0/classes.jar"
         jumboMode="false"
-        revision="19.1.0"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+        revision="21.0.0"
+        sha1="e3f31c89bca185f6993db3d1c5bf90e7d4e331da"/>
     <item
-        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-646a02ddd27e2680cd623b9678477ff97147ecad.jar"
-        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/SutaekHS/dialogL/unspecified/classes.jar"
+        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jsoup-1.7.3-057cf23c3f5fed5e780f23260d423d24cc8084ae.jar"
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/jsoup-1.7.3.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da"/>
+    <item
+        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/android_meal_library-5.jar-8f962c24ba89d0a3c9681a4b935aaa96598dafee.jar"
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/android_meal_library-5.jar.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="501fc3630600b339ae2690afc9c658e9e9d8040f"/>
+    <item
+        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-593591b95e62c46c1cc278618b86585c8b1f7eeb.jar"
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/classes.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="ad13d443d103ca64f3285cd508b6d0d4bfeae82b"/>
+        sha1="af64527b748983a75de9c0756e9768b56b240a49"/>
     <item
         dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jsoup-1.7.3-057cf23c3f5fed5e780f23260d423d24cc8084ae.jar"
         jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/jsoup-1.7.3.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="ab1f22cadc2f8b514e55ba368f5128056fe304da"/>
-    <item
-        dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-4d9515fd67c3ea40192eae3555b101ae04ca40ad.jar"
-        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
 
 </pre-dex-items>

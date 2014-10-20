@@ -3,5 +3,6 @@
     <color name="pressed">#CCED674D</color>
     <color name="public_color">#ffe34f54</color>
     <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
     <color name="background">#ffe3e3e3</color>
 </resources>

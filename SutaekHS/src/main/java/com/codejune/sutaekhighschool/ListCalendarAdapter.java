@@ -7,13 +7,15 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import java.util.ArrayList;
+
 public class ListCalendarAdapter extends BaseAdapter {
 
     Activity context;
     ArrayList<String> title;
     ArrayList<String> description;
 
-    public ListCalendarAdapter(Activity context, ArrayList<String> title, ArrayList<String> description) {
+    public ListCalendarAdapter(Activity context, ArrayList<String> title,
+                               ArrayList<String> description) {
         super();
         this.context = context;
         this.title = title;
@@ -35,28 +37,23 @@ public class ListCalendarAdapter extends BaseAdapter {
         return 0;
     }
 
-
-
     private class ViewHolder {
         TextView txtViewTitle;
         TextView txtViewDescription;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent)
-    {
+    public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
-        LayoutInflater inflater =  context.getLayoutInflater();
+        LayoutInflater inflater = context.getLayoutInflater();
 
-        if (convertView == null)
-        {
+        if (convertView == null) {
             convertView = inflater.inflate(R.layout.list_canlendar_row, null);
             holder = new ViewHolder();
             holder.txtViewTitle = (TextView) convertView.findViewById(R.id.day);
-            holder.txtViewDescription = (TextView) convertView.findViewById(R.id.schedule);
+            holder.txtViewDescription = (TextView) convertView
+                    .findViewById(R.id.schedule);
             convertView.setTag(holder);
-        }
-        else
-        {
+        } else {
             holder = (ViewHolder) convertView.getTag();
         }
 

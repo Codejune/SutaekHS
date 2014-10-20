@@ -16,22 +16,26 @@ public class SubActivity extends Activity {
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         getActionBar().setDisplayShowHomeEnabled(false);
 
-        findViewById(R.id.notice).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.notice).setOnClickListener(
+                new View.OnClickListener() {
 
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(SubActivity.this, Notices.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.notice_parent).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View arg0) {
+                        Intent intent = new Intent(SubActivity.this,
+                                Notices.class);
+                        startActivity(intent);
+                    }
+                });
+        findViewById(R.id.notice_parent).setOnClickListener(
+                new View.OnClickListener() {
 
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(SubActivity.this, Notices_Parents.class);
-                startActivity(intent);
-            }
-        });
+                    @Override
+                    public void onClick(View arg0) {
+                        Intent intent = new Intent(SubActivity.this,
+                                Notices_Parents.class);
+                        startActivity(intent);
+                    }
+                });
         findViewById(R.id.meal).setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -40,39 +44,48 @@ public class SubActivity extends Activity {
                 startActivity(intent);
             }
         });
-        findViewById(R.id.schedule).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.schedule).setOnClickListener(
+                new View.OnClickListener() {
 
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(SubActivity.this, Schedule.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.schoolinfo).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View arg0) {
+                        Intent intent = new Intent(SubActivity.this,
+                                Schedule.class);
+                        startActivity(intent);
+                    }
+                });
+        findViewById(R.id.schoolinfo).setOnClickListener(
+                new View.OnClickListener() {
 
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(SubActivity.this, Schoolinfo.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.schoolintro).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View arg0) {
+                        Intent intent = new Intent(SubActivity.this,
+                                Schoolinfo.class);
+                        startActivity(intent);
+                    }
+                });
+        findViewById(R.id.schoolintro).setOnClickListener(
+                new View.OnClickListener() {
 
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(SubActivity.this, Schoolintro.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.appinfo).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View arg0) {
+                        Intent intent = new Intent(SubActivity.this,
+                                Schoolintro.class);
+                        startActivity(intent);
+                    }
+                });
+        findViewById(R.id.appinfo).setOnClickListener(
+                new View.OnClickListener() {
 
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(SubActivity.this, Appinfo.class);
-                startActivity(intent);
-            }
-        });
+                    @Override
+                    public void onClick(View arg0) {
+                        Intent intent = new Intent(SubActivity.this,
+                                Appinfo.class);
+                        startActivity(intent);
+                    }
+                });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

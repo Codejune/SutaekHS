@@ -2,153 +2,142 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/background">
+    android:background="@color/background" >
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:paddingBottom="20dp">
-
-
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:paddingBottom="20dp" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="center_horizontal"
             android:text="@string/our_goal"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#000000"/>
-
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="center_horizontal"
             android:text="@string/our_goal_desc"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#000000"/>
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_action_expand"/>
+            android:src="@drawable/ic_action_expand" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/card_no_border"
+            android:padding="10dp"
             android:text="@string/our_goal_sub_1"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/card_no_border"
-            android:padding="10dp"
-            android:textColor="@android:color/black"/>
-
+            android:textColor="@android:color/black" />
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_no_border"
+            android:padding="10dp"
             android:text="@string/our_goal_sub_2"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/card_no_border"
-            android:padding="10dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@android:color/black"/>
-
+            android:textColor="@android:color/black" />
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_no_border"
+            android:padding="10dp"
             android:text="@string/our_goal_sub_3"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/card_no_border"
-            android:padding="10dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@android:color/black"/>
-
+            android:textColor="@android:color/black" />
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_no_border"
+            android:padding="10dp"
             android:text="@string/our_goal_sub_4"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/card_no_border"
-            android:padding="10dp"
-            android:layout_marginTop="10dp"
-            android:textColor="#000000"/>
-
-
+            android:textColor="@color/black" />
         <TextView
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
             android:text="@string/our_imagin"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#000000"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_action_expand"/>
+            android:src="@drawable/ic_action_expand" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/card_no_border"
+            android:padding="10dp"
             android:text="@string/our_imagin_sub_1"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/card_no_border"
-            android:padding="10dp"
-            android:textColor="#000000"/>
-
+            android:textColor="@color/black" />
         <TextView
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
             android:text="@string/our_philosophy"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#000000"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_action_expand"/>
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/our_philosophy_sub"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:background="@drawable/card_no_border"
-            android:padding="10dp"
-            android:textColor="#000000"/>
-
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/our_activity"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#000000"/>
+            android:textColor="@color/black" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_action_expand"/>
+            android:src="@drawable/ic_action_expand" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/our_activity_sub"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/card_no_border"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/our_philosophy_sub"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="@string/our_activity"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_action_expand" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:background="@drawable/card_no_border"
             android:padding="10dp"
-            android:textColor="#000000"/>
-
+            android:text="@string/our_activity_sub"
+            android:textColor="@color/black" />
     </LinearLayout>
 
 </ScrollView>

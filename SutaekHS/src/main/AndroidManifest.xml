@@ -5,8 +5,8 @@
     android:versionName="3" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="20" />
+        android:minSdkVersion="10"
+        android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -104,14 +104,6 @@
         <activity
             android:name="com.codejune.sutaekhighschool.Doc_Notices"
             android:label="@string/title_activity_doc__notices"
-            android:parentActivityName="com.codejune.sutaekhighschool.Appinfo" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.codejune.sutaekhighschool.Appinfo" />
-        </activity>
-        <activity
-            android:name="com.codejune.sutaekhighschool.Doc_Copying"
-            android:label="@string/title_activity_doc__copying"
             android:parentActivityName="com.codejune.sutaekhighschool.Appinfo" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

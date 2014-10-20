@@ -13,7 +13,6 @@
         android:layout_margin="10dp"
         android:orientation="vertical"
         android:paddingBottom="50dp" >
-
         <TextView
             android:id="@+id/lunch"
             android:layout_width="match_parent"
@@ -21,151 +20,137 @@
             android:layout_margin="10dp"
             android:text="@string/lunch"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#000000" />
+            android:textColor="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/card_no_border"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-
+            android:orientation="horizontal" >
             <TextView
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="10dp"
-                android:layout_marginTop="8dp"
                 android:text="月"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/lunchmon"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
                 android:layout_weight="5"
                 android:paddingBottom="25dp"
-                android:layout_marginBottom="13dp"
                 android:text="Loading..."
-                android:textColor="#000000" />
+                android:textColor="@color/black" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/card_no_border"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-
+            android:orientation="horizontal" >
             <TextView
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:padding="10dp"
-                android:layout_marginTop="8dp"
                 android:text="火"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/lunchtue"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
                 android:layout_weight="5"
                 android:paddingBottom="25dp"
-                android:layout_marginBottom="13dp"
                 android:text="Loading..."
-                android:textColor="#000000" />
+                android:textColor="@color/black" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/card_no_border"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-
+            android:orientation="horizontal" >
             <TextView
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:padding="10dp"
-                android:layout_marginTop="8dp"
                 android:text="水"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/lunchwed"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
                 android:layout_weight="5"
                 android:paddingBottom="25dp"
-                android:layout_marginBottom="13dp"
                 android:text="Loading..."
-                android:textColor="#000000" />
+                android:textColor="@color/black" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/card_no_border"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-
+            android:orientation="horizontal" >
             <TextView
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
                 android:layout_marginTop="8dp"
+                android:layout_weight="1"
                 android:gravity="center|top"
+                android:padding="10dp"
                 android:text="木"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/lunchthu"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
                 android:layout_weight="5"
                 android:paddingBottom="25dp"
-                android:layout_marginBottom="13dp"
                 android:text="Loading..."
-                android:textColor="#000000" />
+                android:textColor="@color/black" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/card_no_border"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-
+            android:orientation="horizontal" >
             <TextView
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
                 android:layout_marginTop="8dp"
+                android:layout_weight="1"
                 android:gravity="center"
+                android:padding="10dp"
                 android:text="金"
-                android:textColor="#000000"
-                android:textSize="20dp"/>
-
+                android:textColor="@color/black"
+                android:textSize="20dp" />
             <TextView
                 android:id="@+id/lunchfri"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
                 android:layout_weight="5"
                 android:paddingBottom="25dp"
-                android:layout_marginBottom="13dp"
                 android:text="Loading..."
-                android:textColor="#000000" />
+                android:textColor="@color/black" />
         </LinearLayout>
 
         <TextView
@@ -178,151 +163,137 @@
             android:layout_marginTop="20dp"
             android:text="@string/dinner"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#000000" />
+            android:textColor="@color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/card_no_border"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-
+            android:orientation="horizontal" >
             <TextView
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:padding="10dp"
-                android:layout_marginTop="8dp"
                 android:text="月"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/dinnermon"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
                 android:layout_weight="5"
                 android:paddingBottom="25dp"
-                android:layout_marginBottom="13dp"
                 android:text="Loading..."
-                android:textColor="#000000" />
+                android:textColor="@color/black" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/card_no_border"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-
+            android:orientation="horizontal" >
             <TextView
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:padding="10dp"
-                android:layout_marginTop="8dp"
                 android:text="火"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/dinnertue"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
                 android:layout_weight="5"
                 android:paddingBottom="25dp"
-                android:layout_marginBottom="13dp"
                 android:text="Loading..."
-                android:textColor="#000000" />
+                android:textColor="@color/black" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/card_no_border"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-
+            android:orientation="horizontal" >
             <TextView
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:padding="10dp"
-                android:layout_marginTop="8dp"
                 android:text="水"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/dinnerwed"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
                 android:layout_weight="5"
                 android:paddingBottom="25dp"
-                android:layout_marginBottom="13dp"
                 android:text="Loading..."
-                android:textColor="#000000" />
+                android:textColor="@color/black" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/card_no_border"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-
+            android:orientation="horizontal" >
             <TextView
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:padding="10dp"
-                android:layout_marginTop="8dp"
                 android:text="木"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/dinnerthu"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
                 android:layout_weight="5"
                 android:paddingBottom="25dp"
-                android:layout_marginBottom="13dp"
                 android:text="Loading..."
-                android:textColor="#000000" />
+                android:textColor="@color/black" />
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/card_no_border"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5dp">
-
+            android:orientation="horizontal" >
             <TextView
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:padding="10dp"
-                android:layout_marginTop="8dp"
                 android:text="金"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="20dp" />
-
             <TextView
                 android:id="@+id/dinnerfri"
                 android:layout_width="0px"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
                 android:layout_weight="5"
                 android:paddingBottom="25dp"
-                android:layout_marginBottom="13dp"
                 android:text="Loading..."
-                android:textColor="#000000" />
+                android:textColor="@color/black" />
         </LinearLayout>
     </LinearLayout>
 

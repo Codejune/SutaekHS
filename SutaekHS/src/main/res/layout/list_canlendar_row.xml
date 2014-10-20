@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="0"
         android:id="@+id/day"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:background="@drawable/card_no_border"
-        android:layout_marginLeft="10dp"
-        android:textSize="15dp"
-        android:padding="5dp"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Schedule String"
-        android:id="@+id/schedule"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
         android:background="@drawable/card_no_border"
-        android:layout_alignTop="@+id/day"
-        android:layout_toRightOf="@+id/day"
+        android:padding="5dp"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="15dp" />
+    <TextView
+        android:id="@+id/schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/day"
         android:layout_marginRight="10dp"
-        android:textSize="15dp"
-        android:padding="5dp"/>
+        android:layout_toRightOf="@+id/day"
+        android:background="@drawable/card_no_border"
+        android:padding="5dp"
+        android:text="Schedule String"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="15dp" />
 
 </RelativeLayout>

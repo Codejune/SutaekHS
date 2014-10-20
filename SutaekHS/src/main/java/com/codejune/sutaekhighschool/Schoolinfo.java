@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-
 public class Schoolinfo extends Activity {
 
     @Override
@@ -20,20 +19,18 @@ public class Schoolinfo extends Activity {
         getActionBar().setDisplayShowHomeEnabled(false);
 
         View maps_card = findViewById(R.id.maps_card);
-        TextView homepage = (TextView)findViewById(R.id.homepage);
-
         maps_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent src = new Intent(Intent.ACTION_VIEW);
-                src.setData(Uri.parse(
-                        "https://maps.google.com/maps?t=m&q=수택고등학교&output=classic"
-                ));
+                src.setData(Uri
+                        .parse("https://maps.google.com/maps?t=m&q=수택고등학교&output=classic"));
                 startActivity(src);
             }
         });
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
