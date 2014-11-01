@@ -129,7 +129,7 @@
     <string name="title_activity_doc__copying">COPYING</string>
     <string name="title_activity_doc__contributors">CONTRIBUTORS</string>
 
-    <string name="action_settings">settings</string>
+    <string name="action_settings">20205 김병준</string>
     <string name="mealnone">급식정보가 존재하지 않습니다.\n(휴일, 재량휴업일, 방학 등등의 이유로 존재하지 않습니다.)</string>
     <string name="copyright">Copyright@graduation in 2016 KimByoungJune</string>
 </resources>

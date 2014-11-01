@@ -1,5 +1,6 @@
 package com.codejune.sutaekhighschool;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -19,7 +20,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.actionbarsherlock.app.SherlockActivity;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -28,7 +28,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Notices_Parents extends SherlockActivity {
+public class Notices_Parents extends Activity {
 
     private ProgressDialog progressDialog;
     private ArrayList<String> titlearray;

@@ -1,15 +1,15 @@
 package com.codejune.sutaekhighschool;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.actionbarsherlock.app.SherlockActivity;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class Doc_Readme extends SherlockActivity {
+public class Doc_Readme extends Activity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
