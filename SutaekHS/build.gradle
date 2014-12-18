@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.12.+'
+        classpath 'com.android.tools.build:gradle:1.0.0-rc1'
     }
 }
 apply plugin: 'android'
@@ -36,5 +36,5 @@ dependencies {
     compile('de.psdev.licensesdialog:licensesdialog:1.6.0') {
         exclude module: 'support-v4'
     }
-
+    compile files('libs/nineoldandroids-2.4.0.jar')
 }

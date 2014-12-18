@@ -2,6 +2,7 @@ package com.gc.materialdesign.widgets;
 
 import com.codejune.sutaekhighschool.R;
 import com.gc.materialdesign.views.ButtonFlat;
+
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
@@ -36,7 +37,10 @@ public class Dialog extends android.app.Dialog{
 	    setContentView(R.layout.dialog);
 	    
 	    this.titleTextView = (TextView) findViewById(R.id.title);
+	    setTitle(title);
+	    
 	    this.messageTextView = (TextView) findViewById(R.id.message);
+	    setMessage(message);
 	    
 	    this.buttonAccept = (ButtonFlat) findViewById(R.id.button_accept);
 	    buttonAccept.setOnClickListener(new View.OnClickListener() {

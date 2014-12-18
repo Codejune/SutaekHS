@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
             // 하드웨어 뒤로가기 버튼에 따른 이벤트 설정
             case KeyEvent.KEYCODE_BACK:
 
-                Dialog dialog = new Dialog(MainActivity.this, "Exit", "?????????");
+                Dialog dialog = new Dialog(MainActivity.this, "종료", "어플리케이션을 종료하시겠습니까?");
                 dialog.setOnAcceptButtonClickListener(new OnClickListener() {
 
                     @Override

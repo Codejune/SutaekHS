@@ -1,9 +1,7 @@
 package com.gc.materialdesign.views;
 
-import com.codejune.sutaekhighschool.R;
 import com.gc.materialdesign.utils.Utils;
 
-import android.R.interpolator;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -12,14 +10,7 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.LayerDrawable;
 import android.util.AttributeSet;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
-import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
 
 public class ProgressBarCircularIndetermininate extends CustomView {
 	
@@ -48,9 +39,9 @@ public class ProgressBarCircularIndetermininate extends CustomView {
 				setBackgroundColor(getResources().getColor(bacgroundColor));
 			}else{
 				// Color by hexadecimal
-				String background = attrs.getAttributeValue(ANDROIDXML,"background");
-				if(background != null)
-					setBackgroundColor(Color.parseColor(background));
+				int background = attrs.getAttributeIntValue(ANDROIDXML, "background", -1);
+				if (background != -1)
+					setBackgroundColor(background);
 				else
 					setBackgroundColor(Color.parseColor("#1E88E5"));
 			}
@@ -172,6 +163,8 @@ public class ProgressBarCircularIndetermininate extends CustomView {
 	// Set color of background
 	public void setBackgroundColor(int color){
 		super.setBackgroundColor(getResources().getColor(android.R.color.transparent));
+		if(isEnabled())
+			beforeBackground = backgroundColor;
 		this.backgroundColor = color;
 	}
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/public_color</item>
+        <item name="android:colorAccent">#d44246</item>
+        <item name="android:colorPrimaryDark">@color/public_darker_color</item>
+
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <item name="android:windowExitTransition">@android:transition/explode</item>
+
+        <item name="android:windowSharedElementEnterTransition">@transition/change_image</item>
+        <item name="android:windowSharedElementExitTransition">@transition/change_image</item>
+    </style>
+</resources>

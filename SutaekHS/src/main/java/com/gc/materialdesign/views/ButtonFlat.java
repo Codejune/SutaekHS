@@ -9,8 +9,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -48,7 +46,7 @@ public class ButtonFlat extends Button {
 			textButton.setText(text.toUpperCase());
 			textButton.setTextColor(backgroundColor);
 			textButton.setTypeface(null, Typeface.BOLD);
-			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+			LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
 			params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
 			textButton.setLayoutParams(params);
 			addView(textButton);
@@ -58,9 +56,10 @@ public class ButtonFlat extends Button {
 			setBackgroundColor(getResources().getColor(bacgroundColor));
 		}else{
 			// Color by hexadecimal
-			String background = attrs.getAttributeValue(ANDROIDXML,"background");
-			if(background != null)
-				setBackgroundColor(Color.parseColor(background));
+			// Color by hexadecimal
+			background = attrs.getAttributeIntValue(ANDROIDXML, "background", -1);
+			if (background != -1)
+				setBackgroundColor(background);
 		}
 	}
 	
@@ -102,7 +101,19 @@ public class ButtonFlat extends Button {
 	
 	// Set color of background
 	public void setBackgroundColor(int color){
+		backgroundColor = color;
+		if(isEnabled())
+			beforeBackground = backgroundColor;
 		textButton.setTextColor(color);
 	}
+
+
+	public TextView getTextView() {
+		return textButton;
+	}
+	
+	public String getText(){
+        	return textButton.getText().toString();
+ 	}
 
 }

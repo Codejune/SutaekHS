@@ -45,9 +45,9 @@ public class ProgressBarDetermininate extends CustomView {
 				setBackgroundColor(getResources().getColor(bacgroundColor));
 			}else{
 				// Color by hexadecimal
-				String background = attrs.getAttributeValue(ANDROIDXML,"background");
-				if(background != null)
-					setBackgroundColor(Color.parseColor(background));
+				int background = attrs.getAttributeIntValue(ANDROIDXML, "background", -1);
+				if (background != -1)
+					setBackgroundColor(background);
 				else
 					setBackgroundColor(Color.parseColor("#1E88E5"));
 			}
@@ -119,9 +119,15 @@ public class ProgressBarDetermininate extends CustomView {
 		}
 	}
 	
+	public int getProgress(){
+		return progress;
+	}
+	
 	// Set color of background
 	public void setBackgroundColor(int color){
 		this.backgroundColor = color;
+		if(isEnabled())
+			beforeBackground = backgroundColor;
 		LayerDrawable layer = (LayerDrawable) progressView.getBackground();
 		GradientDrawable shape =  (GradientDrawable) layer.findDrawableByLayerId(R.id.shape_bacground);
 		shape.setColor(color);

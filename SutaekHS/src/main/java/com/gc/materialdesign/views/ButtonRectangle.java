@@ -2,6 +2,7 @@ package com.gc.materialdesign.views;
 
 import com.codejune.sutaekhighschool.R;
 import com.gc.materialdesign.utils.Utils;
+
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -14,7 +15,10 @@ import android.widget.TextView;
 public class ButtonRectangle extends Button {
 	
 	TextView textButton;
-
+	
+	int paddingTop,paddingBottom, paddingLeft, paddingRight;
+	
+	
 	public ButtonRectangle(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		setDefaultProperties();
@@ -29,7 +33,6 @@ public class ButtonRectangle extends Button {
 		super.minHeight = 36;
 		super.background = R.drawable.background_button_rectangle;
 		super.setDefaultProperties();
-		rippleSpeed = Utils.dpToPx(3, getResources());
 	}
 	
 	
@@ -43,9 +46,10 @@ public class ButtonRectangle extends Button {
 			setBackgroundColor(getResources().getColor(bacgroundColor));
 		}else{
 			// Color by hexadecimal
-			String background = attrs.getAttributeValue(ANDROIDXML,"background");
-			if(background != null)
-				setBackgroundColor(Color.parseColor(background));
+			// Color by hexadecimal
+			background = attrs.getAttributeIntValue(ANDROIDXML, "background", -1);
+			if (background != -1)
+				setBackgroundColor(background);
 		}
 		
 		// Set Padding
@@ -93,6 +97,9 @@ public class ButtonRectangle extends Button {
 //					textView.setLayoutParams(params);
 			
 		}
+		
+		rippleSpeed = attrs.getAttributeFloatValue(MATERIALDESIGNXML,
+				"rippleSpeed", Utils.dpToPx(6, getResources()));
 	}
 	
 //	/**
@@ -130,5 +137,13 @@ public class ButtonRectangle extends Button {
 	public void setTextColor(int color){
 		textButton.setTextColor(color);
 	}
+
+	public TextView getTextView() {
+		return textButton;
+	}
+
+	public String getText(){
+        	return textButton.getText().toString();
+ 	}
 
 }

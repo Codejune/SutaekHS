@@ -8,11 +8,14 @@
     <string name="notices_parents">Notices for Parents</string>
     <string name="meal">Meal Chart</string>
     <string name="schoolinfo">School Informations</string>
+    <string name="schoolevent">School Event</string>
     <string name="schedule">Schedule</string>
     <string name="schoolintro">About the School</string>
     <string name="info">About the App</string>
     <string name="notices_info">Showing 15 Recent Notices from the School</string>
     <string name="noti_parents_info">Showing 15 Recent Notices for Parents from the School</string>
+    <string name="schoolevent_info">Showing 15 Recent School Event</string>
+    <string name="meal_info">This Week Meal List</string>
     <string name="schedule_info">School Schedules in This Month</string>
     <string name="lunch">Lunch</string>
     <string name="dinner">Dinner</string>
@@ -22,7 +25,7 @@
     <string name="appsettings_docs_title">Legal Notices Documents</string>
     <string name="network_connection_warning">No network connection, Check your network connection first</string>
     <string name="adress">145, Gumbae-ro, Sutaekdong, Guri-si, Gyeonggi-do, Korea[Click to see more on Google Maps]</string>
-    <string name="transportations">버스를 이용하여 오는경우: \n51, 52, 91, 92번 버스를 타고 수택고등학교 정문 옆 횡단보도에서 하차\n걸어서 오는 경우: \n검배사거리에서 구리타워 방향</string>
+    <string name="transportations">버스를 이용하여 오는경우:\n1. 9, 91,92,93,95번 등 탑승 -> 검배사거리 하차 (구리여고 다음정류장) -> 환경사업소 방향으로 2~3분 도보\n2. 구리방향으로 201번 탑승 -> 수택고등학교 하차 (검배사거리 다음정류장, 종점 전 정류장)\n\n전철+버스를 이용하여 오는경우:\n전철 중앙선을 타시고 구리역 -> 역 앞에서 마을버스 탑승 후 검배사거리에서 하차  -> 환경사업소 방향으로 2~3분 도보 (6번 탑승시 많이 돌아서 가나 수택고 앞에서 하차 가능)</string>
     <string name="location">오시는 길</string>
     <string name="contact">학교와 연락하기</string>
     <string name="school_office">교무실 : 031-551-0674</string>
@@ -132,4 +135,6 @@
     <string name="action_settings">20205 김병준</string>
     <string name="mealnone">급식정보가 존재하지 않습니다.\n(휴일, 재량휴업일, 방학 등등의 이유로 존재하지 않습니다.)</string>
     <string name="copyright">Copyright@graduation in 2016 KimByoungJune</string>
+    <string name="accept">ACCEPT</string>
+    <string name="cancel">CANCEL</string>
 </resources>

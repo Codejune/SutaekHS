@@ -3,7 +3,7 @@
     xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background" >
+    android:background="@color/white" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,11 +12,11 @@
         <RelativeLayout
             android:layout_width="fill_parent"
             android:layout_height="0px"
-            android:layout_weight="6" >
+            android:layout_weight="6">
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="@drawable/main" >
+                android:background="@drawable/main">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -101,8 +101,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="155dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginBottom="158dp"
+        android:layout_marginRight="18dp"
         android:background="@color/public_color"
         materialdesign:animate="true"
         materialdesign:icon="@drawable/info" />

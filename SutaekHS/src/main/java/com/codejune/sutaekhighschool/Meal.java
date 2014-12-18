@@ -2,9 +2,12 @@ package com.codejune.sutaekhighschool;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -12,7 +15,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+
+import com.gc.materialdesign.views.ButtonFlat;
+import com.gc.materialdesign.widgets.Dialog;
+
 import toast.library.meal.MealLibrary;
 
 public class Meal extends Activity {
@@ -46,6 +54,16 @@ public class Meal extends Activity {
         overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_meal);
         getActionBar().setDisplayShowHomeEnabled(false);
+        findViewById(R.id.mealinfo).setOnClickListener(
+                new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View arg0) {
+                        Dialog dialog = new Dialog(Meal.this, "알레르기 정보",
+                                "①난류\n②우유\n③메밀\n④땅콩\n⑤대두\n⑥밀\n⑦고등어\n⑧게\n⑨새우\n⑩돼지고기\n⑪복숭아\n⑫토마토\n⑬아황산염");
+                        dialog.show();
+                    }
+                });
 
         if (!isNetworkConnected(this)) {
             new AlertDialog.Builder(this)
@@ -102,10 +120,10 @@ public class Meal extends Activity {
 
                             }
                             for (int i = 1; i <= 5; i++) {
-                                if (lunchstring[i].equals(" ")) {
+                                if (lunchstring[i] == null || "".equals(lunchstring[i]) || " ".equals(lunchstring[i])) {
                                     Lunch[i].setText(getString(R.string.mealnone));
                                 }
-                                if (dinnerstring[i].equals(" ")) {
+                                if (dinnerstring[i] == null || "".equals(dinnerstring[i]) || " ".equals(dinnerstring[i])) {
                                     Dinner[i].setText(getString(R.string.mealnone));
 
                                 }

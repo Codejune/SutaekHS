@@ -36,6 +36,16 @@ public class SubActivity extends Activity {
                         startActivity(intent);
                     }
                 });
+        findViewById(R.id.schoolevent).setOnClickListener(
+                new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View arg0) {
+                        Intent intent = new Intent(SubActivity.this,
+                                SchoolEvent.class);
+                        startActivity(intent);
+                    }
+                });
         findViewById(R.id.meal).setOnClickListener(new View.OnClickListener() {
 
             @Override
