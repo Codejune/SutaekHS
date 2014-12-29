@@ -1,32 +1,27 @@
 package com.codejune.sutaekhighschool;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-
-
 import com.gc.materialdesign.views.Button;
-
 import de.psdev.licensesdialog.LicensesDialog;
 import de.psdev.licensesdialog.licenses.ApacheSoftwareLicense20;
 import de.psdev.licensesdialog.licenses.License;
 import de.psdev.licensesdialog.model.Notice;
 
-public class Appinfo extends Activity {
+public class Appinfo extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_appinfo);
-        getActionBar().setDisplayShowHomeEnabled(false);
 
         // Get app version name from Manifest
         String app_ver = null;
@@ -82,7 +77,8 @@ public class Appinfo extends Activity {
     }
 
     public void notice(final View view) {
-        new LicensesDialog.Builder(this).setNotices(R.raw.licenses).build().show();
+        new LicensesDialog.Builder(this).setNotices(R.raw.licenses).build()
+                .show();
     }
 
     public void copying(final View view) {

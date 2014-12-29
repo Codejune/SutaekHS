@@ -1,22 +1,19 @@
 package com.codejune.sutaekhighschool;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class Doc_Contributors extends Activity {
+public class Doc_Contributors extends ActionBarActivity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_docs);
-        overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         TextView helloTxt = (TextView) findViewById(R.id.doc);
-        getActionBar().setDisplayShowHomeEnabled(false);
         helloTxt.setText(readTxt());
     }
 

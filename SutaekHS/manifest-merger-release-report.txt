@@ -13,8 +13,10 @@ ADDED from AndroidManifest.xml:2:1
 		INJECTED from AndroidManifest.xml:0:0
 uses-sdk
 ADDED from AndroidManifest.xml:7:5
-MERGED from com.actionbarsherlock:actionbarsherlock:4.4.0:3:3
-MERGED from com.android.support:support-v4:21.0.0:15:5
+MERGED from com.android.support:appcompat-v7:21.0.3:15:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.android.support:support-v4:21.0.3:15:5
+MERGED from com.android.support:cardview-v7:21.0.0:15:5
 MERGED from de.psdev.licensesdialog:licensesdialog:1.6.0:23:5
 	android:targetSdkVersion
 		ADDED from AndroidManifest.xml:9:9
@@ -42,8 +44,10 @@ ADDED from AndroidManifest.xml:14:5
 		ADDED from AndroidManifest.xml:14:22
 application
 ADDED from AndroidManifest.xml:16:5
-MERGED from com.actionbarsherlock:actionbarsherlock:4.4.0:4:3
-MERGED from com.android.support:support-v4:21.0.0:16:5
+MERGED from com.android.support:appcompat-v7:21.0.3:16:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
+MERGED from com.android.support:support-v4:21.0.3:16:5
+MERGED from com.android.support:cardview-v7:21.0.0:16:5
 MERGED from de.psdev.licensesdialog:licensesdialog:1.6.0:26:5
 	android:label
 		ADDED from AndroidManifest.xml:19:9
@@ -131,47 +135,61 @@ activity#com.codejune.sutaekhighschool.Schedule
 ADDED from AndroidManifest.xml:80:9
 	android:label
 		ADDED from AndroidManifest.xml:82:13
+	android:theme
+		ADDED from AndroidManifest.xml:84:13
 	android:parentActivityName
 		ADDED from AndroidManifest.xml:83:13
 	android:name
 		ADDED from AndroidManifest.xml:81:13
 activity#com.codejune.sutaekhighschool.Schoolintro
-ADDED from AndroidManifest.xml:88:9
+ADDED from AndroidManifest.xml:89:9
 	android:label
-		ADDED from AndroidManifest.xml:90:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:91:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:92:13
 	android:name
-		ADDED from AndroidManifest.xml:89:13
+		ADDED from AndroidManifest.xml:90:13
 activity#com.codejune.sutaekhighschool.Notices_Parents
-ADDED from AndroidManifest.xml:96:9
+ADDED from AndroidManifest.xml:97:9
 	android:label
-		ADDED from AndroidManifest.xml:98:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:99:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:100:13
 	android:name
-		ADDED from AndroidManifest.xml:97:13
+		ADDED from AndroidManifest.xml:98:13
 activity#com.codejune.sutaekhighschool.Doc_Readme
-ADDED from AndroidManifest.xml:104:9
+ADDED from AndroidManifest.xml:105:9
 	android:label
-		ADDED from AndroidManifest.xml:106:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:107:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:108:13
 	android:name
-		ADDED from AndroidManifest.xml:105:13
+		ADDED from AndroidManifest.xml:106:13
 activity#com.codejune.sutaekhighschool.Doc_Notices
-ADDED from AndroidManifest.xml:112:9
+ADDED from AndroidManifest.xml:113:9
 	android:label
-		ADDED from AndroidManifest.xml:114:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:115:13
-	android:name
-		ADDED from AndroidManifest.xml:113:13
-activity#com.codejune.sutaekhighschool.Doc_Contributors
-ADDED from AndroidManifest.xml:120:9
-	android:label
-		ADDED from AndroidManifest.xml:122:13
 	android:parentActivityName
-		ADDED from AndroidManifest.xml:123:13
+		ADDED from AndroidManifest.xml:116:13
 	android:name
-		ADDED from AndroidManifest.xml:121:13
+		ADDED from AndroidManifest.xml:114:13
+activity#com.codejune.sutaekhighschool.Doc_Contributors
+ADDED from AndroidManifest.xml:121:9
+	android:label
+		ADDED from AndroidManifest.xml:123:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:124:13
+	android:name
+		ADDED from AndroidManifest.xml:122:13
+activity#com.codejune.sutaekhighschool.WebViewActivityNotices
+ADDED from AndroidManifest.xml:129:9
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:131:13
+	android:name
+		ADDED from AndroidManifest.xml:130:13
+activity#com.codejune.sutaekhighschool.WebViewActivityParent
+ADDED from AndroidManifest.xml:134:9
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:136:13
+	android:name
+		ADDED from AndroidManifest.xml:135:13

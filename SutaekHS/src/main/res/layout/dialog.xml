@@ -12,7 +12,10 @@
         android:background="@drawable/dialog_background"
         android:layout_centerInParent="true"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:paddingTop="36dp"
+        android:paddingLeft="36dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="36dp">
 
         <TextView
             android:id="@+id/title"
@@ -23,6 +26,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginBottom="24dp"  
             android:textColor="@color/public_color"
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceLarge" />
         <TextView
             android:id="@+id/message"
@@ -39,17 +43,18 @@
             android:gravity="right">
         
         <com.gc.materialdesign.views.ButtonFlat
-                android:id="@+id/button_cancel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#000"
-                android:text="@string/cancel" />
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:textStyle="bold"
+            android:text="@string/cancel" />
         <com.gc.materialdesign.views.ButtonFlat
-                android:id="@+id/button_accept"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/public_color"
-                android:text="@string/accept" />
+            android:id="@+id/button_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/public_color"
+            android:text="@string/accept" />
         </LinearLayout>
         
     </LinearLayout>

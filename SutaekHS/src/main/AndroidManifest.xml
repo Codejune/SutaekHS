@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codejune.sutaekhighschool"
-    android:versionCode="12"
-    android:versionName="3.1.1" >
+    android:versionCode="13"
+    android:versionName="3.2" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -17,12 +17,12 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.Sutaek_Material">
 
         <activity
             android:name="com.codejune.sutaekhighschool.MainActivity"
             android:icon="@drawable/ic_launcher"
-            android:theme="@style/AppTheme.TranslucentActionBar"
+            android:theme="@style/Theme.Sutaek_Material.Translucent"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -80,7 +80,8 @@
         <activity
             android:name="com.codejune.sutaekhighschool.Schedule"
             android:label="@string/schedule"
-            android:parentActivityName="com.codejune.sutaekhighschool.SubActivity" >
+            android:parentActivityName="com.codejune.sutaekhighschool.SubActivity"
+            android:theme="@style/Theme.Sutaek_Material.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.MainActivity" />
@@ -124,6 +125,16 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.Appinfo" />
+        </activity>
+        <activity
+            android:name=".WebViewActivityNotices"
+            android:parentActivityName="com.codejune.sutaekhighschool.Notices" >
+            android:label="@string/title_activity_web_view" >
+        </activity>
+        <activity
+            android:name=".WebViewActivityParent"
+            android:parentActivityName="com.codejune.sutaekhighschool.Notices_Parents" >
+            android:label="@string/title_activity_web_view" >
         </activity>
     </application>
 

@@ -137,4 +137,5 @@
     <string name="copyright">Copyright@graduation in 2016 KimByoungJune</string>
     <string name="accept">ACCEPT</string>
     <string name="cancel">CANCEL</string>
+    <string name="title_activity_web_view">SutaekHighSchool</string>
 </resources>

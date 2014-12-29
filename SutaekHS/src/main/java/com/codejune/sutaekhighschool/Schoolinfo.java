@@ -1,22 +1,19 @@
 package com.codejune.sutaekhighschool;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 
-public class Schoolinfo extends Activity {
+public class Schoolinfo extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        overridePendingTransition(R.anim.left_slide_in, R.anim.zoom_out);
         setContentView(R.layout.activity_schoolinfo);
-        getActionBar().setDisplayShowHomeEnabled(false);
 
         View maps_card = findViewById(R.id.maps_card);
         maps_card.setOnClickListener(new View.OnClickListener() {
