@@ -136,15 +136,20 @@ public class FridayMeal extends Fragment {
                         Log.d("Lunch", "Lunch : " + lunchstring[5] + "/ Kcal : " + lunchkcalstring[5]);
                         Log.d("Dinner", "Dinner : " + dinnerstring[5] + "/ Kcal : " + dinnerkcalstring[5]);
 
-                        if (lunchstring[5] == null || "".equals(lunchstring[5]) || " ".equals(lunchstring[5])) {
-                            LunchText.setText("\n" + getString(R.string.mealnone));
-                        } else {
-                            LunchText.setText("\n" + lunchstring[5] + "\n\n" + lunchkcalstring[5]);
-                        } if (dinnerstring[5] == null || "".equals(dinnerstring[5]) || " ".equals(dinnerstring[5])) {
-                            DinnerText.setText("\n" + getString(R.string.mealnone));
-                        } else {
-                            DinnerText.setText("\n" + dinnerstring[5] + "\n\n" + dinnerkcalstring[5]);
+                        try{
+                            if (lunchstring[5] == null || "".equals(lunchstring[5]) || " ".equals(lunchstring[5])) {
+                                LunchText.setText("\n" + getString(R.string.mealnone));
+                            } else {
+                                LunchText.setText("\n" + lunchstring[5] + "\n\n" + lunchkcalstring[5]);
+                            } if (dinnerstring[5] == null || "".equals(dinnerstring[5]) || " ".equals(dinnerstring[5])) {
+                                DinnerText.setText("\n" + getString(R.string.mealnone));
+                            } else {
+                                DinnerText.setText("\n" + dinnerstring[5] + "\n\n" + dinnerkcalstring[5]);
+                            }
+                        } catch (IllegalStateException e) {
+                            e.printStackTrace();
                         }
+                        
                         
 
                         Log.d("DONE", "Done Setting Content");

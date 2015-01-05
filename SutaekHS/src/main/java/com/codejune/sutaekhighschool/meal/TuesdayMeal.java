@@ -136,15 +136,20 @@ public class TuesdayMeal extends Fragment {
                         Log.d("Setting Text", "Setting Meal Text");
                         Log.d("Lunch", "Lunch : " + lunchstring[2] + "/ Kcal : " + lunchkcalstring[2]);
                         Log.d("Dinner", "Dinner : " + dinnerstring[2] + "/ Kcal : " + dinnerkcalstring[2]);
-                        if (lunchstring[2] == null || "".equals(lunchstring[2]) || " ".equals(lunchstring[2])) {
-                            LunchText.setText("\n" + getString(R.string.mealnone));
-                        } else {
-                            LunchText.setText("\n" + lunchstring[2] + "\n\n" + lunchkcalstring[2]);
-                        } if (dinnerstring[2] == null || "".equals(dinnerstring[2]) || " ".equals(dinnerstring[2])) {
-                            DinnerText.setText("\n" + getString(R.string.mealnone));
-                        } else {
-                            DinnerText.setText("\n" + dinnerstring[2] + "\n\n" + dinnerkcalstring[2]);
+                        try {
+                            if (lunchstring[2] == null || "".equals(lunchstring[2]) || " ".equals(lunchstring[2])) {
+                                LunchText.setText("\n" + getString(R.string.mealnone));
+                            } else {
+                                LunchText.setText("\n" + lunchstring[2] + "\n\n" + lunchkcalstring[2]);
+                            } if (dinnerstring[2] == null || "".equals(dinnerstring[2]) || " ".equals(dinnerstring[2])) {
+                                DinnerText.setText("\n" + getString(R.string.mealnone));
+                            } else {
+                                DinnerText.setText("\n" + dinnerstring[2] + "\n\n" + dinnerkcalstring[2]);
+                            }
+                        } catch (IllegalStateException e) {
+                            e.printStackTrace();
                         }
+                        
 
                         Log.d("DONE", "Done Setting Content");
                         SRL.setRefreshing(false);

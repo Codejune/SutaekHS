@@ -14,6 +14,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,7 +35,7 @@ public class Meal extends ActionBarActivity implements ActionBar.TabListener {
     
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager mViewPager;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,6 +110,7 @@ public class Meal extends ActionBarActivity implements ActionBar.TabListener {
                         }
                     });
             Crouton.makeText(this, R.string.meal_info, Style.INFO).show();
+
         }
 
     }
@@ -135,6 +137,7 @@ public class Meal extends ActionBarActivity implements ActionBar.TabListener {
 
     @Override
     public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+
     }
 
     @Override
@@ -237,5 +240,18 @@ public class Meal extends ActionBarActivity implements ActionBar.TabListener {
             isConnected = false;
         }
         return isConnected;
+    }
+
+    // 하드웨어 뒤로가기버튼 이벤트 설정.
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        switch (keyCode) {
+            // 하드웨어 뒤로가기 버튼에 따른 이벤트 설정
+            case KeyEvent.KEYCODE_BACK:
+                android.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.commit();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

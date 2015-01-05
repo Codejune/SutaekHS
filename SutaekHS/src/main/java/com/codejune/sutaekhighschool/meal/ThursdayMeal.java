@@ -17,6 +17,8 @@ import android.widget.TextView;
 import com.codejune.sutaekhighschool.MealLoadHelper;
 import com.codejune.sutaekhighschool.R;
 
+import java.io.IOException;
+
 public class ThursdayMeal extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
@@ -91,8 +93,7 @@ public class ThursdayMeal extends Fragment {
 
     @Override
     public void onAttach(Activity activity) {
-        super.onAttach(activity);
-
+            super.onAttach(activity);
     }
 
     @Override
@@ -136,15 +137,20 @@ public class ThursdayMeal extends Fragment {
                         Log.d("Setting Text", "Setting Meal Text");
                         Log.d("Lunch", "Lunch : " + lunchstring[4] + "/ Kcal : " + lunchkcalstring[4]);
                         Log.d("Dinner", "Dinner : " + dinnerstring[4] + "/ Kcal : " + dinnerkcalstring[4]);
-                        if (lunchstring[4] == null || "".equals(lunchstring[4]) || " ".equals(lunchstring[4])) {
-                            LunchText.setText("\n" + getString(R.string.mealnone));
-                        } else {
-                            LunchText.setText("\n" + lunchstring[4] + "\n\n" + lunchkcalstring[4]);
-                        } if (dinnerstring[4] == null || "".equals(dinnerstring[4]) || " ".equals(dinnerstring[4])) {
-                            DinnerText.setText("\n" + getString(R.string.mealnone));
-                        } else {
-                            DinnerText.setText("\n" + dinnerstring[4] + "\n\n" + dinnerkcalstring[4]);
+                        try{
+                            if (lunchstring[4] == null || "".equals(lunchstring[4]) || " ".equals(lunchstring[4])) {
+                                LunchText.setText("\n" + getString(R.string.mealnone));
+                            } else {
+                                LunchText.setText("\n" + lunchstring[4] + "\n\n" + lunchkcalstring[4]);
+                            } if (dinnerstring[4] == null || "".equals(dinnerstring[4]) || " ".equals(dinnerstring[4])) {
+                                DinnerText.setText("\n" + getString(R.string.mealnone));
+                            } else {
+                                DinnerText.setText("\n" + dinnerstring[4] + "\n\n" + dinnerkcalstring[4]);
+                            }
+                        } catch (IllegalStateException e) {
+                            e.printStackTrace();
                         }
+                        
 
                         Log.d("DONE", "Done Setting Content");
                         SRL.setRefreshing(false);

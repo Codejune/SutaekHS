@@ -136,15 +136,20 @@ public class WednsdayMeal extends Fragment {
                         Log.d("Setting Text", "Setting Meal Text");
                         Log.d("Lunch", "Lunch : " + lunchstring[3] + " / Kcal : " + lunchkcalstring[3]);
                         Log.d("Dinner", "Dinner : " + dinnerstring[3] + " / Kcal : " + dinnerkcalstring[3]);
-                        if (lunchstring[3] == null || "".equals(lunchstring[3]) || " ".equals(lunchstring[3])) {
-                            LunchText.setText("\n" + getString(R.string.mealnone));
-                        } else {
-                            LunchText.setText("\n" + lunchstring[3] + "\n\n" + lunchkcalstring[3]);
-                        } if (dinnerstring[3] == null || "".equals(dinnerstring[3]) || " ".equals(dinnerstring[3])) {
-                            DinnerText.setText("\n" + getString(R.string.mealnone));
-                        } else {
-                            DinnerText.setText("\n" + dinnerstring[3] + "\n\n" + dinnerkcalstring[3]);
+                        try {
+                            if (lunchstring[3] == null || "".equals(lunchstring[3]) || " ".equals(lunchstring[3])) {
+                                LunchText.setText("\n" + getString(R.string.mealnone));
+                            } else {
+                                LunchText.setText("\n" + lunchstring[3] + "\n\n" + lunchkcalstring[3]);
+                            } if (dinnerstring[3] == null || "".equals(dinnerstring[3]) || " ".equals(dinnerstring[3])) {
+                                DinnerText.setText("\n" + getString(R.string.mealnone));
+                            } else {
+                                DinnerText.setText("\n" + dinnerstring[3] + "\n\n" + dinnerkcalstring[3]);
+                            }
+                        } catch (IllegalStateException e){
+                            e.printStackTrace();
                         }
+                        
                         
                         Log.d("DONE", "Done Setting Content");
                         SRL.setRefreshing(false);
@@ -155,4 +160,5 @@ public class WednsdayMeal extends Fragment {
             }
         }.start();
     }
+
 }
