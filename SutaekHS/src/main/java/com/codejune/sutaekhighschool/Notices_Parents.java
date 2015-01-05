@@ -16,13 +16,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class Notices_Parents extends ActionBarActivity {
     private ArrayList<String> titlearray;
@@ -70,6 +72,7 @@ public class Notices_Parents extends ActionBarActivity {
                 }
             });
             networkTask();
+            Crouton.makeText(this, R.string.noti_parents_info, Style.INFO).show();
         }
 
     }
@@ -167,10 +170,6 @@ public class Notices_Parents extends ActionBarActivity {
                         handler.sendEmptyMessage(0);
                         SRL.setRefreshing(false);
 
-                        Toast toast = Toast.makeText(getApplicationContext(),
-                                getString(R.string.noti_parents_info),
-                                Toast.LENGTH_LONG);
-                        toast.show();
                     }
                 });
 

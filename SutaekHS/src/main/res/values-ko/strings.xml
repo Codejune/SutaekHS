@@ -12,7 +12,13 @@
     <string name="schoolintro">수택고에 대해서</string>
     <string name="info">이 앱에 대해서</string>
     <string name="notices_parents">학부모 공지사항</string>
+    <string name="monday">월요일</string>
+    <string name="tuesday">화요일</string>
+    <string name="wednsday">수요일</string>
+    <string name="thursday">목요일</string>
+    <string name="friday">금요일</string>
     <string name="appsettings_apinfo_title">앱 정보</string>
+    <string name="appsettings_appinfo_update">Google Play 에서 업데이트 확인</string>
     <string name="appsettings_appinfo_src">개발자 Github로 가기</string>
     <string name="appsettings_docs_title">법적 고지사항 문서</string>
     <string name="notices_info">학교로부터의 최근 15개 공지사항</string>
@@ -20,13 +26,12 @@
     <string name="meal_info">이번주 급식표</string>
     <string name="schoolevent_info">학교로부터의 최근 15개 행사</string>
     <string name="schedule_info">이번달 학사일정</string>
-
     <string name="lunch">점심</string>
     <string name="dinner">저녁</string>
-    <string name="loading">불러오는 중...</string>
+    <string name="not_loaded_yet">\n아직 로드되지 않음...</string>
     <string name="network_connection_warning">네트워크에 연결되어 있지 않습니다, 네트워크 연결을 먼저 확인하세요.</string>
-    <string name="adress">경기도 구리시 수택동 검배로 145 [Google Maps에서 보려면 클릭]</string>
-    <string name="transportations">버스를 이용하여 오는경우:\n1. 9, 91,92,93,95번 등 탑승 -> 검배사거리 하차 (구리여고 다음정류장) -> 환경사업소 방향으로 2~3분 도보\n2. 구리방향으로 201번 탑승 -> 수택고등학교 하차 (검배사거리 다음정류장, 종점 전 정류장)\n\n전철+버스를 이용하여 오는경우:\n전철 중앙선을 타시고 구리역 -> 역 앞에서 마을버스 탑승 후 검배사거리에서 하차  -> 환경사업소 방향으로 2~3분 도보 (6번 탑승시 많이 돌아서 가나 수택고 앞에서 하차 가능)</string>
+    <string name="adress">경기도 구리시 수택동 검배로 145 \n[Google Maps에서 보려면 클릭]</string>
+    <string name="transportations">버스를 이용하여 오는경우:\n1. 9, 91,92,93,95번 등 탑승 -> 검배사거리 하차 (구리여고 다음정류장) -> 환경사업소 방향으로 2~3분 도보\n2. 구리방향으로 201번 탑승 -> 수택고등학교 하차 (검배사거리 다음정류장, 종점 전 정류장)\n\n전철과 버스를 이용하여 오는경우:\n전철 중앙선 탑승 후 구리역 하차 -> 역 앞에서 마을버스 탑승 후 검배사거리에서 하차  -> 환경사업소 방향으로 2~3분 도보 (6번 탑승시 많이 돌아서 가나 수택고 앞에서 하차 가능)</string>
     <string name="location">오시는 길</string>
     <string name="contact">학교와 연락하기</string>
     <string name="school_office">교무실 : 031-551-0674</string>
@@ -133,7 +138,7 @@
     <string name="title_activity_doc__notices">NOTICES</string>
     <string name="title_activity_doc__copying">COPYING</string>
     <string name="title_activity_doc__contributors">CONTRIBUTORS</string>
-    <string name="copyright">Copyright@2016학년도 수택고등학교 졸업예정자 김병준</string>
+    <string name="copyright">Copyright 2013. 2016학년도 수택고등학교 졸업예정자 김병준 all rights reserved</string>
     <string name="action_settings">20205 김병준</string>
     <string name="accept">확인</string>
     <string name="cancel">취소</string>

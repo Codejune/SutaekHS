@@ -5,14 +5,14 @@
     <style name="Theme.Sutaek_Material" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/public_color</item>
         <item name="colorPrimaryDark">@color/public_darker_color</item>
-        <item name="colorAccent">#d44246</item>
+        <item name="colorAccent">@color/lime</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
 
     <style name="Theme.Sutaek_Material.Translucent">
         <item name="colorPrimary">@android:color/transparent</item>
         <item name="colorPrimaryDark">@color/public_darker_color</item>
-        <item name="colorAccent">#d44246</item>
+        <item name="colorAccent">#fff</item>
         <item name="windowActionBarOverlay">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
@@ -20,7 +20,7 @@
     <style name="Theme.Sutaek_Material.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/public_color</item>
         <item name="colorPrimaryDark">@color/public_darker_color</item>
-        <item name="colorAccent">#d44246</item>
+        <item name="colorAccent">#fff</item>
         <item name="windowActionBar">false</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>

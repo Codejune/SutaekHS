@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class Doc_Contributors extends ActionBarActivity {
-    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

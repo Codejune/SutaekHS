@@ -16,17 +16,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
-
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class Notices extends ActionBarActivity {
-
     private ArrayList<String> titlearray;
     private ArrayList<String> titleherfarray;
     private ArrayList<String> authorarray;
@@ -72,6 +71,7 @@ public class Notices extends ActionBarActivity {
                 }
             });
             networkTask();
+            Crouton.makeText(this, R.string.notices_info , Style.INFO).show();
         }
 
     }
@@ -81,13 +81,12 @@ public class Notices extends ActionBarActivity {
                                 int pos, long id) {
             String herfitem = titleherfarray.get(pos);
             Intent intent = new Intent(Notices.this,
-                    WebViewActivityNotices.class);
+                    WebViewActivityParent.class);
             intent.putExtra("URL", herfitem);
             startActivity(intent);
         }
     };
 
-    // Method for get list of notices
     private void networkTask() {
         final Handler mHandler = new Handler();
         new Thread() {
@@ -101,49 +100,28 @@ public class Notices extends ActionBarActivity {
                     }
                 });
 
-                // Task
-
-                // Notices URL
                 try {
                     titlearray = new ArrayList<String>();
                     titleherfarray = new ArrayList<String>();
                     authorarray = new ArrayList<String>();
                     datearray = new ArrayList<String>();
-                    // 파싱할 페이지 URL
                     Document doc = Jsoup
                             .connect(
                                     "http://www.sutaek.hs.kr/main.php?menugrp=020101&master=bbs&act=list&master_sid=1")
                             .get();
-                    Elements rawmaindata = doc.select(".listbody a");
-                    // Get
-                    // contents
-                    // from
-                    // tags,"a"
-                    // which
-                    // are
-                    // in
-                    // the
-                    // class,"listbody"
-                    Elements rawauthordata = doc.select("td:eq(3)"); 
-                    // 작성자 이름 
-                    // 얻기 -
-                    // 3번째
-                    // td셀
-                    // 에서 얻기
-                    Elements rawdatedata = doc.select("td:eq(4)"); 
-                    // 작성 날자 얻기 -
-                    // 4번째 td셀
-                    // 에서 얻기
-                    String titlestring = rawmaindata.toString();
+                    Elements rawdata = doc.select(".listbody a");
+                    Elements rawauthordata = doc.select("td:eq(3)");
+                    Elements rawdatedata = doc.select("td:eq(4)");
+                    String titlestring = rawdata.toString();
+
                     Log.i("Notices", "Parsed Strings" + titlestring);
 
-                    // 파싱할 데이터로 배열 생성
-                    for (Element el : rawmaindata) {
+                    for (Element el : rawdata) {
                         String titlherfedata = el.attr("href");
                         String titledata = el.attr("title");
                         titleherfarray.add("http://www.sutaek.hs.kr/"
-                                + titlherfedata); // add value to ArrayList
-                        titlearray.add(titledata); // add value to ArrayList
+                                + titlherfedata);
+                        titlearray.add(titledata);
                     }
                     Log.i("Notices", "Parsed Link Array Strings"
                             + titleherfarray);
@@ -159,35 +137,26 @@ public class Notices extends ActionBarActivity {
                         Log.d("Date", el.text());
                         datearray.add(datedata);
                     }
-
                 } catch (IOException e) {
                     e.printStackTrace();
-
                 }
 
                 mHandler.post(new Runnable() {
                     public void run() {
-                        // UI Task
-                        // 배열로 어뎁터 설정
-                        adapter = new PostListAdapter(Notices.this, titlearray,
-                                datearray, authorarray);
+                        adapter = new PostListAdapter(Notices.this,
+                                titlearray, datearray, authorarray);
                         listview.setAdapter(adapter);
                         listview.setOnItemClickListener(GoToWebPage);
                         handler.sendEmptyMessage(0);
                         SRL.setRefreshing(false);
-
-                        Toast toast = Toast.makeText(getApplicationContext(),
-                                getString(R.string.notices_info),
-                                Toast.LENGTH_LONG);
-                        toast.show();
                     }
                 });
 
             }
         }.start();
+
     }
 
-    // 인터넷 연결 상태 체크
     public boolean isNetworkConnected(Context context) {
         boolean isConnected = false;
 

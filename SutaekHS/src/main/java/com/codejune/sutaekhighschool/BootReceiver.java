@@ -1,37 +1,40 @@
 package com.codejune.sutaekhighschool;
 
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
-import android.os.Handler;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
-import android.widget.Toast;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 
 public class BootReceiver extends BroadcastReceiver{
+    NotificationManager notimgr;
+
     @Override
     public void onReceive(Context context, Intent intent) {
-        String action = intent.getAction();
-        if (action.equals("android.intent.action.BOOT_COMPLETED")) {
-            // 파싱할 페이지 URL
+        Utils utils = new Utils(context);
+        if(intent.getBooleanExtra("bool", false) || utils.checkNewNotice()){
+
+            Intent i = new Intent(context, Notices_Parents.class);
+            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
+            notimgr = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
+            String title = intent.getStringExtra("title");
+            Log.d("BootRec", title);
+
+            builder.setTicker("새로운 가정통신문이 있습니다")
+                    .setWhen(System.currentTimeMillis())
+                    .setContentTitle(title)
+                    .setContentText("새로운 가정통신문 확인하러 가기")
+                    .setContentIntent(pendingIntent)
+                    .setSmallIcon(R.drawable.ic_launcher)
+                    .setAutoCancel(true)
+                    .setContentInfo("수택고등학교");
+            notimgr.notify(1, builder.build());
         }
     }
+
+
 }
 

@@ -1,7 +1,6 @@
 package com.codejune.sutaekhighschool;
 
 import com.gc.materialdesign.widgets.Dialog;
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,13 +12,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 public class MainActivity extends ActionBarActivity {
+    Utils utils;
 
-    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setTitle("");
+        utils = new Utils(this);
+        utils.registerAlarm();
+        
         findViewById(R.id.homepage).setOnClickListener(new OnClickListener() {
 
             @Override
@@ -54,6 +56,7 @@ public class MainActivity extends ActionBarActivity {
         switch (keyCode) {
             // 하드웨어 뒤로가기 버튼에 따른 이벤트 설정
             case KeyEvent.KEYCODE_BACK:
+
 
                 Dialog dialog = new Dialog(MainActivity.this, "종료", "어플리케이션을 종료하시겠습니까?");
                 dialog.setOnAcceptButtonClickListener(new OnClickListener() {

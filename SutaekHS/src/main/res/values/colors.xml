@@ -3,6 +3,10 @@
     <color name="pressed">#CCED674D</color>
     <color name="public_color">#ffe34f54</color>
     <color name="public_darker_color">#ffd44246</color>
+    <color name="blue">#ff2979ff</color>
+    <color name="light_blue">#ff03a9f4</color>
+    <color name="lime">#ffeeff41</color>
+    <color name="pink">#ffe91e63</color>
     <color name="black">#ff000000</color>
     <color name="white">#ffffffff</color>
     <color name="background">#ffe3e3e3</color>

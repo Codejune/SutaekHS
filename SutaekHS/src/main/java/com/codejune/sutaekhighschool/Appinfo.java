@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-import com.gc.materialdesign.views.Button;
 import de.psdev.licensesdialog.LicensesDialog;
 import de.psdev.licensesdialog.licenses.ApacheSoftwareLicense20;
 import de.psdev.licensesdialog.licenses.License;
@@ -22,21 +21,19 @@ public class Appinfo extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appinfo);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // Get app version name from Manifest
         String app_ver = null;
         try {
-            app_ver = this.getPackageManager().getPackageInfo(
-                    this.getPackageName(), 0).versionName;
+            app_ver = this.getPackageManager().getPackageInfo(this.getPackageName(), 0).versionName;
         } catch (NameNotFoundException e) {
             e.printStackTrace();
         }
 
-        // Set app version name text
-        TextView version = (TextView) findViewById(R.id.version);
+        TextView version = (TextView)findViewById(R.id.version);
         version.setText("Version " + app_ver);
 
-        TextView src = (TextView) findViewById(R.id.src);
+        TextView src = (TextView)findViewById(R.id.src);
         src.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,7 +43,17 @@ public class Appinfo extends ActionBarActivity {
             }
         });
 
-        Button readme = (Button) findViewById(R.id.readme);
+        TextView update = (TextView)findViewById(R.id.update);
+        update.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent update = new Intent(Intent.ACTION_VIEW);
+                update.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.codejune.sutaekhighschool"));
+                startActivity(update);
+            }
+        });
+
+        TextView readme = (TextView)findViewById(R.id.readme);
         readme.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,23 +62,22 @@ public class Appinfo extends ActionBarActivity {
             }
         });
 
-        Button contrubutors = (Button) findViewById(R.id.contrubutors);
+        TextView contrubutors = (TextView)findViewById(R.id.contrubutors);
         contrubutors.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent contrubutors = new Intent(Appinfo.this,
-                        Doc_Contributors.class);
+                Intent contrubutors = new Intent(Appinfo.this, Doc_Contributors.class);
                 startActivity(contrubutors);
             }
         });
     }
 
-    public void onStop() {
+    public void onStop(){
         super.onStop();
 
-    }
 
-    protected void onDestroy() {
+    }
+    protected void onDestroy(){
         super.onDestroy();
 
     }

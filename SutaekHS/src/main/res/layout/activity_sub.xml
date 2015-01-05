@@ -244,7 +244,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginRight="18dp"
-        android:background="@color/public_color"
+        android:background="@color/blue"
         materialdesign:animate="true"
         materialdesign:icon="@drawable/info" />
 

@@ -1,6 +1,8 @@
 package com.codejune.sutaekhighschool;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -15,7 +17,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -25,9 +26,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Schedule extends ActionBarActivity {
-    ConnectivityManager cManager;
-    NetworkInfo mobile;
-    NetworkInfo wifi;
+    
     private ArrayList<String> dayarray;
     private ArrayList<String> schedulearray;
     private ListCalendarAdapter adapter;
@@ -51,91 +50,93 @@ public class Schedule extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-        final TextView MonthTxt = (TextView) findViewById(R.id.month);
-        Button Minus = (Button) findViewById(R.id.minus);
-        Button Plus = (Button) findViewById(R.id.plus);
-        Calendar Cal = Calendar.getInstance();
-        month = Cal.get(Calendar.MONTH) + 1;
-        year = Cal.get(Calendar.YEAR);
-
-        final int MONTH = month;
-        final int YEAR = year;
-
-        MonthTxt.setText(String.valueOf(year) + "." + String.valueOf(month));
-        Minus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                movement--;
-                NewURL = "http://www.sutaek.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1&"
-                        + "SearchYear="
-                        + YEAR
-                        + "&SearchMonth="
-                        + MONTH
-                        + "&SearchCategory=&SearchMoveMonth=" + movement;
-                URL = NewURL;
-                networkTask();
-                if (month == 1) {
-                    month = 12;
-                    year--;
-                } else {
-                    month--;
-                }
-                MonthTxt.setText(String.valueOf(year) + "."
-                        + String.valueOf(month));
-            }
-        });
-        Plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                movement++;
-                NewURL = "http://www.sutaek.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1&"
-                        + "SearchYear="
-                        + YEAR
-                        + "&SearchMonth="
-                        + MONTH
-                        + "&SearchCategory=&SearchMoveMonth=" + movement;
-                URL = NewURL;
-                networkTask();
-                if (month == 12) {
-                    month = 1;
-                    year++;
-                } else {
-                    month++;
-                }
-                MonthTxt.setText(String.valueOf(year) + "."
-                        + String.valueOf(month));
-            }
-        });
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        listview = (ListView) findViewById(R.id.listView);
-
-        cManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        mobile = cManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-        wifi = cManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-        SRL = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
-        SRL.setColorSchemeColors(Color.rgb(231, 76, 60),
-                Color.rgb(46, 204, 113), Color.rgb(41, 128, 185),
-                Color.rgb(241, 196, 15));
-        SRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                networkTask();
-            }
-        });
-
-        if (mobile.isConnected() || wifi.isConnected()) {
+        if (!isNetworkConnected(this)) {
+            new AlertDialog.Builder(this)
+                    .setIcon(R.drawable.ic_error)
+                    .setTitle("네트워크 연결")
+                    .setMessage("\n네트워크 연결 상태 확인 후 다시 시도해 주십시요\n")
+                    .setPositiveButton("확인",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    finish();
+                                }
+                            }).show();
         } else {
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    getString(R.string.network_connection_warning),
-                    Toast.LENGTH_LONG);
-            finish();
-        }
-        networkTask();
+            final TextView MonthTxt = (TextView) findViewById(R.id.month);
+            Button Minus = (Button) findViewById(R.id.minus);
+            Button Plus = (Button) findViewById(R.id.plus);
+            Calendar Cal = Calendar.getInstance();
+            month = Cal.get(Calendar.MONTH) + 1;
+            year = Cal.get(Calendar.YEAR);
 
+            final int MONTH = month;
+            final int YEAR = year;
+
+            MonthTxt.setText(String.valueOf(year) + "." + String.valueOf(month));
+            Minus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    movement--;
+                    NewURL = "http://www.sutaek.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1&"
+                            + "SearchYear="
+                            + YEAR
+                            + "&SearchMonth="
+                            + MONTH
+                            + "&SearchCategory=&SearchMoveMonth=" + movement;
+                    URL = NewURL;
+                    networkTask();
+                    if (month == 1) {
+                        month = 12;
+                        year--;
+                    } else {
+                        month--;
+                    }
+                    MonthTxt.setText(String.valueOf(year) + "."
+                            + String.valueOf(month));
+                }
+            });
+            Plus.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    movement++;
+                    NewURL = "http://www.sutaek.hs.kr/main.php?menugrp=020500&master=diary&act=list&master_sid=1&"
+                            + "SearchYear="
+                            + YEAR
+                            + "&SearchMonth="
+                            + MONTH
+                            + "&SearchCategory=&SearchMoveMonth=" + movement;
+                    URL = NewURL;
+                    networkTask();
+                    if (month == 12) {
+                        month = 1;
+                        year++;
+                    } else {
+                        month++;
+                    }
+                    MonthTxt.setText(String.valueOf(year) + "."
+                            + String.valueOf(month));
+                }
+            });
+
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            listview = (ListView) findViewById(R.id.listView);
+            SRL = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+            SRL.setColorSchemeColors(Color.rgb(231, 76, 60),
+                    Color.rgb(46, 204, 113), Color.rgb(41, 128, 185),
+                    Color.rgb(241, 196, 15));
+            SRL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    networkTask();
+                }
+            });
+            networkTask();
+        }
     }
 
     private void networkTask() {
@@ -222,6 +223,24 @@ public class Schedule extends ActionBarActivity {
 
             }
         }.start();
+    }
+    
+    // 인터넷 연결 상태 체크
+    public boolean isNetworkConnected(Context context) {
+        boolean isConnected = false;
 
+        ConnectivityManager manager = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo mobile = manager
+                .getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        NetworkInfo wifi = manager
+                .getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+
+        if (mobile.isConnected() || wifi.isConnected()) {
+            isConnected = true;
+        } else {
+            isConnected = false;
+        }
+        return isConnected;
     }
 }
