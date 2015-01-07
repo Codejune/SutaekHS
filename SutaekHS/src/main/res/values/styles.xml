@@ -7,20 +7,24 @@
         <item name="colorPrimaryDark">@color/public_darker_color</item>
         <item name="colorAccent">@color/lime</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_action_back_white</item>
+        <item name="homeAsUpIndicator">@drawable/ic_action_back_white</item>
     </style>
 
     <style name="Theme.Sutaek_Material.Translucent">
         <item name="colorPrimary">@android:color/transparent</item>
         <item name="colorPrimaryDark">@color/public_darker_color</item>
-        <item name="colorAccent">#fff</item>
+        <item name="colorAccent">@color/white</item>
         <item name="windowActionBarOverlay">true</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_action_back_white</item>
+        <item name="homeAsUpIndicator">@drawable/ic_action_back_white</item>
     </style>
 
     <style name="Theme.Sutaek_Material.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/public_color</item>
         <item name="colorPrimaryDark">@color/public_darker_color</item>
-        <item name="colorAccent">#fff</item>
+        <item name="colorAccent">@color/white</item>
         <item name="windowActionBar">false</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
