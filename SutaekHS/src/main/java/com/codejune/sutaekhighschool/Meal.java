@@ -14,7 +14,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,7 +23,7 @@ import com.codejune.sutaekhighschool.meal.FridayMeal;
 import com.codejune.sutaekhighschool.meal.MondayMeal;
 import com.codejune.sutaekhighschool.meal.ThursdayMeal;
 import com.codejune.sutaekhighschool.meal.TuesdayMeal;
-import com.codejune.sutaekhighschool.meal.WednsdayMeal;
+import com.codejune.sutaekhighschool.meal.WednesdayMeal;
 import com.gc.materialdesign.widgets.Dialog;
 import java.util.Calendar;
 import java.util.Locale;
@@ -162,7 +161,7 @@ public class Meal extends ActionBarActivity implements ActionBar.TabListener {
                     frag = TuesdayMeal.newInstance(1);
                     break;
                 case 2:
-                    frag = WednsdayMeal.newInstance(2);
+                    frag = WednesdayMeal.newInstance(2);
                     break;
                 case 3:
                     frag = ThursdayMeal.newInstance(3);
@@ -240,18 +239,5 @@ public class Meal extends ActionBarActivity implements ActionBar.TabListener {
             isConnected = false;
         }
         return isConnected;
-    }
-
-    // 하드웨어 뒤로가기버튼 이벤트 설정.
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-        switch (keyCode) {
-            // 하드웨어 뒤로가기 버튼에 따른 이벤트 설정
-            case KeyEvent.KEYCODE_BACK:
-                android.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.commit();
-        }
-        return super.onKeyDown(keyCode, event);
     }
 }

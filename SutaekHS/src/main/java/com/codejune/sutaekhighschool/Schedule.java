@@ -50,7 +50,6 @@ public class Schedule extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_action_back_white);
         if (!isNetworkConnected(this)) {
             new AlertDialog.Builder(this)
                     .setIcon(R.drawable.ic_error)

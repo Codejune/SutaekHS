@@ -13,11 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.codejune.sutaekhighschool.MealLoadHelper;
 import com.codejune.sutaekhighschool.R;
-
-import java.io.IOException;
 
 public class ThursdayMeal extends Fragment {
 

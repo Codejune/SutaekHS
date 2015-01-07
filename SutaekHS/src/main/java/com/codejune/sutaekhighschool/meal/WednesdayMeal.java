@@ -13,12 +13,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.codejune.sutaekhighschool.MealLoadHelper;
 import com.codejune.sutaekhighschool.R;
 
-public class WednsdayMeal extends Fragment {
-  
+public class WednesdayMeal extends Fragment {
+
     private static final String ARG_SECTION_NUMBER = "section_number";
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -35,14 +34,14 @@ public class WednsdayMeal extends Fragment {
     TextView DinnerText;
     SwipeRefreshLayout SRL;
 
-    public static WednsdayMeal newInstance(int sectionNumber) {
-        WednsdayMeal fragment = new WednsdayMeal();
+    public static WednesdayMeal newInstance(int sectionNumber) {
+        WednesdayMeal fragment = new WednesdayMeal();
         Bundle args = new Bundle();
         args.putInt(ARG_SECTION_NUMBER, sectionNumber);
         fragment.setArguments(args);
         return fragment;
     }
-    public WednsdayMeal() {
+    public WednesdayMeal() {
     }
 
     private final Handler handler = new Handler()
@@ -132,7 +131,7 @@ public class WednsdayMeal extends Fragment {
                 mHandler.post(new Runnable()
                 {
                     public void run() {
-                        
+
                         Log.d("Setting Text", "Setting Meal Text");
                         Log.d("Lunch", "Lunch : " + lunchstring[3] + " / Kcal : " + lunchkcalstring[3]);
                         Log.d("Dinner", "Dinner : " + dinnerstring[3] + " / Kcal : " + dinnerkcalstring[3]);
@@ -149,12 +148,12 @@ public class WednsdayMeal extends Fragment {
                         } catch (IllegalStateException e){
                             e.printStackTrace();
                         }
-                        
-                        
+
+
                         Log.d("DONE", "Done Setting Content");
                         SRL.setRefreshing(false);
                         handler.sendEmptyMessage(0);
-                        
+
                     }
                 });
             }
