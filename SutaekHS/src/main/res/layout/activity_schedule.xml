@@ -9,7 +9,7 @@
         android:id="@+id/toolbar"
         android:minHeight="?actionBarSize"
         android:background="?colorPrimary"
-        android:theme="@style/Theme.Sutaek_Material">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"

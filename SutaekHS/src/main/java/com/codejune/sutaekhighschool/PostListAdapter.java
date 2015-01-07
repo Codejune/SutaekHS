@@ -64,8 +64,8 @@ public class PostListAdapter extends BaseAdapter {
         }
 
         holder.txtViewTitle.setText(title.get(position));
-        holder.txtViewDate.setText(date.get(position));
-        holder.txtViewAuthor.setText(author.get(position));
+        holder.txtViewDate.setText("등록일 : " + date.get(position));
+        holder.txtViewAuthor.setText("작성자 : " + author.get(position));
         return convertView;
     }
 

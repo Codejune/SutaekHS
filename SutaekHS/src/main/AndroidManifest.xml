@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codejune.sutaekhighschool"
-    android:versionCode="17"
-    android:versionName="3.4.2" >
+    android:versionCode="18"
+    android:versionName="3.4.3" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -58,10 +58,28 @@
                 android:value="com.codejune.sutaekhighschool.MainActivity" />
         </activity>
         <activity
+            android:name="com.codejune.sutaekhighschool.NoticesContents"
+            android:screenOrientation="portrait"
+            android:label="@string/notices"
+            android:parentActivityName="com.codejune.sutaekhighschool.Notices" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
+        </activity>
+        <activity
             android:name="com.codejune.sutaekhighschool.SchoolEvent"
             android:label="@string/schoolevent"
             android:parentActivityName="com.codejune.sutaekhighschool.SubActivity"
             android:screenOrientation="nosensor">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.codejune.sutaekhighschool.EventContents"
+            android:screenOrientation="portrait"
+            android:label="@string/notices"
+            android:parentActivityName="com.codejune.sutaekhighschool.SchoolEvent" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.MainActivity" />
@@ -99,6 +117,15 @@
             android:label="@string/notices_parents"
             android:parentActivityName="com.codejune.sutaekhighschool.SubActivity"
             android:screenOrientation="nosensor">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.codejune.sutaekhighschool.ParentsContents"
+            android:screenOrientation="portrait"
+            android:label="@string/notices_parents"
+            android:parentActivityName="com.codejune.sutaekhighschool.Notices_Parents" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.MainActivity" />

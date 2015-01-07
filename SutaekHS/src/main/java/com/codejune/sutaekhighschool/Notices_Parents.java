@@ -79,31 +79,36 @@ public class Notices_Parents extends ActionBarActivity {
     private AdapterView.OnItemClickListener GoToWebPage = new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView<?> adapterView, View clickedView,
                                 int pos, long id) {
-            String herfitem = titleherfarray.get(pos);
-            Intent intent = new Intent(Notices_Parents.this,
-                    WebViewActivityParent.class);
-            intent.putExtra("URL", herfitem);
-            startActivity(intent);
+            try {
+                String herfitem = titleherfarray.get(pos);
+                String title = titlearray.get(pos);
+                String date = datearray.get(pos);
+                String author = authorarray.get(pos);
+
+                Intent intent = new Intent(Notices_Parents.this,
+                        ParentsContents.class);
+                intent.putExtra("URL", herfitem);
+                intent.putExtra("title", title);
+                intent.putExtra("date", date);
+                intent.putExtra("author", author);
+                startActivity(intent);
+            } catch ( IndexOutOfBoundsException e ) {
+                e.printStackTrace();
+            }
         }
     };
 
-    // Method for get list of notices for parents
     private void networkTask() {
         final Handler mHandler = new Handler();
         new Thread() {
 
             public void run() {
-
                 mHandler.post(new Runnable() {
 
                     public void run() {
                         SRL.setRefreshing(true);
                     }
                 });
-
-                // Task
-
-                // Notices URL
                 try {
                     titlearray = new ArrayList<String>();
                     titleherfarray = new ArrayList<String>();
@@ -113,22 +118,9 @@ public class Notices_Parents extends ActionBarActivity {
                             .connect(
                                     "http://www.sutaek.hs.kr/main.php?menugrp=020500&master=bbs&act=list&master_sid=4")
                             .get();
-                    Elements rawdata = doc.select(".listbody a"); // Get
-                    // contents
-                    // from
-                    // tags,"a"
-                    // which are
-                    // in the
-                    // class,"listbody"
-                    Elements rawauthordata = doc.select("td:eq(3)"); // 작성자 이름
-                    // 얻기 -
-                    // 3번째
-                    // td셀
-                    // 에서 얻기
-                    Elements rawdatedata = doc.select("td:eq(4)"); // 작성 날자 얻기 -
-                    // 4번째 td셀
-                    // 에서 얻기
-
+                    Elements rawdata = doc.select(".listbody a");
+                    Elements rawauthordata = doc.select("td:eq(3)");
+                    Elements rawdatedata = doc.select("td:eq(4)");
                     String titlestring = rawdata.toString();
                     Log.i("Notices", "Parsed Strings" + titlestring);
 
@@ -136,8 +128,8 @@ public class Notices_Parents extends ActionBarActivity {
                         String titlherfedata = el.attr("href");
                         String titledata = el.attr("title");
                         titleherfarray.add("http://www.sutaek.hs.kr/"
-                                + titlherfedata); // add value to ArrayList
-                        titlearray.add(titledata); // add value to ArrayList
+                                + titlherfedata);
+                        titlearray.add(titledata);
                     }
                     Log.i("Notices", "Parsed Link Array Strings"
                             + titleherfarray);
@@ -161,7 +153,6 @@ public class Notices_Parents extends ActionBarActivity {
 
                 mHandler.post(new Runnable() {
                     public void run() {
-                        // UI Task
                         adapter = new PostListAdapter(Notices_Parents.this,
                                 titlearray, datearray, authorarray);
                         listview.setAdapter(adapter);
@@ -177,7 +168,6 @@ public class Notices_Parents extends ActionBarActivity {
 
     }
 
-    // 인터넷 연결 상태 체크
     public boolean isNetworkConnected(Context context) {
         boolean isConnected = false;
 

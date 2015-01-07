@@ -79,11 +79,22 @@ public class Notices extends ActionBarActivity {
     private AdapterView.OnItemClickListener GoToWebPage = new AdapterView.OnItemClickListener() {
         public void onItemClick(AdapterView<?> adapterView, View clickedView,
                                 int pos, long id) {
-            String herfitem = titleherfarray.get(pos);
-            Intent intent = new Intent(Notices.this,
-                    WebViewActivityParent.class);
-            intent.putExtra("URL", herfitem);
-            startActivity(intent);
+            try {
+                String herfitem = titleherfarray.get(pos);
+                String title = titlearray.get(pos);
+                String date = datearray.get(pos);
+                String author = authorarray.get(pos);
+
+                Intent intent = new Intent(Notices.this,
+                        NoticesContents.class);
+                intent.putExtra("URL", herfitem);
+                intent.putExtra("title", title);
+                intent.putExtra("date", date);
+                intent.putExtra("author", author);
+                startActivity(intent);
+            } catch ( IndexOutOfBoundsException e ) {
+                e.printStackTrace();
+            }
         }
     };
 
