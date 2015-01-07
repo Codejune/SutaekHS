@@ -144,5 +144,7 @@
     <string name="copyright">Copyright 2013. graduation in 2016 ByoungJune Kim all rights reserved</string>
     <string name="accept">ACCEPT</string>
     <string name="cancel">CANCEL</string>
+    <string name="gotoweb">View with Browser</string>
+    <string name="attachment"><![CDATA["<Refer Attached File>"]]></string>
     <string name="title_activity_web_view">SutaekHighSchool</string>
 </resources>

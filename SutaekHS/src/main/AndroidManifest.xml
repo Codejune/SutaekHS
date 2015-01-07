@@ -58,10 +58,28 @@
                 android:value="com.codejune.sutaekhighschool.MainActivity" />
         </activity>
         <activity
+            android:name="com.codejune.sutaekhighschool.NoticesContents"
+            android:screenOrientation="portrait"
+            android:label="@string/notices"
+            android:parentActivityName="com.codejune.sutaekhighschool.Notices" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
+        </activity>
+        <activity
             android:name="com.codejune.sutaekhighschool.SchoolEvent"
             android:label="@string/schoolevent"
             android:parentActivityName="com.codejune.sutaekhighschool.SubActivity"
             android:screenOrientation="nosensor">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.codejune.sutaekhighschool.EventContents"
+            android:screenOrientation="portrait"
+            android:label="@string/notices"
+            android:parentActivityName="com.codejune.sutaekhighschool.SchoolEvent" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.MainActivity" />
@@ -99,6 +117,15 @@
             android:label="@string/notices_parents"
             android:parentActivityName="com.codejune.sutaekhighschool.SubActivity"
             android:screenOrientation="nosensor">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codejune.sutaekhighschool.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.codejune.sutaekhighschool.ParentsContents"
+            android:screenOrientation="portrait"
+            android:label="@string/notices"
+            android:parentActivityName="com.codejune.sutaekhighschool.Notices_Parents" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.codejune.sutaekhighschool.MainActivity" />

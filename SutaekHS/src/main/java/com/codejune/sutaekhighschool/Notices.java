@@ -80,9 +80,16 @@ public class Notices extends ActionBarActivity {
         public void onItemClick(AdapterView<?> adapterView, View clickedView,
                                 int pos, long id) {
             String herfitem = titleherfarray.get(pos);
+            String title = titlearray.get(pos);
+            String date = datearray.get(pos);
+            String author = authorarray.get(pos);
+
             Intent intent = new Intent(Notices.this,
-                    WebViewActivityParent.class);
+                    NoticesContents.class);
             intent.putExtra("URL", herfitem);
+            intent.putExtra("title", title);
+            intent.putExtra("date", date);
+            intent.putExtra("author", author);
             startActivity(intent);
         }
     };
