@@ -100,7 +100,7 @@ public class NoticesContents extends ActionBarActivity {
 
                     Document doc = Jsoup.connect(urls[0]).get();
                     Elements rawcontents = doc.select("#bbsWrap div table tbody tr:eq(4) td p");
-                    Elements rawfile = doc.select("#bbsWrap div table tbody tr:eq(5) td");
+                    Elements rawfile = doc.select("#bbsWrap div table tbody tr:eq(5) td a");
 
 
                     for (Element el : rawcontents) {
@@ -112,12 +112,11 @@ public class NoticesContents extends ActionBarActivity {
                     }
 
                     for (Element el : rawfile) {
-                        String filedata = "http://www.sutaek.hs.kr/" + el.attr("href");
+                        String filedata = "http://www.sutaek.hs.kr/" + el.attr("href") + "<br>";
                         String filetitle = el.text();
                         filename = filename + "<a href=\"" + filedata + "\">" + filetitle + "</a>";
                         Log.d("CONS2", filedata);
                         Log.d("CONS2", filename);
-
                     }
 
                     Log.d("CON", cons);
