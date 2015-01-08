@@ -12,19 +12,18 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import com.gc.materialdesign.views.ProgressBarCircularIndetermininate;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class NoticesContents extends ActionBarActivity {
 
@@ -37,7 +36,6 @@ public class NoticesContents extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.post_contents);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ProgressBarCircularIndetermininate progressBar = (ProgressBarCircularIndetermininate) findViewById(R.id.progressBar);
         if (!isNetworkConnected(this)) {
             new AlertDialog.Builder(this)
                     .setIcon(R.drawable.ic_error)
@@ -53,7 +51,6 @@ public class NoticesContents extends ActionBarActivity {
                             })
                     .show();
         } else {
-            progressBar.setVisibility(View.VISIBLE);
             tvTitle = (TextView) findViewById(R.id.tv_title);
             tvDate = (TextView) findViewById(R.id.tv_date);
             tvAuthor = (TextView) findViewById(R.id.tv_author);
@@ -63,11 +60,10 @@ public class NoticesContents extends ActionBarActivity {
             Intent in = getIntent();
             tvTitle.setText(in.getStringExtra("title"));
             tvDate.setText("등록일 : " +in.getStringExtra("date"));
-            tvAuthor.setText("작성자 : " +in.getStringExtra("author"));
+            tvAuthor.setText("작성자 : " + in.getStringExtra("author"));
             Log.d("CONTENT", in.getStringExtra("URL"));
             noticeTask = new NoticeOpenTask();
             noticeTask.execute(in.getStringExtra("URL"), "", "");
-            progressBar.setVisibility(View.GONE);
         }
     }
 
