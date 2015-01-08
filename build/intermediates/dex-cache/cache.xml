@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/de.psdev.licensesdialog/licensesdialog/1.6.0/classes.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="e3f31c89bca185f6993db3d1c5bf90e7d4e331da">
-        <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-bc2476ef8b50bcd1af7c989f1ca74be62a0f10b1.jar" />
-    </item>
-    <item
         jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/jsoup-1.7.3.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -16,32 +9,11 @@
         <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jsoup-1.7.3-057cf23c3f5fed5e780f23260d423d24cc8084ae.jar" />
     </item>
     <item
-        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/jericho-android.3.1.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="b9d53e9eeea55b5b67e78a0c94e1a1ac8b357ffc">
-        <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jericho-android.3.1-5076ea13595244d4d4cef5a8ce816592cbaa4783.jar" />
-    </item>
-    <item
-        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/de.psdev.licensesdialog/licensesdialog/1.6.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e3f31c89bca185f6993db3d1c5bf90e7d4e331da">
-        <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-bc2476ef8b50bcd1af7c989f1ca74be62a0f10b1.jar" />
-    </item>
-    <item
         jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/de.keyboardsurfer.android.widget/crouton/1.8.5/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="b81c788c5f175f94ddaac2f65e5d1726371e0963">
         <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-dbd60fdd99d4bfd0807b663bbc74535ae7a99505.jar" />
-    </item>
-    <item
-        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/nineoldandroids-2.4.0.jar"
-        jumboMode="false"
-        revision="21.0.0"
-        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
-        <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/nineoldandroids-2.4.0-ad81687e51be948b6a9e218d767bd9e93d465234.jar" />
     </item>
     <item
         jar="/Users/Codejune/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
@@ -72,13 +44,6 @@
         <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jericho-android.3.1-5076ea13595244d4d4cef5a8ce816592cbaa4783.jar" />
     </item>
     <item
-        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-ff018fe733ec87788f5973a9bcf7c91525a1cb18.jar" />
-    </item>
-    <item
         jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -98,6 +63,41 @@
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
         <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-cbf02fd0411306130527c68eb57b9fbbf725cefc.jar" />
+    </item>
+    <item
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/de.psdev.licensesdialog/licensesdialog/1.6.0/classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="e3f31c89bca185f6993db3d1c5bf90e7d4e331da">
+        <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-bc2476ef8b50bcd1af7c989f1ca74be62a0f10b1.jar" />
+    </item>
+    <item
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/jericho-android.3.1.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="b9d53e9eeea55b5b67e78a0c94e1a1ac8b357ffc">
+        <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/jericho-android.3.1-5076ea13595244d4d4cef5a8ce816592cbaa4783.jar" />
+    </item>
+    <item
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/de.psdev.licensesdialog/licensesdialog/1.6.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e3f31c89bca185f6993db3d1c5bf90e7d4e331da">
+        <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-bc2476ef8b50bcd1af7c989f1ca74be62a0f10b1.jar" />
+    </item>
+    <item
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/nineoldandroids-2.4.0-ad81687e51be948b6a9e218d767bd9e93d465234.jar" />
+    </item>
+    <item
+        jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/Codejune/Downloads/SutaekHS/SutaekHS/build/intermediates/pre-dexed/debug/classes-ff018fe733ec87788f5973a9bcf7c91525a1cb18.jar" />
     </item>
     <item
         jar="/Users/Codejune/Downloads/SutaekHS/SutaekHS/libs/nineoldandroids-2.4.0.jar"

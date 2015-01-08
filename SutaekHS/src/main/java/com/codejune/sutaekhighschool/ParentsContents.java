@@ -28,9 +28,9 @@ import java.io.IOException;
 
 public class ParentsContents extends ActionBarActivity {
 
-    TextView tvTitle, tvDate, tvAuthor, tvContents, tvFile;
+    TextView tvTitle, tvDate, tvAuthor, tvContents, tvFile1 ,tvFile2, tvFile3, tvFile4, tvFile5;
     CardView cvFile;
-    String cons = "", filename = "";
+    String cons = "", filename1 = "", filename2 = "", filename3 = "", filename4 = "", filename5 = "";
     private NoticeOpenTask noticeTask;
 
     public void onCreate(Bundle savedInstanceState) {
@@ -56,7 +56,11 @@ public class ParentsContents extends ActionBarActivity {
             tvDate = (TextView) findViewById(R.id.tv_date);
             tvAuthor = (TextView) findViewById(R.id.tv_author);
             tvContents = (TextView) findViewById(R.id.tv_contents);
-            tvFile = (TextView) findViewById(R.id.tv_file);
+            tvFile1 = (TextView) findViewById(R.id.tv_file1);
+            tvFile2 = (TextView) findViewById(R.id.tv_file2);
+            tvFile3 = (TextView) findViewById(R.id.tv_file3);
+            tvFile4 = (TextView) findViewById(R.id.tv_file4);
+            tvFile5 = (TextView) findViewById(R.id.tv_file5);
             cvFile = (CardView) findViewById(R.id.card_file);
             Intent in = getIntent();
             tvTitle.setText(in.getStringExtra("title"));
@@ -97,7 +101,12 @@ public class ParentsContents extends ActionBarActivity {
 
                     Document doc = Jsoup.connect(urls[0]).get();
                     Elements rawcontents = doc.select("#bbsWrap div table tbody tr:eq(4) td p");
-                    Elements rawfile = doc.select("#bbsWrap div table tbody tr:eq(5) td a");
+                    Elements rawfile1 = doc.select("#bbsWrap div table tbody tr:eq(5) td a");
+                    Elements rawfile2 = doc.select("#bbsWrap div table tbody tr:eq(6) td a");
+                    Elements rawfile3 = doc.select("#bbsWrap div table tbody tr:eq(7) td a");
+                    Elements rawfile4 = doc.select("#bbsWrap div table tbody tr:eq(8) td a");
+                    Elements rawfile5 = doc.select("#bbsWrap div table tbody tr:eq(9) td a");
+
 
                     for (Element el : rawcontents) {
                         String con = el.text();
@@ -107,12 +116,52 @@ public class ParentsContents extends ActionBarActivity {
                         cons = cons + con + "\n";
                     }
 
-                    for (Element el : rawfile) {
-                        String filedata = "http://www.sutaek.hs.kr/" + el.attr("href") + "<br>";
-                        String filetitle = el.text();
-                        filename = filename + "<a href=\"" + filedata + "\">" + filetitle + "</a>";
-                        Log.d("CONS2", filedata);
-                        Log.d("CONS2", filename);
+                    for (Element el : rawfile1) {
+                        String filedata1 = "http://www.sutaek.hs.kr/" + el.attr("href") + "<br>";
+                        String filetitle1 = el.text();
+                        filename1 = filename1 + "<a href=\"" + filedata1 + "\">" + filetitle1 + "</a>";
+                        Log.d("CONS2", filedata1);
+                        Log.d("CONS2", filename1);
+                    }
+                    if (!rawfile2.equals("") || !rawfile2.equals(null)) {
+
+                        for (Element el : rawfile2) {
+                            String filedata2 = "http://www.sutaek.hs.kr/" + el.attr("href") + "<br>";
+                            String filetitle2 = el.text();
+                            filename2 = filename2 + "<a href=\"" + filedata2 + "\">" + filetitle2 + "</a>";
+                            Log.d("CONS2", filedata2);
+                            Log.d("CONS2", filename2);
+                        }
+                    }
+
+                    if (!rawfile3.equals("") || !rawfile3.equals(null)) {
+                        for (Element el : rawfile3) {
+                            String filedata3 = "http://www.sutaek.hs.kr/" + el.attr("href") + "<br>";
+                            String filetitle3 = el.text();
+                            filename3 = filename3 + "<a href=\"" + filedata3 + "\">" + filetitle3 + "</a>";
+                            Log.d("CONS2", filedata3);
+                            Log.d("CONS2", filename3);
+                        }
+                    }
+
+                    if (!rawfile4.equals("") || !rawfile4.equals(null)) {
+                        for (Element el : rawfile4) {
+                            String filedata4 = "http://www.sutaek.hs.kr/" + el.attr("href") + "<br>";
+                            String filetitle4 = el.text();
+                            filename3 = filename3 + "<a href=\"" + filedata4 + "\">" + filetitle4 + "</a>";
+                            Log.d("CONS2", filedata4);
+                            Log.d("CONS2", filename4);
+                        }
+                    }
+
+                    if (!rawfile5.equals("") || !rawfile5.equals(null)) {
+                        for (Element el : rawfile5) {
+                            String filedata5 = "http://www.sutaek.hs.kr/" + el.attr("href") + "<br>";
+                            String filetitle5 = el.text();
+                            filename3 = filename3 + "<a href=\"" + filedata5 + "\">" + filetitle5 + "</a>";
+                            Log.d("CONS2", filedata5);
+                            Log.d("CONS2", filename5);
+                        }
                     }
 
                     Log.d("CON", cons);
@@ -133,11 +182,30 @@ public class ParentsContents extends ActionBarActivity {
             } else {
                 tvContents.setText(cons);
             }
-            Log.d("Postdata", cons);
-            if (!filename.equals("")) {
+            if (!filename1.equals("")) {
                 cvFile.setVisibility(View.VISIBLE);
-                tvFile.setText(Html.fromHtml(filename));
-                tvFile.setMovementMethod(LinkMovementMethod.getInstance());
+                tvFile1.setText(Html.fromHtml(filename1));
+                tvFile1.setMovementMethod(LinkMovementMethod.getInstance());
+            }
+            if (!filename2.equals("")) {
+                tvFile2.setVisibility(View.VISIBLE);
+                tvFile2.setText(Html.fromHtml(filename2));
+                tvFile2.setMovementMethod(LinkMovementMethod.getInstance());
+            }
+            if (!filename3.equals("")) {
+                tvFile3.setVisibility(View.VISIBLE);
+                tvFile3.setText(Html.fromHtml(filename3));
+                tvFile3.setMovementMethod(LinkMovementMethod.getInstance());
+            }
+            if (!filename4.equals("")) {
+                tvFile4.setVisibility(View.VISIBLE);
+                tvFile4.setText(Html.fromHtml(filename4));
+                tvFile4.setMovementMethod(LinkMovementMethod.getInstance());
+            }
+            if (!filename5.equals("")) {
+                tvFile5.setVisibility(View.VISIBLE);
+                tvFile5.setText(Html.fromHtml(filename5));
+                tvFile5.setMovementMethod(LinkMovementMethod.getInstance());
             }
         }
     }
