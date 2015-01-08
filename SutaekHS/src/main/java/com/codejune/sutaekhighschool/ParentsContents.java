@@ -148,7 +148,7 @@ public class ParentsContents extends ActionBarActivity {
                         for (Element el : rawfile4) {
                             String filedata4 = "http://www.sutaek.hs.kr/" + el.attr("href") + "<br>";
                             String filetitle4 = el.text();
-                            filename3 = filename3 + "<a href=\"" + filedata4 + "\">" + filetitle4 + "</a>";
+                            filename4 = filename4 + "<a href=\"" + filedata4 + "\">" + filetitle4 + "</a>";
                             Log.d("CONS2", filedata4);
                             Log.d("CONS2", filename4);
                         }
@@ -158,7 +158,7 @@ public class ParentsContents extends ActionBarActivity {
                         for (Element el : rawfile5) {
                             String filedata5 = "http://www.sutaek.hs.kr/" + el.attr("href") + "<br>";
                             String filetitle5 = el.text();
-                            filename3 = filename3 + "<a href=\"" + filedata5 + "\">" + filetitle5 + "</a>";
+                            filename5 = filename5 + "<a href=\"" + filedata5 + "\">" + filetitle5 + "</a>";
                             Log.d("CONS2", filedata5);
                             Log.d("CONS2", filename5);
                         }

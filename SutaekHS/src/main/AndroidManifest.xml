@@ -76,7 +76,7 @@
                 android:value="com.codejune.sutaekhighschool.MainActivity" />
         </activity>
         <activity
-            android:name="com.codejune.sutaekhighschool.EventContents"
+            android:name="com.codejune.sutaekhighschool.EventsContents"
             android:screenOrientation="portrait"
             android:label="@string/notices"
             android:parentActivityName="com.codejune.sutaekhighschool.SchoolEvent" >
